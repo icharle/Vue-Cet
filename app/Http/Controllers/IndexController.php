@@ -14,7 +14,7 @@ class IndexController extends Controller
      * @return mixed
      * CURL通用方法
      */
-    public function curl($url, $data, $referer)
+    public function curl($url, $type = 'get', $data, $referer)
     {
         //伪造Ip
         $ip = mt_rand(1, 255) . "." . mt_rand(1, 255) . "." . mt_rand(1, 255) . "." . mt_rand(1, 255) . "";
@@ -28,8 +28,10 @@ class IndexController extends Controller
         curl_setopt($curl, CURLOPT_TIMEOUT, 30);
         curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($curl, CURLOPT_REFERER, $referer);
-        curl_setopt($curl, CURLOPT_POST, 1);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+        if ($type = 'post') {
+            curl_setopt($curl, CURLOPT_POST, 1);
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+        }
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $result = curl_exec($curl);
         curl_close($curl);
@@ -40,7 +42,8 @@ class IndexController extends Controller
      * @return \Illuminate\Http\JsonResponse
      * 查询准考证
      */
-    public function Tickets()
+    public
+    function Tickets()
     {
         $input = Input::all();
         if (!isset($input['xm']) || empty($input['xm']) || !isset($input['sfz']) || empty($input['sfz']) || !isset($input['jb']) || empty($input['jb'])) {
@@ -61,7 +64,7 @@ class IndexController extends Controller
                 'action' => '',
                 'params' => json_encode($data)
             );
-            $result = $this->curl($url, $post, $referers);
+            $result = $this->curl($url, 'post', $post, $referers);
             $res = json_decode($result, true);
             if (isset($res['ks_bh'])) {
                 return response()
