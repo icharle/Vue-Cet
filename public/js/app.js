@@ -46228,7 +46228,7 @@ exports = module.exports = __webpack_require__(10)(false);
 
 
 // module
-exports.push([module.i, "\n.ticket {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  max-height: 100%;\n}\n.ticket .head {\n  width: 100%;\n  height: 25rem;\n}\n.ticket .head img {\n  width: 100%;\n  height: 100%;\n  min-width: 100%;\n  min-height: 100%;\n}\n.ticket .content {\n  width: 100%;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.ticket .content .title {\n  display: inherit;\n  text-align: center;\n  font-size: 2.3rem;\n  line-height: 2.3rem;\n}\n.ticket .content .getticket {\n  width: 100%;\n}\n.ticket .content .getticket .input-wrap {\n  width: 18rem;\n  position: relative;\n  padding: 0.5rem 0.6rem 0.5rem 3.4rem;\n  margin: 2rem auto 0.5rem auto;\n  border: 0.08rem solid #ccc;\n  border-radius: 0.5rem;\n}\n.ticket .content .getticket .input-wrap span {\n  position: absolute;\n  top: 1.2rem;\n  left: 1rem;\n  font-size: 2.2rem;\n}\n.ticket .content .getticket .input-wrap input {\n  width: 100%;\n  line-height: 3.5rem;\n  font-size: 1.4rem;\n  border-width: 0;\n}\n.ticket .content .getticket .radio-wrap {\n  width: 20rem;\n  margin: 2rem auto 1rem auto;\n}\n.ticket .content .getticket .radio-wrap label input {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  border: 0;\n  outline: 0 !important;\n  vertical-align: middle;\n}\n.ticket .content .getticket .radio-wrap label span {\n  padding-left: 0.4rem;\n  font-size: 1.3rem;\n  vertical-align: middle;\n}\n.ticket .content .getticket .radio-wrap label .radio:after {\n  content: \"\";\n  display: block;\n  width: 1.8rem;\n  height: 1.8rem;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 1.8rem;\n  font-size: 1.3rem;\n  color: #09f;\n  border: 0.2rem solid #ddd;\n  background-color: #fff;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.ticket .content .getticket .radio-wrap label .radio:checked:after {\n  content: \"\\2713\";\n  border-color: #09f;\n  -webkit-transition: all 0.3s ease-in-out;\n  transition: all 0.3s ease-in-out;\n}\n.ticket .content .getticket .btn {\n  margin: 3rem auto 0rem auto;\n  width: 19rem;\n  height: 3rem;\n  line-height: 3rem;\n  text-align: center;\n  border: none;\n  font-size: 2rem;\n  color: #fff;\n  border-radius: 0.5rem;\n  background-color: #636b6f;\n}\n.ticket .footer {\n  width: 100%;\n  height: 2rem;\n  line-height: 2rem;\n  text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n.ticket {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  max-height: 100%;\n}\n.ticket .head {\n  width: 100%;\n  height: 25rem;\n}\n.ticket .head img {\n  width: 100%;\n  height: 100%;\n  min-width: 100%;\n  min-height: 100%;\n}\n.ticket .content {\n  width: 100%;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.ticket .content .title {\n  display: inherit;\n  text-align: center;\n  font-size: 2.3rem;\n  line-height: 2.3rem;\n}\n.ticket .content .getticket {\n  width: 100%;\n}\n.ticket .content .getticket .input-wrap {\n  width: 18rem;\n  position: relative;\n  padding: 0.5rem 0.6rem 0.5rem 3.4rem;\n  margin: 2rem auto 0.5rem auto;\n  border: 0.08rem solid #ccc;\n  border-radius: 0.5rem;\n}\n.ticket .content .getticket .input-wrap span {\n  position: absolute;\n  top: 1.2rem;\n  left: 1rem;\n  font-size: 2.2rem;\n}\n.ticket .content .getticket .input-wrap input {\n  width: 100%;\n  line-height: 3.5rem;\n  font-size: 1.4rem;\n  border-width: 0;\n}\n.ticket .content .getticket .radio-wrap {\n  width: 20rem;\n  margin: 2rem auto 1rem auto;\n}\n.ticket .content .getticket .radio-wrap label input {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  border: 0;\n  outline: 0 !important;\n  vertical-align: middle;\n}\n.ticket .content .getticket .radio-wrap label span {\n  padding-left: 0.4rem;\n  font-size: 1.3rem;\n  vertical-align: middle;\n}\n.ticket .content .getticket .radio-wrap label .radio:after {\n  content: \"\";\n  display: block;\n  width: 1.8rem;\n  height: 1.8rem;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 1.8rem;\n  font-size: 1.3rem;\n  color: #09f;\n  border: 0.2rem solid #ddd;\n  background-color: #fff;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.ticket .content .getticket .radio-wrap label .radio:checked:after {\n  content: \"\\2713\";\n  border-color: #09f;\n  -webkit-transition: all 0.3s ease-in-out;\n  transition: all 0.3s ease-in-out;\n}\n.ticket .content .getticket .btn {\n  margin: 3rem auto 0rem auto;\n  width: 19rem;\n  height: 3rem;\n  line-height: 3rem;\n  text-align: center;\n  border: none;\n  font-size: 2rem;\n  color: #fff;\n  border-radius: 0.5rem;\n  background-color: #636b6f;\n}\n.ticket .footer {\n  width: 100%;\n  height: 2rem;\n  line-height: 2rem;\n  text-align: center;\n}\n.ticket .error {\n  position: fixed;\n  top: 35%;\n  left: 15%;\n  width: 70%;\n  height: 18.5rem;\n  z-index: 100;\n  border-radius: 0.5rem;\n  overflow: hidden;\n  display: inline-grid;\n  background: #636b6f;\n}\n.ticket .error .icon-error {\n  width: 4rem;\n  height: 4rem;\n  border-radius: 50%;\n  border: 0.3rem solid #f00;\n  font-size: 3rem;\n  color: #f00;\n  line-height: 4rem;\n  text-align: center;\n  margin: 1rem auto 0.5rem auto;\n}\n.ticket .error .err-msg {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #fff;\n  text-align: center;\n}\n.ticket .error .err-btn {\n  width: 70%;\n  height: 3rem;\n  line-height: 3rem;\n  border-radius: 0.5rem;\n  text-align: center;\n  font-size: 2rem;\n  color: #fff;\n  background-color: #f00;\n  margin: 1.5rem auto 0rem auto;\n}\n", ""]);
 
 // exports
 
@@ -46272,14 +46272,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
             xm: '',
             sfz: '',
-            submitBtn: '查 询'
+            submitBtn: '查 询',
+            errors: false
         };
+    },
+
+    methods: {
+        error: function error() {
+            this.errors = !this.errors;
+        }
     }
 });
 
@@ -46354,11 +46366,46 @@ var render = function() {
         _vm._v(" "),
         _vm._m(3),
         _vm._v(" "),
-        _c("div", { staticClass: "btn" }, [_vm._v(_vm._s(_vm.submitBtn))])
+        _c(
+          "div",
+          {
+            staticClass: "btn",
+            on: {
+              click: function($event) {
+                _vm.error()
+              }
+            }
+          },
+          [_vm._v(_vm._s(_vm.submitBtn))]
+        )
       ])
     ]),
     _vm._v(" "),
-    _vm._m(4)
+    _vm._m(4),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.errors,
+            expression: "errors"
+          }
+        ],
+        staticClass: "error"
+      },
+      [
+        _vm._m(5),
+        _vm._v(" "),
+        _c("div", { staticClass: "err-msg" }, [
+          _vm._v("查询失败，未找到你的准考证")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "err-btn" }, [_vm._v("确定")])
+      ]
+    )
   ])
 }
 var staticRenderFns = [
@@ -46416,6 +46463,14 @@ var staticRenderFns = [
         ]),
         _vm._v(". All rights reserved.")
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "icon-error" }, [
+      _c("i", { staticClass: "icon-cross" })
     ])
   }
 ]

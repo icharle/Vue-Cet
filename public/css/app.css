@@ -225,8 +225,8 @@ body {
 
 @font-face {
   font-family: 'cet-icon';
-  src: url(/fonts/cet-icon.eot?cd82334aa159988638aa62d0c28ea7a5);
-  src: url(/fonts/cet-icon.eot?cd82334aa159988638aa62d0c28ea7a5) format("embedded-opentype"), url(/fonts/cet-icon.ttf?f362fcdb2e8853e2e454411e11ca6d8f) format("truetype"), url(/fonts/cet-icon.woff?33fe2ddcde80a863c5086bcd2be63386) format("woff"), url(/fonts/cet-icon.svg?cefb0cb934b60a6d9ef2b98517b04d23) format("svg");
+  src: url(/fonts/cet-icon.eot?18ba98dad89a27b60e4cf326da42e465);
+  src: url(/fonts/cet-icon.eot?18ba98dad89a27b60e4cf326da42e465) format("embedded-opentype"), url(/fonts/cet-icon.ttf?405936569d4085e4e1aca6bab124f6af) format("truetype"), url(/fonts/cet-icon.woff?abf46b3b96a03c217a2a1323873fe2e6) format("woff"), url(/fonts/cet-icon.svg?96dbcfe2de91ab9cee1f727f22552d21) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -252,5 +252,9 @@ body {
 
 .icon-user:before {
   content: "\E971";
+}
+
+.icon-cross:before {
+  content: "\EA0F";
 }
 

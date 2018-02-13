@@ -20,13 +20,18 @@
                 </div>
                 <div class="radio-wrap">
                     <label><input type="radio" class="radio" name="type" value="1" checked/><span>四级</span></label>
-                    <label><input type="radio" class="radio" name="type" value="2" /><span>六级</span></label>
+                    <label><input type="radio" class="radio" name="type" value="2"/><span>六级</span></label>
                 </div>
-                <div class="btn">{{submitBtn}}</div>
+                <div class="btn"  @click="error()">{{submitBtn}}</div>
             </form>
         </div>
         <div class="footer">
             <p>Copyright © 2018 <a href="https://icharle.com">Icharle</a>. All rights reserved.</p>
+        </div>
+        <div class="error" v-show="errors">
+            <div class="icon-error"><i class="icon-cross"></i></div>
+            <div class="err-msg">查询失败，未找到你的准考证</div>
+            <div class="err-btn">确定</div>
         </div>
     </div>
 </template>
@@ -37,7 +42,13 @@
             return {
                 xm: '',
                 sfz: '',
-                submitBtn: '查 询'
+                submitBtn: '查 询',
+                errors: false
+            }
+        },
+        methods: {
+            error(){
+                this.errors = !this.errors
             }
         }
     }
@@ -134,4 +145,40 @@
             height 2rem
             line-height 2rem
             text-align center
+        .error
+            position fixed
+            top: 35%
+            left 15%
+            width 70%
+            height 18.5rem
+            z-index 100
+            border-radius 0.5rem
+            overflow hidden
+            display inline-grid
+            background #636b6f
+            .icon-error
+                width 4rem
+                height 4rem
+                border-radius 50%
+                border 0.3rem solid red
+                font-size 3rem
+                color red
+                line-height 4rem
+                text-align center
+                margin 1rem auto 0.5rem auto
+            .err-msg
+                font-size 1.5rem
+                font-weight bold
+                color #ffffff
+                text-align center
+            .err-btn
+                width 70%
+                height 3rem
+                line-height 3rem
+                border-radius 0.5rem
+                text-align center
+                font-size 2rem
+                color #ffffff
+                background-color red
+                margin 1.5rem auto 0rem auto
 </style>
