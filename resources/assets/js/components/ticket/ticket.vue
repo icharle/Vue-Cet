@@ -59,7 +59,7 @@
         display flex
         flex-direction column
         height 100%
-        max-height 100%
+        min-height 100%
         .head
             width 100%
             height 25rem
@@ -71,6 +71,7 @@
         .content
             width 100%
             flex 1
+            -webkit-flex 1
             .title
                 display inherit
                 text-align center
@@ -154,7 +155,6 @@
             z-index 100
             border-radius 0.5rem
             overflow hidden
-            display inline-grid
             background #636b6f
             .icon-error
                 width 4rem
@@ -170,15 +170,18 @@
                 font-size 1.5rem
                 font-weight bold
                 color #ffffff
+                padding-top 2.5rem
                 text-align center
             .err-btn
                 width 70%
                 height 3rem
+                position absolute
+                bottom 1rem
+                left 15%
                 line-height 3rem
                 border-radius 0.5rem
                 text-align center
                 font-size 2rem
                 color #ffffff
                 background-color red
-                margin 1.5rem auto 0rem auto
 </style>
