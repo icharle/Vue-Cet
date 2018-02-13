@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import check from '../components/check/check.vue'
+import ticket from '../components/ticket/ticket.vue'
 
 Vue.use(Router)
 
@@ -8,8 +8,8 @@ Vue.use(Router)
 export default new Router({
     routes: [
         {
-            path: '/check',
-            component: check
+            path: '/',
+            component: ticket
         }
     ]
 })

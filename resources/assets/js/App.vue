@@ -1,18 +1,11 @@
 <template>
-    <div>
-        <h1>Hello, {{ msg }}!</h1>
+    <div style="height: 100%">
         <router-view></router-view>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
-    export default {
-        data() {
-            return {
-                msg: 'Vue'
-            }
-        }
-    }
+    export default {}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
