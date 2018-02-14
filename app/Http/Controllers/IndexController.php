@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use PHPUnit\Framework\Error\Notice;
+use Whoops\Exception\ErrorException;
 
 class IndexController extends Controller
 {
@@ -104,6 +106,13 @@ class IndexController extends Controller
             $referers = 'http://www.chsi.com.cn/cet/';
             $result = $this->curl($url, 'get', '', $referers);
             preg_match_all('/<table[^>]+>(.*)<\/table>/isU', $result, $matches);
+            if (isset($matches)){
+                return response()
+                    ->json([
+                        'status' => 500,
+                        'msg' => '服务暂不可用！'
+                    ]);
+            }
             preg_match_all('/(>)(.*?)(<)/s', $matches[0][1], $matches);
             $search = ['<', '>', '：', chr(13) . chr(10)];
             $replaceRes = str_replace($search, '', $matches[0]);
@@ -113,8 +122,7 @@ class IndexController extends Controller
             foreach (array_filter($arr) as $value) {
                 $cetScores[] = $value;
             }
-
-            if ($cetScores[16]) {
+            if (isset($cetScores[16])) {
                 return response()
                     ->json([
                         'status' => 200,

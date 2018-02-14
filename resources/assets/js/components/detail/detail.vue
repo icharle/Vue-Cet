@@ -15,6 +15,7 @@
             <div class="details">
                 <label>考生姓名:<span>{{xm}}</span></label>
                 <label>准考证号:<span>{{zkz}}</span></label>
+                <label>考生学校:<span>{{xx}}</span></label>
                 <div class="icon" :class=" (this.zf >= 425) ? 'pass' : 'loser' "></div>
             </div>
             <div class="score">
@@ -42,6 +43,11 @@
                 </div>
             </div>
         </div>
+        <div class="error" v-show="errors">
+            <div class="icon-error"><i class="icon-cross"></i></div>
+            <div class="err-msg">查询服务暂不可用！<br> 正跳转到官网！</div>
+            <div class="err-btn" @click="error()">确定</div>
+        </div>
     </div>
 </template>
 
@@ -55,6 +61,7 @@
                 xm: '',     //姓名
                 sfz: '',    //身份证
                 zkz: '',    //准考证
+                xx: ' ',    //考生学校
                 zf: ' ',   //总分
                 tl: ' ',   //听力35%
                 yd: ' ',   //阅读35%
@@ -62,7 +69,8 @@
                 submitBtn: '查询成绩',    //按钮
                 sScore: '',         //服务器返回值
                 turnScore: false,    //查询按钮
-                score: ''           //处理过的分数(听力、阅读、写作及翻译)
+                score: '',           //处理过的分数(听力、阅读、写作及翻译)
+                errors: false    //错误提示
             }
         },
         mounted: function () {
@@ -78,7 +86,7 @@
         },
         watch: {
             sScore: function () {
-                console.log(store.get('sScore'))
+                this.dealscore(store.get(sScore))
             }
         },
         computed: {
@@ -104,6 +112,10 @@
             }
         },
         methods: {
+            error() {
+                this.errors = !this.errors
+                window.location.href = 'http://www.chsi.com.cn/cet/'
+            },
             showScore() {
                 this.turnScore = !this.turnScore
             },
@@ -116,6 +128,10 @@
                     let data = response.data
                     if (data.status === 403 || data.status === 404) {
                         this.submitBtn = '查 询'
+                    } else if (data.status === 500) {
+                        this.submitBtn = '查 询'
+                        this.errors = !this.errors
+//                        window.location.href = 'http://www.chsi.com.cn/cet/'
                     } else if (data.status === 200) {
                         this.submitBtn = '查 询'
                         this.showScore()
@@ -128,6 +144,7 @@
                 });
             },
             dealscore(res) {
+                this.xx = res.school
                 let wrScore = res.written
                 this.zf = wrScore.score
                 this.tl = wrScore.listening
@@ -263,4 +280,43 @@
                     background lightskyblue
                 .round-conner
                     height 1rem
+    .error
+        position fixed
+        top: 35%
+        left 15%
+        width 70%
+        height 18.5rem
+        z-index 100
+        border-radius 0.5rem
+        overflow hidden
+        background #636b6f
+        .icon-error
+            width 4rem
+            height 4rem
+            border-radius 50%
+            border 0.3rem solid red
+            font-size 3rem
+            color red
+            line-height 4rem
+            text-align center
+            margin 1rem auto 0.5rem auto
+        .err-msg
+            font-size 1.5rem
+            font-weight bold
+            line-height 2rem
+            color #ffffff
+            padding-top 2.5rem
+            text-align center
+        .err-btn
+            width 70%
+            height 3rem
+            position absolute
+            bottom 1rem
+            left 15%
+            line-height 3rem
+            border-radius 0.5rem
+            text-align center
+            font-size 2rem
+            color #ffffff
+            background-color red
 </style>

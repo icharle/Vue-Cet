@@ -67,7 +67,7 @@
                         this.ticket = data.msg
                         this.submitBtn = '查 询'
                         store.set('ticket',this.ticket)
-//                        this.$router.push({name: 'detail', params: {ticket: this.ticket}})
+                        this.$router.push({name: 'detail', params: {ticket: this.ticket}})
 //                        this.$router.push({name: 'detail', query: {ticket: this.ticket}})
                     }
                 }).catch(error => {

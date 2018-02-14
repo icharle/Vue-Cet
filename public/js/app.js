@@ -46360,7 +46360,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     _this.ticket = data.msg;
                     _this.submitBtn = '查 询';
                     __WEBPACK_IMPORTED_MODULE_0__common_store__["a" /* default */].set('ticket', _this.ticket);
-                    //                        this.$router.push({name: 'detail', params: {ticket: this.ticket}})
+                    _this.$router.push({ name: 'detail', params: { ticket: _this.ticket } });
                     //                        this.$router.push({name: 'detail', query: {ticket: this.ticket}})
                 }
             }).catch(function (error) {
@@ -46686,7 +46686,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n.header {\n  width: 100%;\n  height: 12rem;\n  margin: 0 auto;\n  background-image: url(" + escape(__webpack_require__(60)) + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.ticket-box {\n  width: 80%;\n  position: relative;\n  top: 2rem;\n  margin: 0 auto;\n  border: 0.2rem dashed #d9dde1;\n  color: #93999f;\n  font-size: 2rem;\n  border-radius: 0.5rem;\n}\n.ticket-box:before {\n  content: attr(title);\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  -webkit-transform: translate(-50%, -50%);\n  padding: 0 1rem;\n  background-color: #fff;\n}\n.ticket-box .details {\n  font-size: 1rem;\n  margin: 2.5rem auto 0rem auto;\n}\n.ticket-box .details label {\n  width: 90%;\n  display: block;\n  color: #87cefa;\n  line-height: 2.5rem;\n  margin: 0 auto 2.5rem auto;\n}\n.ticket-box .details span {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #93999f;\n  padding-left: 1.5rem;\n}\n.clickScore {\n  width: 80%;\n  position: relative;\n  top: 4.5rem;\n  margin: 0 auto;\n}\n.clickScore .btn {\n  width: 75%;\n  height: 3rem;\n  background-color: #87cefa;\n  margin: 0 auto;\n  border-radius: 0.5rem;\n  color: #fff;\n  line-height: 3rem;\n  font-size: 2rem;\n  text-align: center;\n}\n.score-box {\n  width: 80%;\n  position: relative;\n  top: 4.5rem;\n  margin: 0 auto;\n  border: 0.2rem dashed #d9dde1;\n  color: #93999f;\n  font-size: 2rem;\n  border-radius: 0.5rem;\n}\n.score-box:before {\n  content: attr(title);\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  -webkit-transform: translate(-50%, -50%);\n  padding: 0 1rem;\n  background-color: #fff;\n}\n.score-box .details {\n  font-size: 1rem;\n  margin: 2.5rem auto 0rem auto;\n}\n.score-box .details label {\n  width: 90%;\n  display: block;\n  color: #87cefa;\n  margin: 0 auto 2rem auto;\n}\n.score-box .details span {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #93999f;\n  padding-left: 1.5rem;\n}\n.score-box .details .icon {\n  position: absolute;\n  top: -0.2rem;\n  right: -0.2rem;\n  width: 4.8rem;\n  height: 3.65rem;\n  background-size: 4.8rem 3.65rem;\n  background-repeat: no-repeat;\n}\n.score-box .details .icon.pass {\n  background-image: url(" + escape(__webpack_require__(61)) + ");\n}\n@media (-webkit-min-device-piexel-ratio: 2), (min-device-pixel-ratio: 2) {\n.score-box .details .icon.pass {\n    background-image: url(" + escape(__webpack_require__(62)) + ");\n}\n}\n.score-box .details .icon.loser {\n  background-image: url(" + escape(__webpack_require__(63)) + ");\n}\n@media (-webkit-min-device-piexel-ratio: 2), (min-device-pixel-ratio: 2) {\n.score-box .details .icon.loser {\n    background-image: url(" + escape(__webpack_require__(64)) + ");\n}\n}\n.score-box .score {\n  width: 100%;\n  height: 3rem;\n  padding-bottom: 1rem;\n}\n.score-box .score label {\n  width: 85%;\n  font-size: 1.5rem;\n  color: #000;\n  display: block;\n  margin: 0 auto;\n  font-weight: bold;\n  padding-bottom: 0.5rem;\n}\n.score-box .score span {\n  float: right;\n  font-weight: bold;\n  color: #87cefa;\n}\n.score-box .score .progress {\n  width: 85%;\n  background: #ddd;\n  margin: 0 auto;\n}\n.score-box .score .progress .curRate {\n  width: 0;\n  background: #87cefa;\n}\n.score-box .score .progress .round-conner {\n  height: 1rem;\n}\n", ""]);
+exports.push([module.i, "\n.header {\n  width: 100%;\n  height: 12rem;\n  margin: 0 auto;\n  background-image: url(" + escape(__webpack_require__(60)) + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.ticket-box {\n  width: 80%;\n  position: relative;\n  top: 2rem;\n  margin: 0 auto;\n  border: 0.2rem dashed #d9dde1;\n  color: #93999f;\n  font-size: 2rem;\n  border-radius: 0.5rem;\n}\n.ticket-box:before {\n  content: attr(title);\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  -webkit-transform: translate(-50%, -50%);\n  padding: 0 1rem;\n  background-color: #fff;\n}\n.ticket-box .details {\n  font-size: 1rem;\n  margin: 2.5rem auto 0rem auto;\n}\n.ticket-box .details label {\n  width: 90%;\n  display: block;\n  color: #87cefa;\n  line-height: 2.5rem;\n  margin: 0 auto 2.5rem auto;\n}\n.ticket-box .details span {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #93999f;\n  padding-left: 1.5rem;\n}\n.clickScore {\n  width: 80%;\n  position: relative;\n  top: 4.5rem;\n  margin: 0 auto;\n}\n.clickScore .btn {\n  width: 75%;\n  height: 3rem;\n  background-color: #87cefa;\n  margin: 0 auto;\n  border-radius: 0.5rem;\n  color: #fff;\n  line-height: 3rem;\n  font-size: 2rem;\n  text-align: center;\n}\n.score-box {\n  width: 80%;\n  position: relative;\n  top: 4.5rem;\n  margin: 0 auto;\n  border: 0.2rem dashed #d9dde1;\n  color: #93999f;\n  font-size: 2rem;\n  border-radius: 0.5rem;\n}\n.score-box:before {\n  content: attr(title);\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  -webkit-transform: translate(-50%, -50%);\n  padding: 0 1rem;\n  background-color: #fff;\n}\n.score-box .details {\n  font-size: 1rem;\n  margin: 2.5rem auto 0rem auto;\n}\n.score-box .details label {\n  width: 90%;\n  display: block;\n  color: #87cefa;\n  margin: 0 auto 2rem auto;\n}\n.score-box .details span {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #93999f;\n  padding-left: 1.5rem;\n}\n.score-box .details .icon {\n  position: absolute;\n  top: -0.2rem;\n  right: -0.2rem;\n  width: 4.8rem;\n  height: 3.65rem;\n  background-size: 4.8rem 3.65rem;\n  background-repeat: no-repeat;\n}\n.score-box .details .icon.pass {\n  background-image: url(" + escape(__webpack_require__(61)) + ");\n}\n@media (-webkit-min-device-piexel-ratio: 2), (min-device-pixel-ratio: 2) {\n.score-box .details .icon.pass {\n    background-image: url(" + escape(__webpack_require__(62)) + ");\n}\n}\n.score-box .details .icon.loser {\n  background-image: url(" + escape(__webpack_require__(63)) + ");\n}\n@media (-webkit-min-device-piexel-ratio: 2), (min-device-pixel-ratio: 2) {\n.score-box .details .icon.loser {\n    background-image: url(" + escape(__webpack_require__(64)) + ");\n}\n}\n.score-box .score {\n  width: 100%;\n  height: 3rem;\n  padding-bottom: 1rem;\n}\n.score-box .score label {\n  width: 85%;\n  font-size: 1.5rem;\n  color: #000;\n  display: block;\n  margin: 0 auto;\n  font-weight: bold;\n  padding-bottom: 0.5rem;\n}\n.score-box .score span {\n  float: right;\n  font-weight: bold;\n  color: #87cefa;\n}\n.score-box .score .progress {\n  width: 85%;\n  background: #ddd;\n  margin: 0 auto;\n}\n.score-box .score .progress .curRate {\n  width: 0;\n  background: #87cefa;\n}\n.score-box .score .progress .round-conner {\n  height: 1rem;\n}\n.error {\n  position: fixed;\n  top: 35%;\n  left: 15%;\n  width: 70%;\n  height: 18.5rem;\n  z-index: 100;\n  border-radius: 0.5rem;\n  overflow: hidden;\n  background: #636b6f;\n}\n.error .icon-error {\n  width: 4rem;\n  height: 4rem;\n  border-radius: 50%;\n  border: 0.3rem solid #f00;\n  font-size: 3rem;\n  color: #f00;\n  line-height: 4rem;\n  text-align: center;\n  margin: 1rem auto 0.5rem auto;\n}\n.error .err-msg {\n  font-size: 1.5rem;\n  font-weight: bold;\n  line-height: 2rem;\n  color: #fff;\n  padding-top: 2.5rem;\n  text-align: center;\n}\n.error .err-btn {\n  width: 70%;\n  height: 3rem;\n  position: absolute;\n  bottom: 1rem;\n  left: 15%;\n  line-height: 3rem;\n  border-radius: 0.5rem;\n  text-align: center;\n  font-size: 2rem;\n  color: #fff;\n  background-color: #f00;\n}\n", ""]);
 
 // exports
 
@@ -46775,6 +46775,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -46785,6 +46791,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             xm: '', //姓名
             sfz: '', //身份证
             zkz: '', //准考证
+            xx: ' ', //考生学校
             zf: ' ', //总分
             tl: ' ', //听力35%
             yd: ' ', //阅读35%
@@ -46792,7 +46799,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             submitBtn: '查询成绩', //按钮
             sScore: '', //服务器返回值
             turnScore: false, //查询按钮
-            score: '' //处理过的分数(听力、阅读、写作及翻译)
+            score: '', //处理过的分数(听力、阅读、写作及翻译)
+            errors: false //错误提示
         };
     },
 
@@ -46808,9 +46816,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         });
     },
     watch: {
-        sScore: function sScore() {
-            console.log(__WEBPACK_IMPORTED_MODULE_0__common_store__["a" /* default */].get('sScore'));
-        }
+        sScore: function (_sScore) {
+            function sScore() {
+                return _sScore.apply(this, arguments);
+            }
+
+            sScore.toString = function () {
+                return _sScore.toString();
+            };
+
+            return sScore;
+        }(function () {
+            this.dealscore(__WEBPACK_IMPORTED_MODULE_0__common_store__["a" /* default */].get(sScore));
+        })
     },
     computed: {
         lezf: function lezf() {
@@ -46835,6 +46853,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         }
     },
     methods: {
+        error: function error() {
+            this.errors = !this.errors;
+            window.location.href = 'http://www.chsi.com.cn/cet/';
+        },
         showScore: function showScore() {
             this.turnScore = !this.turnScore;
         },
@@ -46849,6 +46871,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 var data = response.data;
                 if (data.status === 403 || data.status === 404) {
                     _this.submitBtn = '查 询';
+                } else if (data.status === 500) {
+                    _this.submitBtn = '查 询';
+                    _this.errors = !_this.errors;
+                    //                        window.location.href = 'http://www.chsi.com.cn/cet/'
                 } else if (data.status === 200) {
                     _this.submitBtn = '查 询';
                     _this.showScore();
@@ -46861,6 +46887,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             });
         },
         dealscore: function dealscore(res) {
+            this.xx = res.school;
             var wrScore = res.written;
             this.zf = wrScore.score;
             this.tl = wrScore.listening;
@@ -46948,6 +46975,11 @@ var render = function() {
             _c("span", [_vm._v(_vm._s(_vm.zkz))])
           ]),
           _vm._v(" "),
+          _c("label", [
+            _vm._v("考生学校:"),
+            _c("span", [_vm._v(_vm._s(_vm.xx))])
+          ]),
+          _vm._v(" "),
           _c("div", {
             staticClass: "icon",
             class: this.zf >= 425 ? "pass" : "loser"
@@ -46986,10 +47018,62 @@ var render = function() {
           ])
         ])
       ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.errors,
+            expression: "errors"
+          }
+        ],
+        staticClass: "error"
+      },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "err-btn",
+            on: {
+              click: function($event) {
+                _vm.error()
+              }
+            }
+          },
+          [_vm._v("确定")]
+        )
+      ]
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "icon-error" }, [
+      _c("i", { staticClass: "icon-cross" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "err-msg" }, [
+      _vm._v("查询服务暂不可用！"),
+      _c("br"),
+      _vm._v(" 正跳转到官网！")
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
