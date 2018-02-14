@@ -1,8 +1,6 @@
 <template>
     <div class="ticket">
-        <div class="head">
-            <img src="/img/banner.jpg">
-        </div>
+        <div class="header"></div>
         <div class="content">
             <span class="title">四六级准考证查询</span>
             <form class="getticket">
@@ -60,14 +58,12 @@
         flex-direction column
         height 100%
         min-height 100%
-        .head
+        .header
             width 100%
             height 25rem
-            img
-                width 100%
-                height 100%
-                min-width 100%
-                min-height 100%
+            background-image url(banner.jpg)
+            background-repeat no-repeat
+            background-size 100% 100%
         .content
             width 100%
             flex 1

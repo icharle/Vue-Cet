@@ -70,7 +70,7 @@
 "use strict";
 
 
-var bind = __webpack_require__(6);
+var bind = __webpack_require__(5);
 var isBuffer = __webpack_require__(22);
 
 /*global toString:true*/
@@ -424,10 +424,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(8);
+    adapter = __webpack_require__(7);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(8);
+    adapter = __webpack_require__(7);
   }
   return adapter;
 }
@@ -498,92 +498,10 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-module.exports = function(useSourceMap) {
-	var list = [];
-
-	// return the list of modules as css string
-	list.toString = function toString() {
-		return this.map(function (item) {
-			var content = cssWithMappingToString(item, useSourceMap);
-			if(item[2]) {
-				return "@media " + item[2] + "{" + content + "}";
-			} else {
-				return content;
-			}
-		}).join("");
-	};
-
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-	var content = item[1] || '';
-	var cssMapping = item[3];
-	if (!cssMapping) {
-		return content;
-	}
-
-	if (useSourceMap && typeof btoa === 'function') {
-		var sourceMapping = toComment(cssMapping);
-		var sourceURLs = cssMapping.sources.map(function (source) {
-			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
-		});
-
-		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-	}
-
-	return [content].join('\n');
-}
-
-// Adapted from convert-source-map (MIT)
-function toComment(sourceMap) {
-	// eslint-disable-next-line no-undef
-	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-
-	return '/*# ' + data + ' */';
-}
-
-
-/***/ }),
-/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -811,7 +729,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -920,7 +838,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -938,7 +856,7 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -1128,7 +1046,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1139,7 +1057,7 @@ var settle = __webpack_require__(25);
 var buildURL = __webpack_require__(27);
 var parseHeaders = __webpack_require__(28);
 var isURLSameOrigin = __webpack_require__(29);
-var createError = __webpack_require__(9);
+var createError = __webpack_require__(8);
 var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(30);
 
 module.exports = function xhrAdapter(config) {
@@ -1315,7 +1233,7 @@ module.exports = function xhrAdapter(config) {
 
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1340,7 +1258,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1352,7 +1270,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1378,7 +1296,7 @@ module.exports = Cancel;
 
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12195,6 +12113,88 @@ module.exports = Vue$3;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(39).setImmediate))
 
 /***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12208,7 +12208,7 @@ module.exports = __webpack_require__(59);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__App_vue__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__App_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__App_vue__);
@@ -42194,7 +42194,7 @@ module.exports = __webpack_require__(21);
 
 
 var utils = __webpack_require__(0);
-var bind = __webpack_require__(6);
+var bind = __webpack_require__(5);
 var Axios = __webpack_require__(23);
 var defaults = __webpack_require__(2);
 
@@ -42229,9 +42229,9 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(11);
+axios.Cancel = __webpack_require__(10);
 axios.CancelToken = __webpack_require__(37);
-axios.isCancel = __webpack_require__(10);
+axios.isCancel = __webpack_require__(9);
 
 // Expose all/spread
 axios.all = function all(promises) {
@@ -42384,7 +42384,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 "use strict";
 
 
-var createError = __webpack_require__(9);
+var createError = __webpack_require__(8);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -42819,7 +42819,7 @@ module.exports = InterceptorManager;
 
 var utils = __webpack_require__(0);
 var transformData = __webpack_require__(34);
-var isCancel = __webpack_require__(10);
+var isCancel = __webpack_require__(9);
 var defaults = __webpack_require__(2);
 var isAbsoluteURL = __webpack_require__(35);
 var combineURLs = __webpack_require__(36);
@@ -42979,7 +42979,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 "use strict";
 
 
-var Cancel = __webpack_require__(11);
+var Cancel = __webpack_require__(10);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -43328,7 +43328,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(7)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(6)))
 
 /***/ }),
 /* 41 */
@@ -43339,7 +43339,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(42)
 }
-var normalizeComponent = __webpack_require__(5)
+var normalizeComponent = __webpack_require__(4)
 /* script */
 var __vue_script__ = __webpack_require__(45)
 /* template */
@@ -43392,7 +43392,7 @@ var content = __webpack_require__(43);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(4)("ab1e092e", content, false, {});
+var update = __webpack_require__(3)("ab1e092e", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -43411,7 +43411,7 @@ if(false) {
 /* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(false);
+exports = module.exports = __webpack_require__(12)(false);
 // imports
 
 
@@ -43494,7 +43494,7 @@ if (false) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_ticket_ticket_vue__ = __webpack_require__(49);
@@ -46160,7 +46160,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(50)
 }
-var normalizeComponent = __webpack_require__(5)
+var normalizeComponent = __webpack_require__(4)
 /* script */
 var __vue_script__ = __webpack_require__(52)
 /* template */
@@ -46213,7 +46213,7 @@ var content = __webpack_require__(51);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(4)("797c948c", content, false, {});
+var update = __webpack_require__(3)("797c948c", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -46232,12 +46232,13 @@ if(false) {
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(false);
+var escape = __webpack_require__(61);
+exports = module.exports = __webpack_require__(12)(false);
 // imports
 
 
 // module
-exports.push([module.i, "\n.ticket {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  min-height: 100%;\n}\n.ticket .head {\n  width: 100%;\n  height: 25rem;\n}\n.ticket .head img {\n  width: 100%;\n  height: 100%;\n  min-width: 100%;\n  min-height: 100%;\n}\n.ticket .content {\n  width: 100%;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-flex: 1;\n}\n.ticket .content .title {\n  display: inherit;\n  text-align: center;\n  font-size: 2.3rem;\n  line-height: 2.3rem;\n}\n.ticket .content .getticket {\n  width: 100%;\n}\n.ticket .content .getticket .input-wrap {\n  width: 18rem;\n  position: relative;\n  padding: 0.5rem 0.6rem 0.5rem 3.4rem;\n  margin: 2rem auto 0.5rem auto;\n  border: 0.08rem solid #ccc;\n  border-radius: 0.5rem;\n}\n.ticket .content .getticket .input-wrap span {\n  position: absolute;\n  top: 1.2rem;\n  left: 1rem;\n  font-size: 2.2rem;\n}\n.ticket .content .getticket .input-wrap input {\n  width: 100%;\n  line-height: 3.5rem;\n  font-size: 1.4rem;\n  border-width: 0;\n}\n.ticket .content .getticket .radio-wrap {\n  width: 20rem;\n  margin: 2rem auto 1rem auto;\n}\n.ticket .content .getticket .radio-wrap label input {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  border: 0;\n  outline: 0 !important;\n  vertical-align: middle;\n}\n.ticket .content .getticket .radio-wrap label span {\n  padding-left: 0.4rem;\n  font-size: 1.3rem;\n  vertical-align: middle;\n}\n.ticket .content .getticket .radio-wrap label .radio:after {\n  content: \"\";\n  display: block;\n  width: 1.8rem;\n  height: 1.8rem;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 1.8rem;\n  font-size: 1.3rem;\n  color: #09f;\n  border: 0.2rem solid #ddd;\n  background-color: #fff;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.ticket .content .getticket .radio-wrap label .radio:checked:after {\n  content: \"\\2713\";\n  border-color: #09f;\n  -webkit-transition: all 0.3s ease-in-out;\n  transition: all 0.3s ease-in-out;\n}\n.ticket .content .getticket .btn {\n  margin: 3rem auto 0rem auto;\n  width: 19rem;\n  height: 3rem;\n  line-height: 3rem;\n  text-align: center;\n  border: none;\n  font-size: 2rem;\n  color: #fff;\n  border-radius: 0.5rem;\n  background-color: #636b6f;\n}\n.ticket .footer {\n  width: 100%;\n  height: 2rem;\n  line-height: 2rem;\n  text-align: center;\n}\n.ticket .error {\n  position: fixed;\n  top: 35%;\n  left: 15%;\n  width: 70%;\n  height: 18.5rem;\n  z-index: 100;\n  border-radius: 0.5rem;\n  overflow: hidden;\n  background: #636b6f;\n}\n.ticket .error .icon-error {\n  width: 4rem;\n  height: 4rem;\n  border-radius: 50%;\n  border: 0.3rem solid #f00;\n  font-size: 3rem;\n  color: #f00;\n  line-height: 4rem;\n  text-align: center;\n  margin: 1rem auto 0.5rem auto;\n}\n.ticket .error .err-msg {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #fff;\n  padding-top: 2.5rem;\n  text-align: center;\n}\n.ticket .error .err-btn {\n  width: 70%;\n  height: 3rem;\n  position: absolute;\n  bottom: 1rem;\n  left: 15%;\n  line-height: 3rem;\n  border-radius: 0.5rem;\n  text-align: center;\n  font-size: 2rem;\n  color: #fff;\n  background-color: #f00;\n}\n", ""]);
+exports.push([module.i, "\n.ticket {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  min-height: 100%;\n}\n.ticket .header {\n  width: 100%;\n  height: 25rem;\n  background-image: url(" + escape(__webpack_require__(73)) + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.ticket .content {\n  width: 100%;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-flex: 1;\n}\n.ticket .content .title {\n  display: inherit;\n  text-align: center;\n  font-size: 2.3rem;\n  line-height: 2.3rem;\n}\n.ticket .content .getticket {\n  width: 100%;\n}\n.ticket .content .getticket .input-wrap {\n  width: 18rem;\n  position: relative;\n  padding: 0.5rem 0.6rem 0.5rem 3.4rem;\n  margin: 2rem auto 0.5rem auto;\n  border: 0.08rem solid #ccc;\n  border-radius: 0.5rem;\n}\n.ticket .content .getticket .input-wrap span {\n  position: absolute;\n  top: 1.2rem;\n  left: 1rem;\n  font-size: 2.2rem;\n}\n.ticket .content .getticket .input-wrap input {\n  width: 100%;\n  line-height: 3.5rem;\n  font-size: 1.4rem;\n  border-width: 0;\n}\n.ticket .content .getticket .radio-wrap {\n  width: 20rem;\n  margin: 2rem auto 1rem auto;\n}\n.ticket .content .getticket .radio-wrap label input {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  border: 0;\n  outline: 0 !important;\n  vertical-align: middle;\n}\n.ticket .content .getticket .radio-wrap label span {\n  padding-left: 0.4rem;\n  font-size: 1.3rem;\n  vertical-align: middle;\n}\n.ticket .content .getticket .radio-wrap label .radio:after {\n  content: \"\";\n  display: block;\n  width: 1.8rem;\n  height: 1.8rem;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 1.8rem;\n  font-size: 1.3rem;\n  color: #09f;\n  border: 0.2rem solid #ddd;\n  background-color: #fff;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.ticket .content .getticket .radio-wrap label .radio:checked:after {\n  content: \"\\2713\";\n  border-color: #09f;\n  -webkit-transition: all 0.3s ease-in-out;\n  transition: all 0.3s ease-in-out;\n}\n.ticket .content .getticket .btn {\n  margin: 3rem auto 0rem auto;\n  width: 19rem;\n  height: 3rem;\n  line-height: 3rem;\n  text-align: center;\n  border: none;\n  font-size: 2rem;\n  color: #fff;\n  border-radius: 0.5rem;\n  background-color: #636b6f;\n}\n.ticket .footer {\n  width: 100%;\n  height: 2rem;\n  line-height: 2rem;\n  text-align: center;\n}\n.ticket .error {\n  position: fixed;\n  top: 35%;\n  left: 15%;\n  width: 70%;\n  height: 18.5rem;\n  z-index: 100;\n  border-radius: 0.5rem;\n  overflow: hidden;\n  background: #636b6f;\n}\n.ticket .error .icon-error {\n  width: 4rem;\n  height: 4rem;\n  border-radius: 50%;\n  border: 0.3rem solid #f00;\n  font-size: 3rem;\n  color: #f00;\n  line-height: 4rem;\n  text-align: center;\n  margin: 1rem auto 0.5rem auto;\n}\n.ticket .error .err-msg {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #fff;\n  padding-top: 2.5rem;\n  text-align: center;\n}\n.ticket .error .err-btn {\n  width: 70%;\n  height: 3rem;\n  position: absolute;\n  bottom: 1rem;\n  left: 15%;\n  line-height: 3rem;\n  border-radius: 0.5rem;\n  text-align: center;\n  font-size: 2rem;\n  color: #fff;\n  background-color: #f00;\n}\n", ""]);
 
 // exports
 
@@ -46248,8 +46249,6 @@ exports.push([module.i, "\n.ticket {\n  display: -webkit-box;\n  display: -ms-fl
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
 //
 //
 //
@@ -46313,14 +46312,14 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "ticket" }, [
-    _vm._m(0),
+    _c("div", { staticClass: "header" }),
     _vm._v(" "),
     _c("div", { staticClass: "content" }, [
       _c("span", { staticClass: "title" }, [_vm._v("四六级准考证查询")]),
       _vm._v(" "),
       _c("form", { staticClass: "getticket" }, [
         _c("div", { staticClass: "input-wrap" }, [
-          _vm._m(1),
+          _vm._m(0),
           _vm._v(" "),
           _c("div", { staticClass: "input-inner" }, [
             _c("input", {
@@ -46347,7 +46346,7 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "input-wrap" }, [
-          _vm._m(2),
+          _vm._m(1),
           _vm._v(" "),
           _c("div", { staticClass: "input-inner" }, [
             _c("input", {
@@ -46373,7 +46372,7 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _vm._m(3),
+        _vm._m(2),
         _vm._v(" "),
         _c(
           "div",
@@ -46390,7 +46389,7 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _vm._m(4),
+    _vm._m(3),
     _vm._v(" "),
     _c(
       "div",
@@ -46406,7 +46405,7 @@ var render = function() {
         staticClass: "error"
       },
       [
-        _vm._m(5),
+        _vm._m(4),
         _vm._v(" "),
         _c("div", { staticClass: "err-msg" }, [
           _vm._v("查询失败，未找到你的准考证")
@@ -46418,14 +46417,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "head" }, [
-      _c("img", { attrs: { src: "/img/banner.jpg" } })
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -46501,7 +46492,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(55)
 }
-var normalizeComponent = __webpack_require__(5)
+var normalizeComponent = __webpack_require__(4)
 /* script */
 var __vue_script__ = __webpack_require__(57)
 /* template */
@@ -46554,7 +46545,7 @@ var content = __webpack_require__(56);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(4)("5b4785d2", content, false, {});
+var update = __webpack_require__(3)("5b4785d2", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -46573,12 +46564,13 @@ if(false) {
 /* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(false);
+var escape = __webpack_require__(61);
+exports = module.exports = __webpack_require__(12)(false);
 // imports
 
 
 // module
-exports.push([module.i, "\n.header {\n  width: 100%;\n  height: 12rem;\n  margin: 0 auto;\n  background: url(\"/img/query.jpg\");\n  background-size: 100% 100%;\n}\n.ticket-box {\n  width: 80%;\n  position: relative;\n  top: 2rem;\n  margin: 0 auto;\n  border: 0.2rem dashed #d9dde1;\n  color: #93999f;\n  font-size: 2rem;\n  border-radius: 0.5rem;\n}\n.ticket-box:before {\n  content: attr(title);\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  -webkit-transform: translate(-50%, -50%);\n  padding: 0 1rem;\n  background-color: #fff;\n}\n.ticket-box .details {\n  font-size: 1rem;\n  margin: 2.5rem auto 0rem auto;\n}\n.ticket-box .details label {\n  width: 90%;\n  display: block;\n  color: #87cefa;\n  line-height: 2.5rem;\n  margin: 0 auto 2.5rem auto;\n}\n.ticket-box .details span {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #93999f;\n  padding-left: 1.5rem;\n}\n.clickScore {\n  width: 80%;\n  position: relative;\n  top: 4.5rem;\n  margin: 0 auto;\n}\n.clickScore .btn {\n  width: 75%;\n  height: 3rem;\n  background-color: #87cefa;\n  margin: 0 auto;\n  border-radius: 0.5rem;\n  color: #fff;\n  line-height: 3rem;\n  font-size: 2rem;\n  text-align: center;\n}\n.score-box {\n  width: 80%;\n  position: relative;\n  top: 4.5rem;\n  margin: 0 auto;\n  border: 0.2rem dashed #d9dde1;\n  color: #93999f;\n  font-size: 2rem;\n  border-radius: 0.5rem;\n}\n.score-box:before {\n  content: attr(title);\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  -webkit-transform: translate(-50%, -50%);\n  padding: 0 1rem;\n  background-color: #fff;\n}\n.score-box .details {\n  font-size: 1rem;\n  margin: 2.5rem auto 0rem auto;\n}\n.score-box .details label {\n  width: 90%;\n  display: block;\n  color: #87cefa;\n  margin: 0 auto 2rem auto;\n}\n.score-box .details span {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #93999f;\n  padding-left: 1.5rem;\n}\n.score-box .score {\n  width: 100%;\n  height: 3rem;\n  padding-bottom: 1rem;\n}\n.score-box .score label {\n  width: 85%;\n  font-size: 1.5rem;\n  color: #000;\n  display: block;\n  margin: 0 auto;\n  font-weight: bold;\n  padding-bottom: 0.5rem;\n}\n.score-box .score span {\n  float: right;\n  font-weight: bold;\n  color: #87cefa;\n}\n.score-box .score .progress {\n  width: 85%;\n  background: #ddd;\n  margin: 0 auto;\n}\n.score-box .score .progress .curRate {\n  width: 60%;\n  background: #87cefa;\n}\n.score-box .score .progress .round-conner {\n  height: 1rem;\n}\n", ""]);
+exports.push([module.i, "\n.header {\n  width: 100%;\n  height: 12rem;\n  margin: 0 auto;\n  background-image: url(" + escape(__webpack_require__(72)) + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.ticket-box {\n  width: 80%;\n  position: relative;\n  top: 2rem;\n  margin: 0 auto;\n  border: 0.2rem dashed #d9dde1;\n  color: #93999f;\n  font-size: 2rem;\n  border-radius: 0.5rem;\n}\n.ticket-box:before {\n  content: attr(title);\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  -webkit-transform: translate(-50%, -50%);\n  padding: 0 1rem;\n  background-color: #fff;\n}\n.ticket-box .details {\n  font-size: 1rem;\n  margin: 2.5rem auto 0rem auto;\n}\n.ticket-box .details label {\n  width: 90%;\n  display: block;\n  color: #87cefa;\n  line-height: 2.5rem;\n  margin: 0 auto 2.5rem auto;\n}\n.ticket-box .details span {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #93999f;\n  padding-left: 1.5rem;\n}\n.clickScore {\n  width: 80%;\n  position: relative;\n  top: 4.5rem;\n  margin: 0 auto;\n}\n.clickScore .btn {\n  width: 75%;\n  height: 3rem;\n  background-color: #87cefa;\n  margin: 0 auto;\n  border-radius: 0.5rem;\n  color: #fff;\n  line-height: 3rem;\n  font-size: 2rem;\n  text-align: center;\n}\n.score-box {\n  width: 80%;\n  position: relative;\n  top: 4.5rem;\n  margin: 0 auto;\n  border: 0.2rem dashed #d9dde1;\n  color: #93999f;\n  font-size: 2rem;\n  border-radius: 0.5rem;\n}\n.score-box:before {\n  content: attr(title);\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  -webkit-transform: translate(-50%, -50%);\n  padding: 0 1rem;\n  background-color: #fff;\n}\n.score-box .details {\n  font-size: 1rem;\n  margin: 2.5rem auto 0rem auto;\n}\n.score-box .details label {\n  width: 90%;\n  display: block;\n  color: #87cefa;\n  margin: 0 auto 2rem auto;\n}\n.score-box .details span {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #93999f;\n  padding-left: 1.5rem;\n}\n.score-box .details .icon {\n  position: absolute;\n  top: -0.2rem;\n  right: -0.2rem;\n  width: 4.8rem;\n  height: 3.65rem;\n  background-size: 4.8rem 3.65rem;\n  background-repeat: no-repeat;\n}\n.score-box .details .icon.pass {\n  background-image: url(" + escape(__webpack_require__(68)) + ");\n}\n@media (-webkit-min-device-piexel-ratio: 2), (min-device-pixel-ratio: 2) {\n.score-box .details .icon.pass {\n    background-image: url(" + escape(__webpack_require__(69)) + ");\n}\n}\n.score-box .details .icon.loser {\n  background-image: url(" + escape(__webpack_require__(70)) + ");\n}\n@media (-webkit-min-device-piexel-ratio: 2), (min-device-pixel-ratio: 2) {\n.score-box .details .icon.loser {\n    background-image: url(" + escape(__webpack_require__(71)) + ");\n}\n}\n.score-box .score {\n  width: 100%;\n  height: 3rem;\n  padding-bottom: 1rem;\n}\n.score-box .score label {\n  width: 85%;\n  font-size: 1.5rem;\n  color: #000;\n  display: block;\n  margin: 0 auto;\n  font-weight: bold;\n  padding-bottom: 0.5rem;\n}\n.score-box .score span {\n  float: right;\n  font-weight: bold;\n  color: #87cefa;\n}\n.score-box .score .progress {\n  width: 85%;\n  background: #ddd;\n  margin: 0 auto;\n}\n.score-box .score .progress .curRate {\n  width: 60%;\n  background: #87cefa;\n}\n.score-box .score .progress .round-conner {\n  height: 1rem;\n}\n", ""]);
 
 // exports
 
@@ -46589,6 +46581,7 @@ exports.push([module.i, "\n.header {\n  width: 100%;\n  height: 12rem;\n  margin
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -46729,7 +46722,9 @@ var render = function() {
           _c("label", [
             _vm._v("准考证号:"),
             _c("span", [_vm._v(_vm._s(_vm.zkz))])
-          ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "icon loser" })
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "score" }, [
@@ -46807,6 +46802,71 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 60 */,
+/* 61 */
+/***/ (function(module, exports) {
+
+module.exports = function escape(url) {
+    if (typeof url !== 'string') {
+        return url
+    }
+    // If url is already wrapped in quotes, remove them
+    if (/^['"].*['"]$/.test(url)) {
+        url = url.slice(1, -1);
+    }
+    // Should url be wrapped?
+    // See https://drafts.csswg.org/css-values-3/#urls
+    if (/["'() \t\n]/.test(url)) {
+        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
+    }
+
+    return url
+}
+
+
+/***/ }),
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/pass@1x.png?dbbc1a2cb15c198bd719d854951e1ff6";
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/pass@2x.png?4dc976a6a6b8d65c08f7b6de2a8e9523";
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/loser@1x.png?c1de4ea4f406ac123a78c5e433fb3f6f";
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/loser@2x.png?ad4e1d04bcdf568a0f7229738eb84abd";
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/query.jpg?e21b87d0426293d2677adbb6aba16167";
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/banner.jpg?0bc9ac12d2818db3a0a2c3994192f8ed";
 
 /***/ })
 /******/ ]);

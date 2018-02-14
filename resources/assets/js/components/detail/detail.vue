@@ -15,6 +15,7 @@
             <div class="details">
                 <label>考生姓名:<span>{{xm}}</span></label>
                 <label>准考证号:<span>{{zkz}}</span></label>
+                <div class="icon loser"></div>
             </div>
             <div class="score">
                 <label>总分<span>{{zf}}</span></label>
@@ -59,7 +60,7 @@
             }
         },
         methods: {
-            showScore(){
+            showScore() {
                 this.turnScore = !this.turnScore
             }
         }
@@ -67,12 +68,15 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
+    @import "../../../sass/mixin.styl"
     .header
         width 100%
         height 12rem
         margin 0 auto
-        background url(/img/query.jpg)
+        background-image url(query.jpg)
+        background-repeat no-repeat
         background-size 100% 100%
+
     .ticket-box
         width 80%
         position relative
@@ -120,6 +124,7 @@
             line-height 3rem
             font-size 2rem
             text-align center
+
     .score-box
         width 80%
         position relative
@@ -150,6 +155,18 @@
                 font-weight bold
                 color #93999f
                 padding-left 1.5rem
+            .icon
+                position absolute
+                top -0.2rem
+                right -0.2rem
+                width 4.8rem
+                height 3.65rem
+                background-size 4.8rem 3.65rem
+                background-repeat no-repeat
+                &.pass
+                    bg-image('pass')
+                &.loser
+                    bg-image('loser')
         .score
             width 100%
             height 3rem
