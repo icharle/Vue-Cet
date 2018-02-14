@@ -106,7 +106,7 @@ class IndexController extends Controller
             $referers = 'http://www.chsi.com.cn/cet/';
             $result = $this->curl($url, 'get', '', $referers);
             preg_match_all('/<table[^>]+>(.*)<\/table>/isU', $result, $matches);
-            if (isset($matches)){
+            if (!isset($matches[0][1])){
                 return response()
                     ->json([
                         'status' => 500,

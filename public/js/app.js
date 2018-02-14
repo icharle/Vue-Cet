@@ -46855,7 +46855,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         error: function error() {
             this.errors = !this.errors;
-            window.location.href = 'http://www.chsi.com.cn/cet/';
+            //                window.location.href = 'http://www.chsi.com.cn/cet/'
         },
         showScore: function showScore() {
             this.turnScore = !this.turnScore;
@@ -46880,7 +46880,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     _this.showScore();
                     var res = data.msg;
                     _this.dealscore(res);
-                    __WEBPACK_IMPORTED_MODULE_0__common_store__["a" /* default */].set('sScore', res);
+                    __WEBPACK_IMPORTED_MODULE_0__common_store__["a" /* default */].set('xm', res);
                 }
             }).catch(function (error) {
                 console.log(error);
@@ -47070,7 +47070,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "err-msg" }, [
       _vm._v("查询服务暂不可用！"),
       _c("br"),
-      _vm._v(" 正跳转到官网！")
+      _vm._v(" 请前往到官网查询！")
     ])
   }
 ]

@@ -45,7 +45,7 @@
         </div>
         <div class="error" v-show="errors">
             <div class="icon-error"><i class="icon-cross"></i></div>
-            <div class="err-msg">查询服务暂不可用！<br> 正跳转到官网！</div>
+            <div class="err-msg">查询服务暂不可用！<br> 请前往到官网查询！</div>
             <div class="err-btn" @click="error()">确定</div>
         </div>
     </div>
@@ -114,7 +114,7 @@
         methods: {
             error() {
                 this.errors = !this.errors
-                window.location.href = 'http://www.chsi.com.cn/cet/'
+//                window.location.href = 'http://www.chsi.com.cn/cet/'
             },
             showScore() {
                 this.turnScore = !this.turnScore
@@ -137,7 +137,7 @@
                         this.showScore()
                         const res = data.msg
                         this.dealscore(res)
-                        store.set('sScore', res)
+                        store.set('xm', res)
                     }
                 }).catch(error => {
                     console.log(error)
