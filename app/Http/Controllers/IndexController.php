@@ -49,7 +49,7 @@ class IndexController extends Controller
             return response()
                 ->json([
                     'status' => 403,
-                    'message' => '数据缺失,请完整输入个人信息！',
+                    'msg' => '数据缺失,请完整输入个人信息！',
                 ]);
         } else {
             $url = 'http://app.cet.edu.cn:7066/baas/app/setuser.do?method=UserVerify';
@@ -69,14 +69,16 @@ class IndexController extends Controller
                 return response()
                     ->json([
                         'status' => 200,
-                        'xm' => $input['xm'],
-                        'zkz' => $res['ks_bh']
+                        'msg' => [
+                            'xm' => $input['xm'],
+                            'zkz' => $res['ks_bh']
+                        ]
                     ]);
             } else {
                 return response()
                     ->json([
                         'status' => 404,
-                        'message' => '未找到该考生准考证号码！'
+                        'msg' => '未找到该考生准考证号码！'
                     ]);
             }
         }
@@ -94,7 +96,7 @@ class IndexController extends Controller
             return response()
                 ->json([
                     'status' => 403,
-                    'message' => '数据缺失,请完整输入个人信息！',
+                    'msg' => '数据缺失,请完整输入个人信息！',
                 ]);
         } else {
             $url = 'http://www.chsi.com.cn/cet/query?zkzh=' . $input['zkz'] . '&xm=' . urlencode($input['xm']);
@@ -115,26 +117,27 @@ class IndexController extends Controller
                 return response()
                     ->json([
                         'status' => 200,
-                        'name' => (string)$cetScores[3],      //姓名
-                        'school' => (string)$cetScores[7],     //学校
-                        'type' => (string)$cetScores[9],       //四级or六级
-                        'written' => [                                              //笔试部分
-                            'number' => (string)$cetScores[12],    //准考证号码
-                            'score' => (int)$cetScores[16],        //总分
-                            'listening' => (int)$cetScores[20],     //听力
-                            'reading' => (int)$cetScores[24],       //阅读
-                            'translation' => (int)$cetScores[26]        //翻译
-                        ],
-                        'oral' => [                                                 //口语部分
-                            'number' => (string)$cetScores[29],         //准考证号
-                            'score' => (string)$cetScores[33]           //等 级
-                        ]
+                        'msg' => [
+                            'name' => (string)$cetScores[3],      //姓名
+                            'school' => (string)$cetScores[7],     //学校
+                            'type' => (string)$cetScores[9],       //四级or六级
+                            'written' => [                                              //笔试部分
+                                'number' => (string)$cetScores[12],    //准考证号码
+                                'score' => (int)$cetScores[16],        //总分
+                                'listening' => (int)$cetScores[20],     //听力
+                                'reading' => (int)$cetScores[24],       //阅读
+                                'translation' => (int)$cetScores[26]        //翻译
+                            ],
+                            'oral' => [                                                 //口语部分
+                                'number' => (string)$cetScores[29],         //准考证号
+                                'score' => (string)$cetScores[33]           //等 级
+                            ]]
                     ]);
             } else {
                 return response()
                     ->json([
                         'status' => 404,
-                        'message' => '未找到该考生成绩！'
+                        'msg' => '未找到该考生成绩！'
                     ]);
             }
         }
