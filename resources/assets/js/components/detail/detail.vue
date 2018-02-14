@@ -8,37 +8,37 @@
                 <label>准考证号:<span>{{zkz}}</span></label>
             </div>
         </div>
-        <div class="clickScore" v-show="!turnScore" @click="showScore">
-            <div class="btn">查询成绩</div>
+        <div class="clickScore" v-show="!turnScore" @click="submit()">
+            <div class="btn">{{submitBtn}}</div>
         </div>
         <div class="score-box" title="成绩情况" v-show="turnScore" @click="showScore">
             <div class="details">
                 <label>考生姓名:<span>{{xm}}</span></label>
                 <label>准考证号:<span>{{zkz}}</span></label>
-                <div class="icon loser"></div>
+                <div class="icon" :class=" (this.zf >= 425) ? 'pass' : 'loser' "></div>
             </div>
             <div class="score">
                 <label>总分<span>{{zf}}</span></label>
                 <div class="progress round-conner">
-                    <div class="curRate round-conner"></div>
+                    <div class="curRate round-conner" :style="lezf"></div>
                 </div>
             </div>
             <div class="score">
                 <label>听力<span>{{tl}}</span></label>
                 <div class="progress round-conner">
-                    <div class="curRate round-conner"></div>
+                    <div class="curRate round-conner" :style="letl"></div>
                 </div>
             </div>
             <div class="score">
                 <label>阅读<span>{{yd}}</span></label>
                 <div class="progress round-conner">
-                    <div class="curRate round-conner"></div>
+                    <div class="curRate round-conner" :style="leyd"></div>
                 </div>
             </div>
             <div class="score">
                 <label>写作<span>{{xz}}</span></label>
                 <div class="progress round-conner">
-                    <div class="curRate round-conner"></div>
+                    <div class="curRate round-conner" :style="lexz"></div>
                 </div>
             </div>
         </div>
@@ -46,22 +46,93 @@
 </template>
 
 <script type="text/ecmascript-6">
+    import store from '../common/store'
+
     export default {
+        props: ['ticket'],
         data() {
             return {
-                xm: '艾超',                    //姓名
-                sfz: '789546123547895136',    //身份证
-                zkz: '41186882896',           //准考证
-                zf: '470',   //总分
-                tl: '175',   //听力35%
-                yd: '145',   //阅读35%
-                xz: '150',   //写作及翻译30%
-                turnScore: false
+                xm: '',     //姓名
+                sfz: '',    //身份证
+                zkz: '',    //准考证
+                zf: ' ',   //总分
+                tl: ' ',   //听力35%
+                yd: ' ',   //阅读35%
+                xz: ' ',   //写作及翻译30%
+                submitBtn: '查询成绩',    //按钮
+                sScore: '',         //服务器返回值
+                turnScore: false,    //查询按钮
+                score: ''           //处理过的分数(听力、阅读、写作及翻译)
+            }
+        },
+        mounted: function () {
+            this.$nextTick(function () {
+                const data = store.get('ticket')
+                this.xm = data.xm
+                this.sfz = data.sfz
+                this.zkz = data.zkz
+//                console.log(this.$route.params.ticket)
+//                const data = this.$route.query.ticket
+//                console.log(data)
+            })
+        },
+        watch: {
+            sScore: function () {
+                console.log(store.get('sScore'))
+            }
+        },
+        computed: {
+            lezf() {
+                return {
+                    width: (this.zf / 710 * 100) + '%'
+                }
+            },
+            letl() {
+                return {
+                    width: (this.tl / 249 * 100) + '%'
+                }
+            },
+            leyd() {
+                return {
+                    width: (this.yd / 249 * 100) + '%'
+                }
+            },
+            lexz() {
+                return {
+                    width: (this.xz / 212 * 100) + '%'
+                }
             }
         },
         methods: {
             showScore() {
                 this.turnScore = !this.turnScore
+            },
+            submit() {
+                this.submitBtn = '查 询 中...'
+                axios.post('api/score', {
+                    xm: this.xm,
+                    zkz: this.zkz
+                }).then(response => {
+                    let data = response.data
+                    if (data.status === 403 || data.status === 404) {
+                        this.submitBtn = '查 询'
+                    } else if (data.status === 200) {
+                        this.submitBtn = '查 询'
+                        this.showScore()
+                        const res = data.msg
+                        this.dealscore(res)
+                        store.set('sScore', res)
+                    }
+                }).catch(error => {
+                    console.log(error)
+                });
+            },
+            dealscore(res) {
+                let wrScore = res.written
+                this.zf = wrScore.score
+                this.tl = wrScore.listening
+                this.yd = wrScore.reading
+                this.xz = wrScore.translation
             }
         }
     }
@@ -188,7 +259,7 @@
                 background #ddd
                 margin 0 auto
                 .curRate
-                    width 60%
+                    width 0
                     background lightskyblue
                 .round-conner
                     height 1rem

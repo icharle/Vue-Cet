@@ -13,15 +13,14 @@
         "axios": "^0.17",
         "bootstrap-sass": "^3.3.7",
         "cross-env": "^5.1",
+        "css-loader": "^0.28.9",
         "jquery": "^3.2",
         "laravel-mix": "^1.0",
         "lodash": "^4.17.4",
         "stylus": "^0.54.5",
         "stylus-loader": "^3.0.1",
+        "url-loader": "^0.6.2",
         "vue": "^2.5.13",
         "vue-router": "^3.0.1"
-    },
-    "dependencies": {
-        "css-loader": "^0.28.9"
     }
 }

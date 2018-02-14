@@ -7,6 +7,7 @@ Vue.use(Router)
 
 
 export default new Router({
+    linkActiveClass: 'active',
     routes: [
         {
             path: '/',
@@ -18,7 +19,9 @@ export default new Router({
         },
         {
             path: '/detail',
-            component: detail
+            name: 'detail',
+            component: detail,
+            props: true
         }
     ]
 })

@@ -71,6 +71,7 @@ class IndexController extends Controller
                         'status' => 200,
                         'msg' => [
                             'xm' => $input['xm'],
+                            'sfz' => $input['sfz'],
                             'zkz' => $res['ks_bh']
                         ]
                     ]);

@@ -17,10 +17,10 @@
                     </div>
                 </div>
                 <div class="radio-wrap">
-                    <label><input type="radio" class="radio" name="type" value="1" checked/><span>四级</span></label>
-                    <label><input type="radio" class="radio" name="type" value="2"/><span>六级</span></label>
+                    <label><input type="radio" class="radio" name="type" value="1" checked v-model="jb"/><span>四级</span></label>
+                    <label><input type="radio" class="radio" name="type" value="2" v-model="jb"/><span>六级</span></label>
                 </div>
-                <div class="btn"  @click="error()">{{submitBtn}}</div>
+                <div class="btn" @click="submit()">{{submitBtn}}</div>
             </form>
         </div>
         <div class="footer">
@@ -29,24 +29,50 @@
         <div class="error" v-show="errors">
             <div class="icon-error"><i class="icon-cross"></i></div>
             <div class="err-msg">查询失败，未找到你的准考证</div>
-            <div class="err-btn">确定</div>
+            <div class="err-btn" @click="error()">确定</div>
         </div>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
+    import store from '../common/store'
     export default {
         data() {
             return {
-                xm: '',
-                sfz: '',
+                xm: '',    //姓名
+                sfz: '',   //身份证
+                jb: 1,      //类型(四六级)
                 submitBtn: '查 询',
-                errors: false
+                ticket: '',
+                errors: false    //错误提示
             }
         },
         methods: {
-            error(){
+            error() {
                 this.errors = !this.errors
+            },
+            submit() {
+                this.submitBtn = '查 询 中...'
+                this.ticket = ''
+                axios.post('api/tickets', {
+                    xm: this.xm,
+                    sfz: this.sfz,
+                    jb: this.jb
+                }).then(response => {
+                    let data = response.data
+                    if (data.status === 403 || data.status === 404) {
+                        this.error()
+                        this.submitBtn = '查 询'
+                    } else if (data.status === 200) {
+                        this.ticket = data.msg
+                        this.submitBtn = '查 询'
+                        store.set('ticket',this.ticket)
+//                        this.$router.push({name: 'detail', params: {ticket: this.ticket}})
+//                        this.$router.push({name: 'detail', query: {ticket: this.ticket}})
+                    }
+                }).catch(error => {
+                    console.log(error)
+                });
             }
         }
     }
