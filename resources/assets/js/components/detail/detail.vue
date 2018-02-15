@@ -43,16 +43,13 @@
                 </div>
             </div>
         </div>
-        <div class="error" v-show="errors">
-            <div class="icon-error"><i class="icon-cross"></i></div>
-            <div class="err-msg">查询服务暂不可用！<br> 请前往到官网查询！</div>
-            <div class="err-btn" @click="error()">确定</div>
-        </div>
+        <error ref="error"></error>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
     import store from '../common/store'
+    import error from '../error/error'
 
     export default {
         props: ['ticket'],
@@ -70,7 +67,6 @@
                 sScore: '',         //服务器返回值
                 turnScore: false,    //查询按钮
                 score: '',           //处理过的分数(听力、阅读、写作及翻译)
-                errors: false    //错误提示
             }
         },
         mounted: function () {
@@ -112,10 +108,6 @@
             }
         },
         methods: {
-            error() {
-                this.errors = !this.errors
-//                window.location.href = 'http://www.chsi.com.cn/cet/'
-            },
             showScore() {
                 this.turnScore = !this.turnScore
             },
@@ -130,7 +122,7 @@
                         this.submitBtn = '查 询'
                     } else if (data.status === 500) {
                         this.submitBtn = '查 询'
-                        this.errors = !this.errors
+                        this.$refs.error.show("查询服务暂不可用", "请前往官网查询")
 //                        window.location.href = 'http://www.chsi.com.cn/cet/'
                     } else if (data.status === 200) {
                         this.submitBtn = '查 询'
@@ -151,6 +143,9 @@
                 this.yd = wrScore.reading
                 this.xz = wrScore.translation
             }
+        },
+        components: {
+            error
         }
     }
 </script>
@@ -280,43 +275,4 @@
                     background lightskyblue
                 .round-conner
                     height 1rem
-    .error
-        position fixed
-        top: 35%
-        left 15%
-        width 70%
-        height 18.5rem
-        z-index 100
-        border-radius 0.5rem
-        overflow hidden
-        background #636b6f
-        .icon-error
-            width 4rem
-            height 4rem
-            border-radius 50%
-            border 0.3rem solid red
-            font-size 3rem
-            color red
-            line-height 4rem
-            text-align center
-            margin 1rem auto 0.5rem auto
-        .err-msg
-            font-size 1.5rem
-            font-weight bold
-            line-height 2rem
-            color #ffffff
-            padding-top 2.5rem
-            text-align center
-        .err-btn
-            width 70%
-            height 3rem
-            position absolute
-            bottom 1rem
-            left 15%
-            line-height 3rem
-            border-radius 0.5rem
-            text-align center
-            font-size 2rem
-            color #ffffff
-            background-color red
 </style>
