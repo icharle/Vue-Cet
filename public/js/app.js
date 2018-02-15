@@ -43558,7 +43558,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        var script = document.createElement('script');
+        script.src = 'https://s95.cnzz.com/z_stat.php?id=1261362991&web_id=1261362991'; //友盟链接
+        script.language = 'JavaScript';
+        document.body.appendChild(script);
+    },
+
+    watch: {
+        '$route': function $route() {
+            if (window._czc) {
+                var location = window.location;
+                var contentUrl = location.pathname + location.hash;
+                var refererUrl = '/';
+                window._czc.push(['_trackPageview', contentUrl, refererUrl]);
+            }
+        }
+    }
+});
 
 /***/ }),
 /* 49 */
@@ -46346,7 +46364,7 @@ exports.push([module.i, "\n.ticket {\n  display: -webkit-box;\n  display: -ms-fl
 /* 55 */
 /***/ (function(module, exports) {
 
-module.exports = "/images/banner.jpg?c86804df7b6c733e5eafc64ba0378809";
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/Applications/MAMP/htdocs/cet.test/resources/assets/js/components/ticket/banner.jpg'");
 
 /***/ }),
 /* 56 */

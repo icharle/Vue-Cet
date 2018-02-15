@@ -8,7 +8,22 @@
 
 <script type="text/ecmascript-6">
     export default {
-
+        mounted () {
+            const script = document.createElement('script')
+            script.src = 'https://s95.cnzz.com/z_stat.php?id=1261362991&web_id=1261362991'     //友盟链接
+            script.language = 'JavaScript'
+            document.body.appendChild(script)
+        },
+        watch: {
+            '$route' () {
+                if (window._czc) {
+                    let location = window.location
+                    let contentUrl = location.pathname + location.hash
+                    let refererUrl = '/'
+                    window._czc.push(['_trackPageview', contentUrl, refererUrl])
+                }
+            }
+        }
     }
 </script>
 
