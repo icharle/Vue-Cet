@@ -10,7 +10,7 @@
     export default {
         mounted () {
             const script = document.createElement('script')
-            script.src = 'https://s95.cnzz.com/z_stat.php?id=1261362991&web_id=1261362991'     //友盟链接
+            script.src = 'https://s19.cnzz.com/z_stat.php?id=1267073773&web_id=1267073773'     //友盟链接
             script.language = 'JavaScript'
             document.body.appendChild(script)
         },
