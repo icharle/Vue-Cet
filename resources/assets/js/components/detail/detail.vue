@@ -120,6 +120,7 @@
                     let data = response.data
                     if (data.status === 403 || data.status === 404) {
                         this.submitBtn = '查 询'
+                        this.$refs.error.show("查询服务暂不可用", "请前往官网查询")
                     } else if (data.status === 500) {
                         this.submitBtn = '查 询'
                         this.$refs.error.show("查询服务暂不可用", "请前往官网查询")
