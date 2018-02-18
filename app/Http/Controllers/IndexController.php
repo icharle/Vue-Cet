@@ -29,7 +29,9 @@ class IndexController extends Controller
         curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36");
         curl_setopt($curl, CURLOPT_TIMEOUT, 30);
         curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
-        curl_setopt($curl, CURLOPT_REFERER, $referer);
+        if ($referer != '') {
+            curl_setopt($curl, CURLOPT_REFERER, $referer);
+        }
         if ($type = 'post') {
             curl_setopt($curl, CURLOPT_POST, 1);
             curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
@@ -106,7 +108,7 @@ class IndexController extends Controller
             $referers = 'http://www.chsi.com.cn/cet/';
             $result = $this->curl($url, 'get', '', $referers);
             preg_match_all('/<table[^>]+>(.*)<\/table>/isU', $result, $matches);
-            if (!isset($matches[0][1])){
+            if (!isset($matches[0][1])) {
                 return response()
                     ->json([
                         'status' => 500,
@@ -149,6 +151,97 @@ class IndexController extends Controller
                         'msg' => '未找到该考生成绩！'
                     ]);
             }
+        }
+    }
+
+    /**
+     * @return \Illuminate\Session\SessionManager|\Illuminate\Session\Store|mixed
+     * 获取全局access_token票据
+     */
+    public function GetAccessToken()
+    {
+        $appid = 'wxe52445f48fe6f0ff';
+        $secret = '753a9366f31298755b126d411359f9d4';
+
+        //如果access_token没有过期，直接return
+        if (session('access_token') && session('expire_time') > time()) {
+            return session('access_token');
+        } else {
+            //重新获取access_token
+            $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' . $appid . '&secret=' . $secret;
+            $res = $this->curl($url, 'get', 'json', '');
+            $res = json_decode($res, true);
+            session(['access_token' => $res['access_token']]);
+            session(['expire_time' => (time() + 7000)]);
+            return session('access_token');
+        }
+    }
+
+    /**
+     * @return mixed
+     * 获取JsTicket
+     */
+    public function GetJsTicket()
+    {
+        if (!session('JsTicket') && session('JsExpire_time') < time()) {
+            $Access_Token = $this->GetAccessToken();
+            $url = 'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=' . $Access_Token . '&type=jsapi';
+            $res = $this->curl($url, 'get', 'json', '');
+            $res = json_decode($res, true);
+            session(['JsTicket' => $res['ticket']]);
+            session(['JsExpire_time' => (time() + 7000)]);
+            return $res['ticket'];
+        } else {
+            return session('JsTicket');
+        }
+
+    }
+
+
+    /**
+     * @param int $length
+     * @return string
+     * 获取16位随机数
+     */
+    public function GetNoncestr($length = 16)
+    {
+        $str = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+        $res = "";
+        for ($i = 0; $i < $length; $i++) {
+            $res .= substr($str, mt_rand(0, strlen($str) - 1), 1);
+        }
+        return $res;
+    }
+
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     * Signature签名接口  返回前端
+     */
+    public function RspSignature()
+    {
+        $data = Input::all();
+        if (empty($data['PostUrl'])) {
+            return response()
+                ->json([
+                    'status' => 403,
+                    'msg' => '请输入URL链接！'
+                ]);
+        } else {
+            $noncestr = $this->GetNoncestr();
+            $jsapi_ticket = $this->GetJsTicket();
+            $timestamp = time();
+            $url = $data['PostUrl'];
+            $str = 'jsapi_ticket=' . $jsapi_ticket . '&noncestr=' . $noncestr . '×tamp=' . $timestamp . '&url=' . $url;
+            return response()
+                ->json([
+                    'status' => 200,
+                    'msg' => [
+                        'appId' => 'wxe52445f48fe6f0ff',
+                        'timestamp' => $timestamp,
+                        'nonceStr' => $noncestr,
+                        'signature' => sha1($str),
+                    ]
+                ]);
         }
     }
 }

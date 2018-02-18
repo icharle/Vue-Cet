@@ -16,5 +16,6 @@ Route::group(['middleware' => 'api'], function () {
 
     Route::post('tickets', 'IndexController@Tickets');
     Route::post('score', 'IndexController@Score');
+    Route::post('RspSignature', 'IndexController@RspSignature');
 
 });
