@@ -125,6 +125,13 @@ return [
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
+
+    /**
+     * 微信公众号appID appsecret
+     */
+    'appID' => env('appID', ''),
+    'appSecret' => env('appSecret', ''),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

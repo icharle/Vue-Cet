@@ -15,7 +15,7 @@ import wx from 'weixin-js-sdk'
 router.afterEach((to, from) => {
     let _url = window.location.origin + to.fullPath
     axios({
-        url: 'http://soarteam.cn/wechat/index.php/Home/Index/RspSignature',
+        url: 'api/RspSignature',
         method: 'post',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'

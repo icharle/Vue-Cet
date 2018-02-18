@@ -160,8 +160,8 @@ class IndexController extends Controller
      */
     public function GetAccessToken()
     {
-        $appid = 'wxe52445f48fe6f0ff';
-        $secret = '753a9366f31298755b126d411359f9d4';
+        $appid = config('app.appID');
+        $secret = config('app.appSecret');
 
         //如果access_token没有过期，直接return
         if (session('access_token') && session('expire_time') > time()) {
@@ -236,7 +236,7 @@ class IndexController extends Controller
                 ->json([
                     'status' => 200,
                     'msg' => [
-                        'appId' => 'wxe52445f48fe6f0ff',
+                        'appId' => config('app.appID'),
                         'timestamp' => $timestamp,
                         'nonceStr' => $noncestr,
                         'signature' => sha1($str),
