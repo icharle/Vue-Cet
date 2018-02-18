@@ -24,6 +24,8 @@ class IndexController extends Controller
         //Curl处理
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
         curl_setopt($curl, CURLOPT_HEADER, 0);
         curl_setopt($curl, CURLOPT_HTTPHEADER, array("CLIENT-IP:" . $ip . "", "X_FORWARD_FOR:" . $ip . ""));
         curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36");
@@ -231,7 +233,7 @@ class IndexController extends Controller
             $jsapi_ticket = $this->GetJsTicket();
             $timestamp = time();
             $url = $data['PostUrl'];
-            $str = 'jsapi_ticket=' . $jsapi_ticket . '&noncestr=' . $noncestr . '×tamp=' . $timestamp . '&url=' . $url;
+            $str = 'jsapi_ticket=' . $jsapi_ticket . '&noncestr=' . $noncestr . '&timestamp=' . $timestamp . '&url=' . $url;
             return response()
                 ->json([
                     'status' => 200,
