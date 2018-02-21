@@ -17,6 +17,7 @@ class CreateReservesTable extends Migration
             $table->increments('id');
             $table->string('username');
             $table->string('idcard');
+            $table->string('email');
             $table->timestamps();
         });
     }
