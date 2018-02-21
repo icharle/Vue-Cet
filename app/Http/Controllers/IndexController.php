@@ -68,8 +68,7 @@ class IndexController extends Controller
                         'status' => 500,
                         'msg' => '服务暂不可用！'
                     ]);
-            }
-            else if (isset($cetScores[16])) {
+            } else if (isset($cetScores[16])) {
                 return response()
                     ->json([
                         'status' => 200,
@@ -197,7 +196,7 @@ class IndexController extends Controller
     public function PreSave()
     {
         $input = Input::all();
-        if (!isset($input['username']) || empty($input['username']) || !isset($input['idcard']) || empty($input['idcard'])) {
+        if (!isset($input['username']) || empty($input['username']) || !isset($input['idcard']) || empty($input['idcard']) || !isset($input['email']) || empty($input['email'])) {
             return response()
                 ->json([
                     'status' => 403,
@@ -206,6 +205,7 @@ class IndexController extends Controller
         } else {
             $data['username'] = $input['username'];
             $data['idcard'] = $input['idcard'];
+            $data['email'] = $input['email'];
             $result = Reserve::create($data);
             if ($result) {
                 return response()
