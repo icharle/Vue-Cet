@@ -8,21 +8,24 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Support\Facades\Log;
+use Mail;
 
 class SendScore implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    protected $num;
+    protected $string;
+    protected $email;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($i)
+    public function __construct($string, $email)
     {
-        $this->num = $i;
+        $this->string = $string;
+        $this->email = $email;
     }
 
     /**
@@ -32,6 +35,7 @@ class SendScore implements ShouldQueue
      */
     public function handle()
     {
-        Log::info('Hello, Redis-Queue' . $this->num);
+//        Log::info('Hello, Redis-Queue' . $this->string['school']);
+        Mail::to($this->email)->send(new \App\Mail\SendScore($this->string));
     }
 }
