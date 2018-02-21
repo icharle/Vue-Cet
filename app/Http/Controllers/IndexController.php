@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Reserve;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use PHPUnit\Framework\Error\Notice;
@@ -244,6 +245,39 @@ class IndexController extends Controller
                         'signature' => sha1($str),
                     ]
                 ]);
+        }
+    }
+
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     * 预约查询入库处理
+     */
+    public function PreSave()
+    {
+        $input = Input::all();
+        if (!isset($input['username']) || empty($input['username']) || !isset($input['idcard']) || empty($input['idcard'])) {
+            return response()
+                ->json([
+                    'status' => 403,
+                    'msg' => '请输入URL链接！'
+                ]);
+        } else {
+            $data['username'] = $input['username'];
+            $data['idcard'] = $input['idcard'];
+            $result = Reserve::create($data);
+            if ($result) {
+                return response()
+                    ->json([
+                        'status' => 200,
+                        'msg' => '预约查询成绩成功！'
+                    ]);
+            } else {
+                return response()
+                    ->json([
+                        'status' => 405,
+                        'msg' => '预约查询成绩失败！'
+                    ]);
+            }
         }
     }
 }
