@@ -206,6 +206,7 @@ class IndexController extends Controller
             $data['username'] = $input['username'];
             $data['idcard'] = $input['idcard'];
             $data['email'] = $input['email'];
+            $data['level'] = $input['level'];
             $result = Reserve::create($data);
             if ($result) {
                 return response()
