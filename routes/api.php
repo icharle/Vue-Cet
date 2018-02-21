@@ -17,6 +17,8 @@ Route::group(['middleware' => 'api'], function () {
     Route::post('tickets', 'IndexController@Tickets');
     Route::post('score', 'IndexController@Score');
     Route::post('RspSignature', 'IndexController@RspSignature');
-    Route::any('SendMail','MailController@SendMail');
+
+    Route::get('SendMail','MailController@SendMail');
+    Route::get('SendQueue','MailController@SendQueue');
 
 });
