@@ -8,11 +8,11 @@
 ![qrcode](img/qrcode.png)
 
 ## 项目效果图
-* 首页
+* 首页  
     ![home](img/home.png)
-* 准考证页面
+* 准考证页面  
     ![ticket](img/ticket.png)
-* 成绩显示页面( 分数 < 425 )    
+* 成绩显示页面( 分数 < 425 )   
     ![score](img/score1.png)
 * 成绩显示页面( 分数 >= 425)  
     ![score](img/score2.png)  
