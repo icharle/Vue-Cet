@@ -1,1 +1,276 @@
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,html,i,iframe,img,input,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-weight:400;vertical-align:baseline}html{font-size:10px}@media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}@media screen and (min-width:376px) and (max-width:414px){html{font-size:12px}}@media screen and (min-width:415px) and (max-width:639px){html{font-size:15px}}@media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}@media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}@media screen and (min-width:750px) and (max-width:799px){html{font-size:23.5px}}@media screen and (min-width:800px){html{font-size:25px}}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:none}table{border-collapse:collapse;border-spacing:0}a{color:#7e8c8d;text-decoration:none;-webkit-backface-visibility:hidden}li{list-style:none}input{outline:none}::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track-piece{background-color:rgba(0,0,0,.2);-webkit-border-radius:6px}::-webkit-scrollbar-thumb:vertical{height:5px;background-color:hsla(0,0%,49%,.7);-webkit-border-radius:6px}::-webkit-scrollbar-thumb:horizontal{width:5px;background-color:hsla(0,0%,49%,.7);-webkit-border-radius:6px}body,html{width:100%;height:100%}body{-webkit-text-size-adjust:none;-webkit-tap-highlight-color:transparent}@font-face{font-family:cet-icon;src:url(/fonts/cet-icon.eot?18ba98dad89a27b60e4cf326da42e465);src:url(/fonts/cet-icon.eot?18ba98dad89a27b60e4cf326da42e465) format("embedded-opentype"),url(/fonts/cet-icon.ttf?405936569d4085e4e1aca6bab124f6af) format("truetype"),url(/fonts/cet-icon.woff?abf46b3b96a03c217a2a1323873fe2e6) format("woff"),url(/fonts/cet-icon.svg?96dbcfe2de91ab9cee1f727f22552d21) format("svg");font-weight:400;font-style:normal}[class*=" icon-"],[class^=icon-]{font-family:cet-icon!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-profile:before{content:"\E923"}.icon-user:before{content:"\E971"}.icon-cross:before{content:"\EA0F"}
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /*font-size: 62.5%;*/
+  font-weight: normal;
+  vertical-align: baseline;
+}
+
+html {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 414px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 415px) and (max-width: 639px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 719px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 749px) {
+  html {
+    font-size: 22.5px;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 799px) {
+  html {
+    font-size: 23.5px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 25px;
+  }
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom */
+
+a {
+  color: #7e8c8d;
+  text-decoration: none;
+  -webkit-backface-visibility: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+  font-family: 'cet-icon';
+  src: url(/fonts/cet-icon.eot?52b83ed1eca7e949f3897e4b64aca5f4);
+  src: url(/fonts/cet-icon.eot?52b83ed1eca7e949f3897e4b64aca5f4) format("embedded-opentype"), url(/fonts/cet-icon.ttf?c68a1e82c0f1984cc1fe3d4c4644e3a9) format("truetype"), url(/fonts/cet-icon.woff?a4b5e09c7f9442a36575ac8b20b2d1b2) format("woff"), url(/fonts/cet-icon.svg?0149fdb7f50504e732fdd77204e258cb) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'cet-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-profile:before {
+  content: "\E923";
+}
+
+.icon-user:before {
+  content: "\E971";
+}
+
+.icon-cross:before {
+  content: "\EA0F";
+}
+
+.icon-checkmark:before {
+  content: "\EA10";
+}
+
+.icon-circle-right:before {
+  content: "\EA42";
+}
+
+.icon-circle-left:before {
+  content: "\EA44";
+}
+
+.icon-mail:before {
+  content: "\EA83";
+}
+

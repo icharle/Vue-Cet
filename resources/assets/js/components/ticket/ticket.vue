@@ -2,7 +2,18 @@
     <div class="ticket">
         <div class="header"></div>
         <div class="content">
-            <span class="title">四六级准考证查询</span>
+            <!--<span class="title">四六级准考证查询</span>-->
+            <div class="tab">
+                <div class="tab-item">
+                    <router-link to="/detail"><i class="icon-circle-left"></i><p>预约查询</p></router-link>
+                </div>
+                <div class="tab-item active">
+                    准考证查询
+                </div>
+                <div class="tab-item">
+                    <router-link to="/detail"><p>成绩查询</p><i class="icon-circle-right"></i></router-link>
+                </div>
+            </div>
             <form class="getticket">
                 <div class="input-wrap">
                     <span><i class="icon-user"></i></span>
@@ -96,6 +107,23 @@
                 text-align center
                 font-size 2.3rem
                 line-height 2.3rem
+            .tab
+                display flex
+                width 100%
+                height 2.3rem
+                line-height 2.3rem
+                .tab-item
+                    flex 1
+                    text-align center
+                    &.active
+                        font-size 2rem
+                        color: #09f
+                    p
+                        display inline-block
+                        padding 0 0.3rem 0 0.3rem
+                    i
+                        display inline-block
+                        font-size 1.5rem
             .getticket
                 width 100%
                 .input-wrap
