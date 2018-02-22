@@ -86,6 +86,7 @@
             width 100%
             flex 1
             -webkit-flex 1
+            overflow auto
             .title
                 display inherit
                 padding-top 2rem

@@ -5,13 +5,13 @@
             <!--<span class="title">四六级准考证查询</span>-->
             <div class="tab">
                 <div class="tab-item">
-                    <router-link to="/detail"><i class="icon-circle-left"></i><p>预约查询</p></router-link>
+                    <router-link to="/reserve"><i class="icon-circle-left"></i><p>预约查询</p></router-link>
                 </div>
                 <div class="tab-item active">
                     准考证查询
                 </div>
                 <div class="tab-item">
-                    <router-link to="/detail"><p>成绩查询</p><i class="icon-circle-right"></i></router-link>
+                    <router-link to="/query"><p>成绩查询</p><i class="icon-circle-right"></i></router-link>
                 </div>
             </div>
             <form class="getticket">
@@ -102,6 +102,7 @@
             width 100%
             flex 1
             -webkit-flex 1
+            overflow auto
             .title
                 display inherit
                 text-align center

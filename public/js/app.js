@@ -46426,7 +46426,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.ticket {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  min-height: 100%;\n}\n.ticket .header {\n  width: 100%;\n  height: 25rem;\n  background-image: url(" + escape(__webpack_require__(55)) + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.ticket .content {\n  width: 100%;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-flex: 1;\n}\n.ticket .content .title {\n  display: inherit;\n  text-align: center;\n  font-size: 2.3rem;\n  line-height: 2.3rem;\n}\n.ticket .content .tab {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 100%;\n  height: 2.3rem;\n  line-height: 2.3rem;\n}\n.ticket .content .tab .tab-item {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  text-align: center;\n}\n.ticket .content .tab .tab-item.active {\n  font-size: 2rem;\n  color: #09f;\n}\n.ticket .content .tab .tab-item p {\n  display: inline-block;\n  padding: 0 0.3rem 0 0.3rem;\n}\n.ticket .content .tab .tab-item i {\n  display: inline-block;\n  font-size: 1.5rem;\n}\n.ticket .content .getticket {\n  width: 100%;\n}\n.ticket .content .getticket .input-wrap {\n  width: 18rem;\n  position: relative;\n  padding: 0.5rem 0.6rem 0.5rem 3.4rem;\n  margin: 2rem auto 0.5rem auto;\n  border: 0.08rem solid #ccc;\n  border-radius: 0.5rem;\n}\n.ticket .content .getticket .input-wrap span {\n  position: absolute;\n  top: 1.2rem;\n  left: 1rem;\n  font-size: 2.2rem;\n}\n.ticket .content .getticket .input-wrap input {\n  width: 100%;\n  line-height: 3.5rem;\n  font-size: 1.4rem;\n  border-width: 0;\n}\n.ticket .content .getticket .radio-wrap {\n  width: 20rem;\n  margin: 2rem auto 1rem auto;\n}\n.ticket .content .getticket .radio-wrap label input {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  border: 0;\n  outline: 0 !important;\n  vertical-align: middle;\n}\n.ticket .content .getticket .radio-wrap label span {\n  padding-left: 0.4rem;\n  font-size: 1.3rem;\n  vertical-align: middle;\n}\n.ticket .content .getticket .radio-wrap label .radio:after {\n  content: \"\";\n  display: block;\n  width: 1.8rem;\n  height: 1.8rem;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 1.8rem;\n  font-size: 1.3rem;\n  color: #09f;\n  border: 0.2rem solid #ddd;\n  background-color: #fff;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.ticket .content .getticket .radio-wrap label .radio:checked:after {\n  content: \"\\2713\";\n  border-color: #09f;\n  -webkit-transition: all 0.3s ease-in-out;\n  transition: all 0.3s ease-in-out;\n}\n.ticket .content .getticket .btn {\n  margin: 3rem auto 0rem auto;\n  width: 19rem;\n  height: 3rem;\n  line-height: 3rem;\n  text-align: center;\n  border: none;\n  font-size: 2rem;\n  color: #fff;\n  border-radius: 0.5rem;\n  background-color: #636b6f;\n}\n.ticket .footer {\n  width: 100%;\n  height: 2rem;\n  line-height: 2rem;\n  text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n.ticket {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  min-height: 100%;\n}\n.ticket .header {\n  width: 100%;\n  height: 25rem;\n  background-image: url(" + escape(__webpack_require__(55)) + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.ticket .content {\n  width: 100%;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-flex: 1;\n  overflow: auto;\n}\n.ticket .content .title {\n  display: inherit;\n  text-align: center;\n  font-size: 2.3rem;\n  line-height: 2.3rem;\n}\n.ticket .content .tab {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 100%;\n  height: 2.3rem;\n  line-height: 2.3rem;\n}\n.ticket .content .tab .tab-item {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  text-align: center;\n}\n.ticket .content .tab .tab-item.active {\n  font-size: 2rem;\n  color: #09f;\n}\n.ticket .content .tab .tab-item p {\n  display: inline-block;\n  padding: 0 0.3rem 0 0.3rem;\n}\n.ticket .content .tab .tab-item i {\n  display: inline-block;\n  font-size: 1.5rem;\n}\n.ticket .content .getticket {\n  width: 100%;\n}\n.ticket .content .getticket .input-wrap {\n  width: 18rem;\n  position: relative;\n  padding: 0.5rem 0.6rem 0.5rem 3.4rem;\n  margin: 2rem auto 0.5rem auto;\n  border: 0.08rem solid #ccc;\n  border-radius: 0.5rem;\n}\n.ticket .content .getticket .input-wrap span {\n  position: absolute;\n  top: 1.2rem;\n  left: 1rem;\n  font-size: 2.2rem;\n}\n.ticket .content .getticket .input-wrap input {\n  width: 100%;\n  line-height: 3.5rem;\n  font-size: 1.4rem;\n  border-width: 0;\n}\n.ticket .content .getticket .radio-wrap {\n  width: 20rem;\n  margin: 2rem auto 1rem auto;\n}\n.ticket .content .getticket .radio-wrap label input {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  border: 0;\n  outline: 0 !important;\n  vertical-align: middle;\n}\n.ticket .content .getticket .radio-wrap label span {\n  padding-left: 0.4rem;\n  font-size: 1.3rem;\n  vertical-align: middle;\n}\n.ticket .content .getticket .radio-wrap label .radio:after {\n  content: \"\";\n  display: block;\n  width: 1.8rem;\n  height: 1.8rem;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 1.8rem;\n  font-size: 1.3rem;\n  color: #09f;\n  border: 0.2rem solid #ddd;\n  background-color: #fff;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.ticket .content .getticket .radio-wrap label .radio:checked:after {\n  content: \"\\2713\";\n  border-color: #09f;\n  -webkit-transition: all 0.3s ease-in-out;\n  transition: all 0.3s ease-in-out;\n}\n.ticket .content .getticket .btn {\n  margin: 3rem auto 0rem auto;\n  width: 19rem;\n  height: 3rem;\n  line-height: 3rem;\n  text-align: center;\n  border: none;\n  font-size: 2rem;\n  color: #fff;\n  border-radius: 0.5rem;\n  background-color: #636b6f;\n}\n.ticket .footer {\n  width: 100%;\n  height: 2rem;\n  line-height: 2rem;\n  text-align: center;\n}\n", ""]);
 
 // exports
 
@@ -46966,7 +46966,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.header {\n  width: 100%;\n  height: 12rem;\n  margin: 0 auto;\n  background-image: url(" + escape(__webpack_require__(65)) + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.ticket-box {\n  width: 80%;\n  position: relative;\n  top: 2rem;\n  margin: 0 auto;\n  border: 0.2rem dashed #d9dde1;\n  color: #93999f;\n  font-size: 2rem;\n  border-radius: 0.5rem;\n}\n.ticket-box:before {\n  content: attr(title);\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  -webkit-transform: translate(-50%, -50%);\n  padding: 0 1rem;\n  background-color: #fff;\n}\n.ticket-box .details {\n  font-size: 1rem;\n  margin: 2.5rem auto 0rem auto;\n}\n.ticket-box .details label {\n  width: 90%;\n  display: block;\n  color: #87cefa;\n  line-height: 2.5rem;\n  margin: 0 auto 2.5rem auto;\n}\n.ticket-box .details span {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #93999f;\n  padding-left: 1.5rem;\n}\n.clickScore {\n  width: 80%;\n  position: relative;\n  top: 4.5rem;\n  margin: 0 auto;\n}\n.clickScore .btn {\n  width: 75%;\n  height: 3rem;\n  background-color: #87cefa;\n  margin: 0 auto;\n  border-radius: 0.5rem;\n  color: #fff;\n  line-height: 3rem;\n  font-size: 2rem;\n  text-align: center;\n}\n.score-box {\n  width: 80%;\n  position: relative;\n  top: 4.5rem;\n  margin: 0 auto;\n  border: 0.2rem dashed #d9dde1;\n  color: #93999f;\n  font-size: 2rem;\n  border-radius: 0.5rem;\n}\n.score-box:before {\n  content: attr(title);\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  -webkit-transform: translate(-50%, -50%);\n  padding: 0 1rem;\n  background-color: #fff;\n}\n.score-box .details {\n  font-size: 1rem;\n  margin: 2.5rem auto 0rem auto;\n}\n.score-box .details label {\n  width: 90%;\n  display: block;\n  color: #87cefa;\n  margin: 0 auto 2rem auto;\n}\n.score-box .details span {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #93999f;\n  padding-left: 1.5rem;\n}\n.score-box .details .icon {\n  position: absolute;\n  top: -0.2rem;\n  right: -0.2rem;\n  width: 4.8rem;\n  height: 3.65rem;\n  background-size: 4.8rem 3.65rem;\n  background-repeat: no-repeat;\n}\n.score-box .details .icon.pass {\n  background-image: url(" + escape(__webpack_require__(66)) + ");\n}\n@media (-webkit-min-device-piexel-ratio: 2), (min-device-pixel-ratio: 2) {\n.score-box .details .icon.pass {\n    background-image: url(" + escape(__webpack_require__(67)) + ");\n}\n}\n.score-box .details .icon.loser {\n  background-image: url(" + escape(__webpack_require__(68)) + ");\n}\n@media (-webkit-min-device-piexel-ratio: 2), (min-device-pixel-ratio: 2) {\n.score-box .details .icon.loser {\n    background-image: url(" + escape(__webpack_require__(69)) + ");\n}\n}\n.score-box .score {\n  width: 100%;\n  height: 3rem;\n  padding-bottom: 1rem;\n}\n.score-box .score label {\n  width: 85%;\n  font-size: 1.5rem;\n  color: #000;\n  display: block;\n  margin: 0 auto;\n  font-weight: bold;\n  padding-bottom: 0.5rem;\n}\n.score-box .score span {\n  float: right;\n  font-weight: bold;\n  color: #87cefa;\n}\n.score-box .score .progress {\n  width: 85%;\n  background: #ddd;\n  margin: 0 auto;\n}\n.score-box .score .progress .curRate {\n  width: 0;\n  background: #87cefa;\n}\n.score-box .score .progress .round-conner {\n  height: 1rem;\n}\n", ""]);
+exports.push([module.i, "\n.detail {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  min-height: 100%;\n}\n.detail .header {\n  width: 100%;\n  height: 12rem;\n  margin: 0 auto;\n  background-image: url(" + escape(__webpack_require__(65)) + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.detail .content {\n  width: 100%;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-flex: 1;\n  overflow: auto;\n}\n.detail .content .ticket-box {\n  width: 80%;\n  position: relative;\n  top: 2rem;\n  margin: 0 auto;\n  border: 0.2rem dashed #d9dde1;\n  color: #93999f;\n  font-size: 2rem;\n  border-radius: 0.5rem;\n}\n.detail .content .ticket-box:before {\n  content: attr(title);\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  -webkit-transform: translate(-50%, -50%);\n  padding: 0 1rem;\n  background-color: #fff;\n}\n.detail .content .ticket-box .details {\n  font-size: 1rem;\n  margin: 2.5rem auto 0rem auto;\n}\n.detail .content .ticket-box .details label {\n  width: 90%;\n  display: block;\n  color: #87cefa;\n  line-height: 2.5rem;\n  margin: 0 auto 2.5rem auto;\n}\n.detail .content .ticket-box .details span {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #93999f;\n  padding-left: 1.5rem;\n}\n.detail .content .clickScore {\n  width: 80%;\n  position: relative;\n  top: 4.5rem;\n  margin: 0 auto;\n}\n.detail .content .clickScore .btn {\n  width: 75%;\n  height: 3rem;\n  background-color: #87cefa;\n  margin: 0 auto;\n  border-radius: 0.5rem;\n  color: #fff;\n  line-height: 3rem;\n  font-size: 2rem;\n  text-align: center;\n}\n.detail .content .score-box {\n  width: 80%;\n  position: relative;\n  top: 4.5rem;\n  margin: 0 auto;\n  border: 0.2rem dashed #d9dde1;\n  color: #93999f;\n  font-size: 2rem;\n  border-radius: 0.5rem;\n}\n.detail .content .score-box:before {\n  content: attr(title);\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  -webkit-transform: translate(-50%, -50%);\n  padding: 0 1rem;\n  background-color: #fff;\n}\n.detail .content .score-box .details {\n  font-size: 1rem;\n  margin: 2.5rem auto 0rem auto;\n}\n.detail .content .score-box .details label {\n  width: 90%;\n  display: block;\n  color: #87cefa;\n  margin: 0 auto 2rem auto;\n}\n.detail .content .score-box .details span {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #93999f;\n  padding-left: 1.5rem;\n}\n.detail .content .score-box .details .icon {\n  position: absolute;\n  top: -0.2rem;\n  right: -0.2rem;\n  width: 4.8rem;\n  height: 3.65rem;\n  background-size: 4.8rem 3.65rem;\n  background-repeat: no-repeat;\n}\n.detail .content .score-box .details .icon.pass {\n  background-image: url(" + escape(__webpack_require__(66)) + ");\n}\n@media (-webkit-min-device-piexel-ratio: 2), (min-device-pixel-ratio: 2) {\n.detail .content .score-box .details .icon.pass {\n    background-image: url(" + escape(__webpack_require__(67)) + ");\n}\n}\n.detail .content .score-box .details .icon.loser {\n  background-image: url(" + escape(__webpack_require__(68)) + ");\n}\n@media (-webkit-min-device-piexel-ratio: 2), (min-device-pixel-ratio: 2) {\n.detail .content .score-box .details .icon.loser {\n    background-image: url(" + escape(__webpack_require__(69)) + ");\n}\n}\n.detail .content .score-box .score {\n  width: 100%;\n  height: 3rem;\n  padding-bottom: 1rem;\n}\n.detail .content .score-box .score label {\n  width: 85%;\n  font-size: 1.5rem;\n  color: #000;\n  display: block;\n  margin: 0 auto;\n  font-weight: bold;\n  padding-bottom: 0.5rem;\n}\n.detail .content .score-box .score span {\n  float: right;\n  font-weight: bold;\n  color: #87cefa;\n}\n.detail .content .score-box .score .progress {\n  width: 85%;\n  background: #ddd;\n  margin: 0 auto;\n}\n.detail .content .score-box .score .progress .curRate {\n  width: 0;\n  background: #87cefa;\n}\n.detail .content .score-box .score .progress .round-conner {\n  height: 1rem;\n}\n.detail .footer {\n  width: 100%;\n  height: 2rem;\n  text-align: center;\n}\n", ""]);
 
 // exports
 
@@ -47010,6 +47010,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_store__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__error_error__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__error_error___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__error_error__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -47189,136 +47194,171 @@ var render = function() {
     [
       _c("div", { staticClass: "header" }),
       _vm._v(" "),
-      _c("div", { staticClass: "ticket-box", attrs: { title: "准考证信息" } }, [
-        _c("div", { staticClass: "details" }, [
-          _c("label", [
-            _vm._v("考生姓名:"),
-            _c("span", [_vm._v(_vm._s(_vm.xm))])
-          ]),
-          _vm._v(" "),
-          _c("label", [
-            _vm._v("身份证号:"),
-            _c("span", [_vm._v(_vm._s(_vm.sfz))])
-          ]),
-          _vm._v(" "),
-          _c("label", [
-            _vm._v("准考证号:"),
-            _c("span", [_vm._v(_vm._s(_vm.zkz))])
-          ])
-        ])
+      _c("div", { staticClass: "content" }, [
+        _c(
+          "div",
+          { staticClass: "ticket-box", attrs: { title: "准考证信息" } },
+          [
+            _c("div", { staticClass: "details" }, [
+              _c("label", [
+                _vm._v("考生姓名:"),
+                _c("span", [_vm._v(_vm._s(_vm.xm))])
+              ]),
+              _vm._v(" "),
+              _c("label", [
+                _vm._v("身份证号:"),
+                _c("span", [_vm._v(_vm._s(_vm.sfz))])
+              ]),
+              _vm._v(" "),
+              _c("label", [
+                _vm._v("准考证号:"),
+                _c("span", [_vm._v(_vm._s(_vm.zkz))])
+              ])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: !_vm.turnScore,
+                expression: "!turnScore"
+              }
+            ],
+            staticClass: "clickScore",
+            on: {
+              click: function($event) {
+                _vm.submit()
+              }
+            }
+          },
+          [_c("div", { staticClass: "btn" }, [_vm._v(_vm._s(_vm.submitBtn))])]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.turnScore,
+                expression: "turnScore"
+              }
+            ],
+            staticClass: "score-box",
+            attrs: { title: "成绩情况" },
+            on: { click: _vm.showScore }
+          },
+          [
+            _c("div", { staticClass: "details" }, [
+              _c("label", [
+                _vm._v("考生姓名:"),
+                _c("span", [_vm._v(_vm._s(_vm.xm))])
+              ]),
+              _vm._v(" "),
+              _c("label", [
+                _vm._v("准考证号:"),
+                _c("span", [_vm._v(_vm._s(_vm.zkz))])
+              ]),
+              _vm._v(" "),
+              _c("label", [
+                _vm._v("考生学校:"),
+                _c("span", [_vm._v(_vm._s(_vm.xx))])
+              ]),
+              _vm._v(" "),
+              _c("div", {
+                staticClass: "icon",
+                class: this.zf >= 425 ? "pass" : "loser"
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "score" }, [
+              _c("label", [
+                _vm._v("总分"),
+                _c("span", [_vm._v(_vm._s(_vm.zf))])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "progress round-conner" }, [
+                _c("div", {
+                  staticClass: "curRate round-conner",
+                  style: _vm.lezf
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "score" }, [
+              _c("label", [
+                _vm._v("听力"),
+                _c("span", [_vm._v(_vm._s(_vm.tl))])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "progress round-conner" }, [
+                _c("div", {
+                  staticClass: "curRate round-conner",
+                  style: _vm.letl
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "score" }, [
+              _c("label", [
+                _vm._v("阅读"),
+                _c("span", [_vm._v(_vm._s(_vm.yd))])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "progress round-conner" }, [
+                _c("div", {
+                  staticClass: "curRate round-conner",
+                  style: _vm.leyd
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "score" }, [
+              _c("label", [
+                _vm._v("写作"),
+                _c("span", [_vm._v(_vm._s(_vm.xz))])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "progress round-conner" }, [
+                _c("div", {
+                  staticClass: "curRate round-conner",
+                  style: _vm.lexz
+                })
+              ])
+            ])
+          ]
+        )
       ]),
       _vm._v(" "),
-      _c(
-        "div",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: !_vm.turnScore,
-              expression: "!turnScore"
-            }
-          ],
-          staticClass: "clickScore",
-          on: {
-            click: function($event) {
-              _vm.submit()
-            }
-          }
-        },
-        [_c("div", { staticClass: "btn" }, [_vm._v(_vm._s(_vm.submitBtn))])]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: _vm.turnScore,
-              expression: "turnScore"
-            }
-          ],
-          staticClass: "score-box",
-          attrs: { title: "成绩情况" },
-          on: { click: _vm.showScore }
-        },
-        [
-          _c("div", { staticClass: "details" }, [
-            _c("label", [
-              _vm._v("考生姓名:"),
-              _c("span", [_vm._v(_vm._s(_vm.xm))])
-            ]),
-            _vm._v(" "),
-            _c("label", [
-              _vm._v("准考证号:"),
-              _c("span", [_vm._v(_vm._s(_vm.zkz))])
-            ]),
-            _vm._v(" "),
-            _c("label", [
-              _vm._v("考生学校:"),
-              _c("span", [_vm._v(_vm._s(_vm.xx))])
-            ]),
-            _vm._v(" "),
-            _c("div", {
-              staticClass: "icon",
-              class: this.zf >= 425 ? "pass" : "loser"
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "score" }, [
-            _c("label", [_vm._v("总分"), _c("span", [_vm._v(_vm._s(_vm.zf))])]),
-            _vm._v(" "),
-            _c("div", { staticClass: "progress round-conner" }, [
-              _c("div", {
-                staticClass: "curRate round-conner",
-                style: _vm.lezf
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "score" }, [
-            _c("label", [_vm._v("听力"), _c("span", [_vm._v(_vm._s(_vm.tl))])]),
-            _vm._v(" "),
-            _c("div", { staticClass: "progress round-conner" }, [
-              _c("div", {
-                staticClass: "curRate round-conner",
-                style: _vm.letl
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "score" }, [
-            _c("label", [_vm._v("阅读"), _c("span", [_vm._v(_vm._s(_vm.yd))])]),
-            _vm._v(" "),
-            _c("div", { staticClass: "progress round-conner" }, [
-              _c("div", {
-                staticClass: "curRate round-conner",
-                style: _vm.leyd
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "score" }, [
-            _c("label", [_vm._v("写作"), _c("span", [_vm._v(_vm._s(_vm.xz))])]),
-            _vm._v(" "),
-            _c("div", { staticClass: "progress round-conner" }, [
-              _c("div", {
-                staticClass: "curRate round-conner",
-                style: _vm.lexz
-              })
-            ])
-          ])
-        ]
-      ),
+      _vm._m(0),
       _vm._v(" "),
       _c("error", { ref: "error" })
     ],
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "footer" }, [
+      _c("p", [
+        _vm._v("Copyright © 2018 "),
+        _c("a", { attrs: { href: "https://icharle.com" } }, [
+          _vm._v("Icharle")
+        ]),
+        _vm._v(". All rights reserved.")
+      ])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -48106,7 +48146,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.query {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  min-height: 100%;\n}\n.query .header {\n  width: 100%;\n  height: 12rem;\n  margin: 0 auto;\n  background-image: url(" + escape(__webpack_require__(65)) + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.query .content {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.query .footer {\n  width: 100%;\n  height: 2rem;\n  line-height: 2rem;\n  text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n.query {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  min-height: 100%;\n}\n.query .header {\n  width: 100%;\n  height: 12rem;\n  margin: 0 auto;\n  background-image: url(" + escape(__webpack_require__(65)) + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.query .content {\n  width: 100%;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-flex: 1;\n  overflow: auto;\n}\n.query .content .title {\n  display: inherit;\n  padding-top: 2rem;\n  text-align: center;\n  font-size: 2.3rem;\n  line-height: 2.3rem;\n}\n.query .content .getticket {\n  width: 100%;\n}\n.query .content .getticket .input-wrap {\n  width: 18rem;\n  position: relative;\n  padding: 0.5rem 0.6rem 0.5rem 3.4rem;\n  margin: 2rem auto 0.5rem auto;\n  border: 0.08rem solid #ccc;\n  border-radius: 0.5rem;\n}\n.query .content .getticket .input-wrap span {\n  position: absolute;\n  top: 1.2rem;\n  left: 1rem;\n  font-size: 2.2rem;\n}\n.query .content .getticket .input-wrap input {\n  width: 100%;\n  line-height: 3.5rem;\n  font-size: 1.4rem;\n  border-width: 0;\n}\n.query .content .getticket .radio-wrap {\n  width: 20rem;\n  margin: 2rem auto 1rem auto;\n}\n.query .content .getticket .radio-wrap label input {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  border: 0;\n  outline: 0 !important;\n  vertical-align: middle;\n}\n.query .content .getticket .radio-wrap label span {\n  padding-left: 0.4rem;\n  font-size: 1.3rem;\n  vertical-align: middle;\n}\n.query .content .getticket .radio-wrap label .radio:after {\n  content: \"\";\n  display: block;\n  width: 1.8rem;\n  height: 1.8rem;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 1.8rem;\n  font-size: 1.3rem;\n  color: #09f;\n  border: 0.2rem solid #ddd;\n  background-color: #fff;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.query .content .getticket .radio-wrap label .radio:checked:after {\n  content: \"\\2713\";\n  border-color: #09f;\n  -webkit-transition: all 0.3s ease-in-out;\n  transition: all 0.3s ease-in-out;\n}\n.query .content .getticket .btn {\n  margin: 3rem auto 0rem auto;\n  width: 19rem;\n  height: 3rem;\n  line-height: 3rem;\n  text-align: center;\n  border: none;\n  font-size: 2rem;\n  color: #fff;\n  border-radius: 0.5rem;\n  background-color: #636b6f;\n}\n.query .content .score-box {\n  width: 80%;\n  position: relative;\n  top: 4.5rem;\n  margin: 0 auto;\n  border: 0.2rem dashed #d9dde1;\n  color: #93999f;\n  font-size: 2rem;\n  border-radius: 0.5rem;\n}\n.query .content .score-box:before {\n  content: attr(title);\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  -webkit-transform: translate(-50%, -50%);\n  padding: 0 1rem;\n  background-color: #fff;\n}\n.query .content .score-box .details {\n  font-size: 1rem;\n  margin: 2.5rem auto 0rem auto;\n}\n.query .content .score-box .details label {\n  width: 90%;\n  display: block;\n  color: #87cefa;\n  margin: 0 auto 2rem auto;\n}\n.query .content .score-box .details span {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #93999f;\n  padding-left: 1.5rem;\n}\n.query .content .score-box .details .icon {\n  position: absolute;\n  top: -0.2rem;\n  right: -0.2rem;\n  width: 4.8rem;\n  height: 3.65rem;\n  background-size: 4.8rem 3.65rem;\n  background-repeat: no-repeat;\n}\n.query .content .score-box .score {\n  width: 100%;\n  height: 3rem;\n  padding-bottom: 1rem;\n}\n.query .content .score-box .score label {\n  width: 85%;\n  font-size: 1.5rem;\n  color: #000;\n  display: block;\n  margin: 0 auto;\n  font-weight: bold;\n  padding-bottom: 0.5rem;\n}\n.query .content .score-box .score span {\n  float: right;\n  font-weight: bold;\n  color: #87cefa;\n}\n.query .content .score-box .score .progress {\n  width: 85%;\n  background: #ddd;\n  margin: 0 auto;\n}\n.query .content .score-box .score .progress .curRate {\n  width: 0;\n  background: #87cefa;\n}\n.query .content .score-box .score .progress .round-conner {\n  height: 1rem;\n}\n.query .footer {\n  width: 100%;\n  height: 2rem;\n  line-height: 2rem;\n  text-align: center;\n}\n", ""]);
 
 // exports
 
@@ -48129,8 +48169,76 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            xm: '', //姓名
+            sfz: '', //身份证
+            zkz: '', //准考证
+            xx: ' ', //考生学校
+            zf: ' ', //总分
+            tl: ' ', //听力35%
+            yd: ' ', //阅读35%
+            xz: ' ', //写作及翻译30%
+            submitBtn: '查询成绩', //按钮
+            sScore: '', //服务器返回值
+            turnScore: false, //查询按钮
+            score: '' //处理过的分数(听力、阅读、写作及翻译)
+        };
+    }
+});
 
 /***/ }),
 /* 85 */
@@ -48140,26 +48248,248 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "query" }, [
+    _c("div", { staticClass: "header" }),
+    _vm._v(" "),
+    _c("div", { staticClass: "content" }, [
+      _c("span", { staticClass: "title" }, [_vm._v("四六级成绩查询")]),
+      _vm._v(" "),
+      _c(
+        "form",
+        {
+          directives: [
+            { name: "show", rawName: "v-show", value: true, expression: "true" }
+          ],
+          staticClass: "getticket"
+        },
+        [
+          _c("div", { staticClass: "input-wrap" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-inner" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.xm,
+                    expression: "xm"
+                  }
+                ],
+                attrs: { type: "text", placeholder: "姓名" },
+                domProps: { value: _vm.xm },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.xm = $event.target.value
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "input-wrap" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-inner" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.sfz,
+                    expression: "sfz"
+                  }
+                ],
+                attrs: { type: "text", placeholder: "身份证" },
+                domProps: { value: _vm.sfz },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.sfz = $event.target.value
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "radio-wrap" }, [
+            _c("label", [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.jb,
+                    expression: "jb"
+                  }
+                ],
+                staticClass: "radio",
+                attrs: { type: "radio", name: "type", value: "1", checked: "" },
+                domProps: { checked: _vm._q(_vm.jb, "1") },
+                on: {
+                  change: function($event) {
+                    _vm.jb = "1"
+                  }
+                }
+              }),
+              _c("span", [_vm._v("四级")])
+            ]),
+            _vm._v(" "),
+            _c("label", [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.jb,
+                    expression: "jb"
+                  }
+                ],
+                staticClass: "radio",
+                attrs: { type: "radio", name: "type", value: "2" },
+                domProps: { checked: _vm._q(_vm.jb, "2") },
+                on: {
+                  change: function($event) {
+                    _vm.jb = "2"
+                  }
+                }
+              }),
+              _c("span", [_vm._v("六级")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "btn",
+              on: {
+                click: function($event) {
+                  _vm.submit()
+                }
+              }
+            },
+            [_vm._v(_vm._s(_vm.submitBtn))]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: false,
+              expression: "false"
+            }
+          ],
+          staticClass: "score-box",
+          attrs: { title: "成绩情况" },
+          on: { click: _vm.showScore }
+        },
+        [
+          _c("div", { staticClass: "details" }, [
+            _c("label", [
+              _vm._v("考生姓名:"),
+              _c("span", [_vm._v(_vm._s(_vm.xm))])
+            ]),
+            _vm._v(" "),
+            _c("label", [
+              _vm._v("准考证号:"),
+              _c("span", [_vm._v(_vm._s(_vm.zkz))])
+            ]),
+            _vm._v(" "),
+            _c("label", [
+              _vm._v("考生学校:"),
+              _c("span", [_vm._v(_vm._s(_vm.xx))])
+            ]),
+            _vm._v(" "),
+            _c("div", {
+              staticClass: "icon",
+              class: this.zf >= 425 ? "pass" : "loser"
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "score" }, [
+            _c("label", [_vm._v("总分"), _c("span", [_vm._v(_vm._s(_vm.zf))])]),
+            _vm._v(" "),
+            _c("div", { staticClass: "progress round-conner" }, [
+              _c("div", {
+                staticClass: "curRate round-conner",
+                style: _vm.lezf
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "score" }, [
+            _c("label", [_vm._v("听力"), _c("span", [_vm._v(_vm._s(_vm.tl))])]),
+            _vm._v(" "),
+            _c("div", { staticClass: "progress round-conner" }, [
+              _c("div", {
+                staticClass: "curRate round-conner",
+                style: _vm.letl
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "score" }, [
+            _c("label", [_vm._v("阅读"), _c("span", [_vm._v(_vm._s(_vm.yd))])]),
+            _vm._v(" "),
+            _c("div", { staticClass: "progress round-conner" }, [
+              _c("div", {
+                staticClass: "curRate round-conner",
+                style: _vm.leyd
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "score" }, [
+            _c("label", [_vm._v("写作"), _c("span", [_vm._v(_vm._s(_vm.xz))])]),
+            _vm._v(" "),
+            _c("div", { staticClass: "progress round-conner" }, [
+              _c("div", {
+                staticClass: "curRate round-conner",
+                style: _vm.lexz
+              })
+            ])
+          ])
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _vm._m(2)
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "query" }, [
-      _c("div", { staticClass: "header" }),
-      _vm._v(" "),
-      _c("div", { staticClass: "content" }),
-      _vm._v(" "),
-      _c("div", { staticClass: "footer" }, [
-        _c("p", [
-          _vm._v("Copyright © 2018 "),
-          _c("a", { attrs: { href: "https://icharle.com" } }, [
-            _vm._v("Icharle")
-          ]),
-          _vm._v(". All rights reserved.")
-        ])
+    return _c("span", [_c("i", { staticClass: "icon-user" })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", [_c("i", { staticClass: "icon-profile" })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "footer" }, [
+      _c("p", [
+        _vm._v("Copyright © 2018 "),
+        _c("a", { attrs: { href: "https://icharle.com" } }, [
+          _vm._v("Icharle")
+        ]),
+        _vm._v(". All rights reserved.")
       ])
     ])
   }
@@ -48260,7 +48590,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.reserve {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  min-height: 100%;\n}\n.reserve .header {\n  width: 100%;\n  height: 12rem;\n  margin: 0 auto;\n  background-image: url(" + escape(__webpack_require__(91)) + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.reserve .content {\n  width: 100%;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-flex: 1;\n}\n.reserve .content .title {\n  display: inherit;\n  padding-top: 2rem;\n  text-align: center;\n  font-size: 2.3rem;\n  line-height: 2.3rem;\n}\n.reserve .content .getticket {\n  width: 100%;\n}\n.reserve .content .getticket .input-wrap {\n  width: 18rem;\n  position: relative;\n  padding: 0.5rem 0.6rem 0.5rem 3.4rem;\n  margin: 2rem auto 0.5rem auto;\n  border: 0.08rem solid #ccc;\n  border-radius: 0.5rem;\n}\n.reserve .content .getticket .input-wrap span {\n  position: absolute;\n  top: 1.2rem;\n  left: 1rem;\n  font-size: 2.2rem;\n}\n.reserve .content .getticket .input-wrap input {\n  width: 100%;\n  line-height: 3.5rem;\n  font-size: 1.4rem;\n  border-width: 0;\n}\n.reserve .content .getticket .radio-wrap {\n  width: 20rem;\n  margin: 2rem auto 1rem auto;\n}\n.reserve .content .getticket .radio-wrap label input {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  border: 0;\n  outline: 0 !important;\n  vertical-align: middle;\n}\n.reserve .content .getticket .radio-wrap label span {\n  padding-left: 0.4rem;\n  font-size: 1.3rem;\n  vertical-align: middle;\n}\n.reserve .content .getticket .radio-wrap label .radio:after {\n  content: \"\";\n  display: block;\n  width: 1.8rem;\n  height: 1.8rem;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 1.8rem;\n  font-size: 1.3rem;\n  color: #09f;\n  border: 0.2rem solid #ddd;\n  background-color: #fff;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.reserve .content .getticket .radio-wrap label .radio:checked:after {\n  content: \"\\2713\";\n  border-color: #09f;\n  -webkit-transition: all 0.3s ease-in-out;\n  transition: all 0.3s ease-in-out;\n}\n.reserve .content .getticket .btn {\n  margin: 3rem auto 0rem auto;\n  width: 19rem;\n  height: 3rem;\n  line-height: 3rem;\n  text-align: center;\n  border: none;\n  font-size: 2rem;\n  color: #fff;\n  border-radius: 0.5rem;\n  background-color: #636b6f;\n}\n.reserve .footer {\n  width: 100%;\n  height: 2rem;\n  line-height: 2rem;\n  text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n.reserve {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  min-height: 100%;\n}\n.reserve .header {\n  width: 100%;\n  height: 12rem;\n  margin: 0 auto;\n  background-image: url(" + escape(__webpack_require__(91)) + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.reserve .content {\n  width: 100%;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-flex: 1;\n  overflow: auto;\n}\n.reserve .content .title {\n  display: inherit;\n  padding-top: 2rem;\n  text-align: center;\n  font-size: 2.3rem;\n  line-height: 2.3rem;\n}\n.reserve .content .getticket {\n  width: 100%;\n}\n.reserve .content .getticket .input-wrap {\n  width: 18rem;\n  position: relative;\n  padding: 0.5rem 0.6rem 0.5rem 3.4rem;\n  margin: 2rem auto 0.5rem auto;\n  border: 0.08rem solid #ccc;\n  border-radius: 0.5rem;\n}\n.reserve .content .getticket .input-wrap span {\n  position: absolute;\n  top: 1.2rem;\n  left: 1rem;\n  font-size: 2.2rem;\n}\n.reserve .content .getticket .input-wrap input {\n  width: 100%;\n  line-height: 3.5rem;\n  font-size: 1.4rem;\n  border-width: 0;\n}\n.reserve .content .getticket .radio-wrap {\n  width: 20rem;\n  margin: 2rem auto 1rem auto;\n}\n.reserve .content .getticket .radio-wrap label input {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  border: 0;\n  outline: 0 !important;\n  vertical-align: middle;\n}\n.reserve .content .getticket .radio-wrap label span {\n  padding-left: 0.4rem;\n  font-size: 1.3rem;\n  vertical-align: middle;\n}\n.reserve .content .getticket .radio-wrap label .radio:after {\n  content: \"\";\n  display: block;\n  width: 1.8rem;\n  height: 1.8rem;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 1.8rem;\n  font-size: 1.3rem;\n  color: #09f;\n  border: 0.2rem solid #ddd;\n  background-color: #fff;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.reserve .content .getticket .radio-wrap label .radio:checked:after {\n  content: \"\\2713\";\n  border-color: #09f;\n  -webkit-transition: all 0.3s ease-in-out;\n  transition: all 0.3s ease-in-out;\n}\n.reserve .content .getticket .btn {\n  margin: 3rem auto 0rem auto;\n  width: 19rem;\n  height: 3rem;\n  line-height: 3rem;\n  text-align: center;\n  border: none;\n  font-size: 2rem;\n  color: #fff;\n  border-radius: 0.5rem;\n  background-color: #636b6f;\n}\n.reserve .footer {\n  width: 100%;\n  height: 2rem;\n  line-height: 2rem;\n  text-align: center;\n}\n", ""]);
 
 // exports
 

@@ -1,18 +1,28 @@
 <template>
-    <div class="detail">
+    <div class="query">
         <div class="header"></div>
-            <div class="content">
-            <div class="ticket-box" title="准考证信息">
-                <div class="details">
-                    <label>考生姓名:<span>{{xm}}</span></label>
-                    <label>身份证号:<span>{{sfz}}</span></label>
-                    <label>准考证号:<span>{{zkz}}</span></label>
+        <div class="content">
+            <span class="title">四六级成绩查询</span>
+            <form class="getticket" v-show="true">
+                <div class="input-wrap">
+                    <span><i class="icon-user"></i></span>
+                    <div class="input-inner">
+                        <input type="text" v-model="xm" placeholder="姓名"/>
+                    </div>
                 </div>
-            </div>
-            <div class="clickScore" v-show="!turnScore" @click="submit()">
-                <div class="btn">{{submitBtn}}</div>
-            </div>
-            <div class="score-box" title="成绩情况" v-show="turnScore" @click="showScore">
+                <div class="input-wrap">
+                    <span><i class="icon-profile"></i></span>
+                    <div class="input-inner">
+                        <input type="text" v-model="sfz" placeholder="身份证"/>
+                    </div>
+                </div>
+                <div class="radio-wrap">
+                    <label><input type="radio" class="radio" name="type" value="1" checked v-model="jb"/><span>四级</span></label>
+                    <label><input type="radio" class="radio" name="type" value="2" v-model="jb"/><span>六级</span></label>
+                </div>
+                <div class="btn" @click="submit()">{{submitBtn}}</div>
+            </form>
+            <div class="score-box" title="成绩情况" @click="showScore" v-show="false">
                 <div class="details">
                     <label>考生姓名:<span>{{xm}}</span></label>
                     <label>准考证号:<span>{{zkz}}</span></label>
@@ -48,16 +58,11 @@
         <div class="footer">
             <p>Copyright © 2018 <a href="https://icharle.com">Icharle</a>. All rights reserved.</p>
         </div>
-        <error ref="error"></error>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
-    import store from '../common/store'
-    import error from '../error/error'
-
     export default {
-        props: ['ticket'],
         data() {
             return {
                 xm: '',     //姓名
@@ -73,92 +78,12 @@
                 turnScore: false,    //查询按钮
                 score: '',           //处理过的分数(听力、阅读、写作及翻译)
             }
-        },
-        mounted: function () {
-            this.$nextTick(function () {
-                const data = store.get('ticket')
-                this.xm = data.xm
-                this.sfz = data.sfz
-                this.zkz = data.zkz
-//                console.log(this.$route.params.ticket)
-//                const data = this.$route.query.ticket
-//                console.log(data)
-            })
-        },
-        watch: {
-            sScore: function () {
-                this.dealscore(store.get(sScore))
-            }
-        },
-        computed: {
-            lezf() {
-                return {
-                    width: (this.zf / 710 * 100) + '%'
-                }
-            },
-            letl() {
-                return {
-                    width: (this.tl / 249 * 100) + '%'
-                }
-            },
-            leyd() {
-                return {
-                    width: (this.yd / 249 * 100) + '%'
-                }
-            },
-            lexz() {
-                return {
-                    width: (this.xz / 212 * 100) + '%'
-                }
-            }
-        },
-        methods: {
-            showScore() {
-                this.turnScore = !this.turnScore
-            },
-            submit() {
-                this.submitBtn = '查 询 中...'
-                axios.post('api/score', {
-                    xm: this.xm,
-                    zkz: this.zkz
-                }).then(response => {
-                    let data = response.data
-                    if (data.status === 403 || data.status === 404) {
-                        this.submitBtn = '查 询'
-                        this.$refs.error.show("查询服务暂不可用", "请前往官网查询")
-                    } else if (data.status === 500) {
-                        this.submitBtn = '查 询'
-                        this.$refs.error.show("查询服务暂不可用", "请前往官网查询")
-//                        window.location.href = 'http://www.chsi.com.cn/cet/'
-                    } else if (data.status === 200) {
-                        this.submitBtn = '查 询'
-                        this.showScore()
-                        const res = data.msg
-                        this.dealscore(res)
-                        store.set('xm', res)
-                    }
-                }).catch(error => {
-                    console.log(error)
-                });
-            },
-            dealscore(res) {
-                this.xx = res.school
-                let wrScore = res.written
-                this.zf = wrScore.score
-                this.tl = wrScore.listening
-                this.yd = wrScore.reading
-                this.xz = wrScore.translation
-            }
-        },
-        components: {
-            error
         }
     }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-    @import "../../../sass/mixin.styl"
-    .detail
+    .query
         display flex
         flex-direction column
         height 100%
@@ -167,7 +92,7 @@
             width 100%
             height 12rem
             margin 0 auto
-            background-image url(query.jpg)
+            background-image url(../detail/query.jpg)
             background-repeat no-repeat
             background-size 100% 100%
         .content
@@ -175,55 +100,76 @@
             flex 1
             -webkit-flex 1
             overflow auto
-            .ticket-box
-                width 80%
-                position relative
-                top 2rem
-                margin 0 auto
-                border 0.2rem dashed #d9dde1
-                color #93999f
-                font-size 2rem
-                border-radius 0.5rem
-                &:before
-                    content attr(title)
-                    position absolute
-                    left 50%
-                    transform translateX(-50%)
-                    -webkit-transform translate(-50%, -50%)
-                    padding 0 1rem
-                    background-color #fff
-                .details
-                    font-size 1rem
-                    margin 2.5rem auto 0rem auto
-                    label
-                        width 90%
-                        display block
-                        color lightskyblue
-                        line-height 2.5rem
-                        margin 0 auto 2.5rem auto
-                    span
-                        font-size 1.5rem
-                        font-weight bold
-                        color #93999f
-                        padding-left 1.5rem
-
-
-            .clickScore
-                width 80%
-                position relative
-                top 4.5rem
-                margin 0 auto
-                .btn
-                    width 75%
-                    height 3rem
-                    background-color lightskyblue
-                    margin 0 auto
+            .title
+                display inherit
+                padding-top 2rem
+                text-align center
+                font-size 2.3rem
+                line-height 2.3rem
+            .getticket
+                width 100%
+                .input-wrap
+                    width 18rem
+                    position relative
+                    padding 0.5rem 0.6rem 0.5rem 3.4rem
+                    margin 2rem auto 0.5rem auto
+                    border 0.08rem solid #ccc
                     border-radius 0.5rem
-                    color white
+                    span
+                        position absolute
+                        top 1.2rem
+                        left 1rem
+                        font-size 2.2rem
+                    input
+                        width 100%
+                        line-height 3.5rem
+                        font-size 1.4rem
+                        border-width 0
+                .radio-wrap
+                    width 20rem
+                    margin 2rem auto 1rem auto
+                    label
+                        input
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                            border: 0;
+                            outline: 0 !important;
+                            vertical-align middle
+                        span
+                            padding-left 0.4rem
+                            font-size 1.3rem
+                            vertical-align middle
+                        .radio:after {
+                            content ""
+                            display block
+                            width 1.8rem
+                            height 1.8rem
+                            border-radius 50%
+                            text-align center
+                            line-height 1.8rem
+                            font-size 1.3rem
+                            color #09f
+                            border 0.2rem solid #ddd
+                            background-color #fff
+                            box-sizing border-box
+                        }
+                        .radio:checked:after {
+                            content "\2713"
+                            border-color #09f
+                            transition all 0.3s ease-in-out
+                        }
+                .btn
+                    margin 3rem auto 0rem auto
+                    width 19rem
+                    height 3rem
                     line-height 3rem
-                    font-size 2rem
                     text-align center
-
+                    border none
+                    font-size 2rem
+                    color #ffffff
+                    border-radius 0.5rem
+                    background-color #636b6f
             .score-box
                 width 80%
                 position relative
@@ -294,5 +240,6 @@
         .footer
             width 100%
             height 2rem
+            line-height 2rem
             text-align center
 </style>
