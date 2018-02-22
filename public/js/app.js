@@ -47096,78 +47096,26 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.detail {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  min-height: 100%;\n}\n.detail .header {\n  width: 100%;\n  height: 12rem;\n  margin: 0 auto;\n  background-image: url(" + escape(__webpack_require__(18)) + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.detail .content {\n  width: 100%;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-flex: 1;\n  overflow: auto;\n}\n.detail .content .ticket-box {\n  width: 80%;\n  position: relative;\n  top: 2rem;\n  margin: 0 auto;\n  border: 0.2rem dashed #d9dde1;\n  color: #93999f;\n  font-size: 2rem;\n  border-radius: 0.5rem;\n}\n.detail .content .ticket-box:before {\n  content: attr(title);\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  -webkit-transform: translate(-50%, -50%);\n  padding: 0 1rem;\n  background-color: #fff;\n}\n.detail .content .ticket-box .details {\n  font-size: 1rem;\n  margin: 2.5rem auto 0rem auto;\n}\n.detail .content .ticket-box .details label {\n  width: 90%;\n  display: block;\n  color: #87cefa;\n  line-height: 2.5rem;\n  margin: 0 auto 2.5rem auto;\n}\n.detail .content .ticket-box .details span {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #93999f;\n  padding-left: 1.5rem;\n}\n.detail .content .clickScore {\n  width: 80%;\n  position: relative;\n  top: 4.5rem;\n  margin: 0 auto;\n}\n.detail .content .clickScore .btn {\n  width: 75%;\n  height: 3rem;\n  background-color: #87cefa;\n  margin: 0 auto;\n  border-radius: 0.5rem;\n  color: #fff;\n  line-height: 3rem;\n  font-size: 2rem;\n  text-align: center;\n}\n.detail .content .score-box {\n  width: 80%;\n  position: relative;\n  top: 4.5rem;\n  margin: 0 auto;\n  border: 0.2rem dashed #d9dde1;\n  color: #93999f;\n  font-size: 2rem;\n  border-radius: 0.5rem;\n}\n.detail .content .score-box:before {\n  content: attr(title);\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  -webkit-transform: translate(-50%, -50%);\n  padding: 0 1rem;\n  background-color: #fff;\n}\n.detail .content .score-box .details {\n  font-size: 1rem;\n  margin: 2.5rem auto 0rem auto;\n}\n.detail .content .score-box .details label {\n  width: 90%;\n  display: block;\n  color: #87cefa;\n  margin: 0 auto 2rem auto;\n}\n.detail .content .score-box .details span {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #93999f;\n  padding-left: 1.5rem;\n}\n.detail .content .score-box .details .icon {\n  position: absolute;\n  top: -0.2rem;\n  right: -0.2rem;\n  width: 4.8rem;\n  height: 3.65rem;\n  background-size: 4.8rem 3.65rem;\n  background-repeat: no-repeat;\n}\n.detail .content .score-box .details .icon.pass {\n  background-image: url(" + escape(__webpack_require__(71)) + ");\n}\n@media (-webkit-min-device-piexel-ratio: 2), (min-device-pixel-ratio: 2) {\n.detail .content .score-box .details .icon.pass {\n    background-image: url(" + escape(__webpack_require__(72)) + ");\n}\n}\n.detail .content .score-box .details .icon.loser {\n  background-image: url(" + escape(__webpack_require__(73)) + ");\n}\n@media (-webkit-min-device-piexel-ratio: 2), (min-device-pixel-ratio: 2) {\n.detail .content .score-box .details .icon.loser {\n    background-image: url(" + escape(__webpack_require__(74)) + ");\n}\n}\n.detail .content .score-box .score {\n  width: 100%;\n  height: 3rem;\n  padding-bottom: 1rem;\n}\n.detail .content .score-box .score label {\n  width: 85%;\n  font-size: 1.5rem;\n  color: #000;\n  display: block;\n  margin: 0 auto;\n  font-weight: bold;\n  padding-bottom: 0.5rem;\n}\n.detail .content .score-box .score span {\n  float: right;\n  font-weight: bold;\n  color: #87cefa;\n}\n.detail .content .score-box .score .progress {\n  width: 85%;\n  background: #ddd;\n  margin: 0 auto;\n}\n.detail .content .score-box .score .progress .curRate {\n  width: 0;\n  background: #87cefa;\n}\n.detail .content .score-box .score .progress .round-conner {\n  height: 1rem;\n}\n", ""]);
+exports.push([module.i, "\n.detail {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  min-height: 100%;\n}\n.detail .header {\n  width: 100%;\n  height: 12rem;\n  margin: 0 auto;\n  background-image: url(" + escape(__webpack_require__(18)) + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.detail .content {\n  width: 100%;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-flex: 1;\n  overflow: auto;\n}\n.detail .content .ticket-box {\n  width: 80%;\n  position: relative;\n  top: 2rem;\n  margin: 0 auto;\n  border: 0.2rem dashed #d9dde1;\n  color: #93999f;\n  font-size: 2rem;\n  border-radius: 0.5rem;\n}\n.detail .content .ticket-box:before {\n  content: attr(title);\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  -webkit-transform: translate(-50%, -50%);\n  padding: 0 1rem;\n  background-color: #fff;\n}\n.detail .content .ticket-box .details {\n  font-size: 1rem;\n  margin: 2.5rem auto 0rem auto;\n}\n.detail .content .ticket-box .details label {\n  width: 90%;\n  display: block;\n  color: #87cefa;\n  line-height: 2.5rem;\n  margin: 0 auto 2.5rem auto;\n}\n.detail .content .ticket-box .details span {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #93999f;\n  padding-left: 1.5rem;\n}\n.detail .content .clickScore {\n  width: 80%;\n  position: relative;\n  top: 4.5rem;\n  margin: 0 auto;\n}\n.detail .content .clickScore .btn {\n  width: 75%;\n  height: 3rem;\n  background-color: #87cefa;\n  margin: 0 auto;\n  border-radius: 0.5rem;\n  color: #fff;\n  line-height: 3rem;\n  font-size: 2rem;\n  text-align: center;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 71 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/pass@1x.png?dbbc1a2cb15c198bd719d854951e1ff6";
-
-/***/ }),
-/* 72 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/pass@2x.png?4dc976a6a6b8d65c08f7b6de2a8e9523";
-
-/***/ }),
-/* 73 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/loser@1x.png?c1de4ea4f406ac123a78c5e433fb3f6f";
-
-/***/ }),
-/* 74 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/loser@2x.png?ad4e1d04bcdf568a0f7229738eb84abd";
-
-/***/ }),
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
 /* 75 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_store__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__error_error__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__error_error___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__error_error__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__score_score__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__score_score___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__score_score__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__footer_footer__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__footer_footer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__footer_footer__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -47194,116 +47142,44 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['ticket'],
+    //        props: ['ticket'],
     data: function data() {
         return {
-            xm: '', //姓名
-            sfz: '', //身份证
-            zkz: '', //准考证
-            xx: ' ', //考生学校
-            zf: ' ', //总分
-            tl: ' ', //听力35%
-            yd: ' ', //阅读35%
-            xz: ' ', //写作及翻译30%
+            name: '', //姓名
+            idcard: '', //身份证
+            ticket: '', //准考证
             submitBtn: '查询成绩', //按钮
-            sScore: '', //服务器返回值
-            turnScore: false, //查询按钮
-            score: '' //处理过的分数(听力、阅读、写作及翻译)
+            turnScore: true //查询按钮
         };
     },
 
     mounted: function mounted() {
         this.$nextTick(function () {
             var data = __WEBPACK_IMPORTED_MODULE_0__common_store__["a" /* default */].get('ticket');
-            this.xm = data.xm;
-            this.sfz = data.sfz;
-            this.zkz = data.zkz;
+            this.name = data.xm;
+            this.idcard = data.sfz;
+            this.ticket = data.zkz;
             //                console.log(this.$route.params.ticket)
             //                const data = this.$route.query.ticket
             //                console.log(data)
         });
     },
-    watch: {
-        sScore: function (_sScore) {
-            function sScore() {
-                return _sScore.apply(this, arguments);
-            }
-
-            sScore.toString = function () {
-                return _sScore.toString();
-            };
-
-            return sScore;
-        }(function () {
-            this.dealscore(__WEBPACK_IMPORTED_MODULE_0__common_store__["a" /* default */].get(sScore));
-        })
-    },
-    computed: {
-        lezf: function lezf() {
-            return {
-                width: this.zf / 710 * 100 + '%'
-            };
-        },
-        letl: function letl() {
-            return {
-                width: this.tl / 249 * 100 + '%'
-            };
-        },
-        leyd: function leyd() {
-            return {
-                width: this.yd / 249 * 100 + '%'
-            };
-        },
-        lexz: function lexz() {
-            return {
-                width: this.xz / 212 * 100 + '%'
-            };
-        }
-    },
     methods: {
+        submit: function submit() {
+            this.$refs.score.submit(this.name, this.ticket);
+        },
         showScore: function showScore() {
             this.turnScore = !this.turnScore;
         },
-        submit: function submit() {
-            var _this = this;
-
-            this.submitBtn = '查 询 中...';
-            axios.post('api/score', {
-                //                    xm: this.xm,
-                //                    zkz: this.zkz
-                xm: '张嘉阳',
-                zkz: '320590171103912'
-            }).then(function (response) {
-                var data = response.data;
-                if (data.status === 403 || data.status === 404) {
-                    _this.submitBtn = '查 询';
-                    _this.$refs.error.show(false, "查询服务暂不可用", "请前往官网查询");
-                } else if (data.status === 500) {
-                    _this.submitBtn = '查 询';
-                    _this.$refs.error.show(false, "查询服务暂不可用", "请前往官网查询");
-                    //                        window.location.href = 'http://www.chsi.com.cn/cet/'
-                } else if (data.status === 200) {
-                    _this.submitBtn = '查 询';
-                    _this.showScore();
-                    var res = data.msg;
-                    _this.dealscore(res);
-                    __WEBPACK_IMPORTED_MODULE_0__common_store__["a" /* default */].set('xm', res);
-                }
-            }).catch(function (error) {
-                console.log(error);
-            });
+        changebtn: function changebtn(txt) {
+            this.submitBtn = txt;
         },
-        dealscore: function dealscore(res) {
-            this.xx = res.school;
-            var wrScore = res.written;
-            this.zf = wrScore.score;
-            this.tl = wrScore.listening;
-            this.yd = wrScore.reading;
-            this.xz = wrScore.translation;
+        changescore: function changescore(txt) {
+            this.turnScore = txt;
         }
     },
     components: {
-        error: __WEBPACK_IMPORTED_MODULE_1__error_error___default.a,
+        score: __WEBPACK_IMPORTED_MODULE_1__score_score___default.a,
         foot: __WEBPACK_IMPORTED_MODULE_2__footer_footer___default.a
     }
 });
@@ -47322,151 +47198,63 @@ var render = function() {
     [
       _c("div", { staticClass: "header" }),
       _vm._v(" "),
-      _c("div", { staticClass: "content" }, [
-        _c(
-          "div",
-          { staticClass: "ticket-box", attrs: { title: "准考证信息" } },
-          [
-            _c("div", { staticClass: "details" }, [
-              _c("label", [
-                _vm._v("考生姓名:"),
-                _c("span", [_vm._v(_vm._s(_vm.xm))])
-              ]),
-              _vm._v(" "),
-              _c("label", [
-                _vm._v("身份证号:"),
-                _c("span", [_vm._v(_vm._s(_vm.sfz))])
-              ]),
-              _vm._v(" "),
-              _c("label", [
-                _vm._v("准考证号:"),
-                _c("span", [_vm._v(_vm._s(_vm.zkz))])
+      _c(
+        "div",
+        { staticClass: "content" },
+        [
+          _c(
+            "div",
+            { staticClass: "ticket-box", attrs: { title: "准考证信息" } },
+            [
+              _c("div", { staticClass: "details" }, [
+                _c("label", [
+                  _vm._v("考生姓名:"),
+                  _c("span", [_vm._v(_vm._s(_vm.name))])
+                ]),
+                _vm._v(" "),
+                _c("label", [
+                  _vm._v("身份证号:"),
+                  _c("span", [_vm._v(_vm._s(_vm.idcard))])
+                ]),
+                _vm._v(" "),
+                _c("label", [
+                  _vm._v("准考证号:"),
+                  _c("span", [_vm._v(_vm._s(_vm.ticket))])
+                ])
               ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            directives: [
-              {
-                name: "show",
-                rawName: "v-show",
-                value: !_vm.turnScore,
-                expression: "!turnScore"
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: _vm.turnScore,
+                  expression: "turnScore"
+                }
+              ],
+              staticClass: "clickScore",
+              on: {
+                click: function($event) {
+                  _vm.submit()
+                }
               }
-            ],
-            staticClass: "clickScore",
-            on: {
-              click: function($event) {
-                _vm.submit()
-              }
-            }
-          },
-          [_c("div", { staticClass: "btn" }, [_vm._v(_vm._s(_vm.submitBtn))])]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            directives: [
-              {
-                name: "show",
-                rawName: "v-show",
-                value: _vm.turnScore,
-                expression: "turnScore"
-              }
-            ],
-            staticClass: "score-box",
-            attrs: { title: "成绩情况" },
-            on: { click: _vm.showScore }
-          },
-          [
-            _c("div", { staticClass: "details" }, [
-              _c("label", [
-                _vm._v("考生姓名:"),
-                _c("span", [_vm._v(_vm._s(_vm.xm))])
-              ]),
-              _vm._v(" "),
-              _c("label", [
-                _vm._v("准考证号:"),
-                _c("span", [_vm._v(_vm._s(_vm.zkz))])
-              ]),
-              _vm._v(" "),
-              _c("label", [
-                _vm._v("考生学校:"),
-                _c("span", [_vm._v(_vm._s(_vm.xx))])
-              ]),
-              _vm._v(" "),
-              _c("div", {
-                staticClass: "icon",
-                class: this.zf >= 425 ? "pass" : "loser"
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "score" }, [
-              _c("label", [
-                _vm._v("总分"),
-                _c("span", [_vm._v(_vm._s(_vm.zf))])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "progress round-conner" }, [
-                _c("div", {
-                  staticClass: "curRate round-conner",
-                  style: _vm.lezf
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "score" }, [
-              _c("label", [
-                _vm._v("听力"),
-                _c("span", [_vm._v(_vm._s(_vm.tl))])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "progress round-conner" }, [
-                _c("div", {
-                  staticClass: "curRate round-conner",
-                  style: _vm.letl
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "score" }, [
-              _c("label", [
-                _vm._v("阅读"),
-                _c("span", [_vm._v(_vm._s(_vm.yd))])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "progress round-conner" }, [
-                _c("div", {
-                  staticClass: "curRate round-conner",
-                  style: _vm.leyd
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "score" }, [
-              _c("label", [
-                _vm._v("写作"),
-                _c("span", [_vm._v(_vm._s(_vm.xz))])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "progress round-conner" }, [
-                _c("div", {
-                  staticClass: "curRate round-conner",
-                  style: _vm.lexz
-                })
-              ])
-            ])
-          ]
-        )
-      ]),
+            },
+            [_c("div", { staticClass: "btn" }, [_vm._v(_vm._s(_vm.submitBtn))])]
+          ),
+          _vm._v(" "),
+          _c("score", {
+            ref: "score",
+            on: { changebtn: _vm.changebtn, changescore: _vm.changescore }
+          })
+        ],
+        1
+      ),
       _vm._v(" "),
-      _c("foot"),
-      _vm._v(" "),
-      _c("error", { ref: "error" })
+      _c("foot")
     ],
     1
   )
