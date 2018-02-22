@@ -1,58 +1,51 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+## Laravel5.5+Vue2.x简单spa项目应用:star2: :star2:
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+>采用laravel、vue开发的CET四六级准考证、成绩查询项目
 
-## About Laravel
+## 项目地址
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+:point_right: 在线演示：https://cet.icharle.com/
+![qrcode](img/qrcode.png)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 项目效果图
+* 首页
+    ![home](img/home.png)
+* 准考证页面
+    ![ticket](img/ticket.png)
+* 成绩显示页面( 分数 < 425 )    
+    ![score](img/score1.png)
+* 成绩显示页面( 分数 >= 425)  
+    ![score](img/score2.png)  
+    
+## 功能(v1.0版本)
+- [x] 准考证查询 
+- [x] 成绩查询 
+- [x] 微信分享 
+- [ ] 预约查询(邮件方式推送) 
+- [ ] Redis消息队列方法推送 
+       
+## 安装使用
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+```
+# 从仓库中下载
+$ git clone https://github.com/icharle/Vue-Cet.git
 
-## Learning Laravel
+# 进入代码根目录安装依赖
+$ composer install
+$ npm install
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+# copy .env文件
+$ cp .env.example .env
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+# 生成项目key
+$ php artisan key:generate
 
-## Laravel Sponsors
+# 配置微信公众号appID && appSecret
+$ appID = xxxxxx
+$ appSecret = xxxxxxx
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+# 修改resources/assets/js/app.js文件中相关微信分享配置
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Pulse Storm](http://www.pulsestorm.net/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# 打包压缩发布
+$ npm run prod
+```
