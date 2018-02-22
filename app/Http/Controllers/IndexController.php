@@ -200,7 +200,7 @@ class IndexController extends Controller
             return response()
                 ->json([
                     'status' => 403,
-                    'msg' => '请输入URL链接！'
+                    'msg' => '请输入完整数据！'
                 ]);
         } else {
             $data['username'] = $input['xm'];
@@ -217,7 +217,7 @@ class IndexController extends Controller
             } else {
                 return response()
                     ->json([
-                        'status' => 405,
+                        'status' => 404,
                         'msg' => '预约查询成绩失败！'
                     ]);
             }

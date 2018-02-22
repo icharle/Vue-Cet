@@ -30,10 +30,12 @@
             </form>
         </div>
         <foot></foot>
+        <error ref="error"></error>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
+    import error from '../error/error'
     import foot from '../footer/footer'
     export default {
         data() {
@@ -56,9 +58,11 @@
                 }).then(response => {
                     let data = response.data
                     if (data.status === 403 || data.status === 404) {
-
+                        this.submitBtn = '预 约'
+                        this.$refs.error.show(false,"预约查询失败！","请正确输入信息！")
                     } else if (data.status === 200) {
-
+                        this.submitBtn = '预 约'
+                        this.$refs.error.show(true,"预约查询成功！","请留意邮件推送！")
                     }
                 }).catch(error => {
                     console.log(error)
@@ -66,7 +70,8 @@
             }
         },
         components: {
-            foot
+            foot,
+            error
         }
     }
 </script>
