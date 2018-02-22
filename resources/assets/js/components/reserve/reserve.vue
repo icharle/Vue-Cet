@@ -3,7 +3,7 @@
         <div class="header"></div>
         <div class="content">
             <span class="title">四六级成绩预约查询</span>
-            <form class="getticket">
+            <form class="prescore">
                 <div class="input-wrap">
                     <span><i class="icon-user"></i></span>
                     <div class="input-inner">
@@ -100,7 +100,7 @@
                 text-align center
                 font-size 2.3rem
                 line-height 2.3rem
-            .getticket
+            .prescore
                 width 100%
                 .input-wrap
                     width 18rem
@@ -164,9 +164,4 @@
                     color #ffffff
                     border-radius 0.5rem
                     background-color #636b6f
-        .footer
-            width 100%
-            height 2rem
-            line-height 2rem
-            text-align center
 </style>

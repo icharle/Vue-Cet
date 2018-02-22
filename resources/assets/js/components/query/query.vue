@@ -3,57 +3,22 @@
         <div class="header"></div>
         <div class="content">
             <span class="title">四六级成绩查询</span>
-            <form class="getticket" v-show="true">
+            <form class="getscore" v-show="turnScore">
                 <div class="input-wrap">
                     <span><i class="icon-user"></i></span>
                     <div class="input-inner">
-                        <input type="text" v-model="xm" placeholder="姓名"/>
+                        <input type="text" v-model="name" placeholder="姓名"/>
                     </div>
                 </div>
                 <div class="input-wrap">
                     <span><i class="icon-profile"></i></span>
                     <div class="input-inner">
-                        <input type="text" v-model="sfz" placeholder="身份证"/>
+                        <input type="text" v-model="ticket" placeholder="准考证"/>
                     </div>
-                </div>
-                <div class="radio-wrap">
-                    <label><input type="radio" class="radio" name="type" value="1" checked v-model="jb"/><span>四级</span></label>
-                    <label><input type="radio" class="radio" name="type" value="2" v-model="jb"/><span>六级</span></label>
                 </div>
                 <div class="btn" @click="submit()">{{submitBtn}}</div>
             </form>
-            <div class="score-box" title="成绩情况" @click="showScore" v-show="false">
-                <div class="details">
-                    <label>考生姓名:<span>{{xm}}</span></label>
-                    <label>准考证号:<span>{{zkz}}</span></label>
-                    <label>考生学校:<span>{{xx}}</span></label>
-                    <div class="icon" :class=" (this.zf >= 425) ? 'pass' : 'loser' "></div>
-                </div>
-                <div class="score">
-                    <label>总分<span>{{zf}}</span></label>
-                    <div class="progress round-conner">
-                        <div class="curRate round-conner" :style="lezf"></div>
-                    </div>
-                </div>
-                <div class="score">
-                    <label>听力<span>{{tl}}</span></label>
-                    <div class="progress round-conner">
-                        <div class="curRate round-conner" :style="letl"></div>
-                    </div>
-                </div>
-                <div class="score">
-                    <label>阅读<span>{{yd}}</span></label>
-                    <div class="progress round-conner">
-                        <div class="curRate round-conner" :style="leyd"></div>
-                    </div>
-                </div>
-                <div class="score">
-                    <label>写作<span>{{xz}}</span></label>
-                    <div class="progress round-conner">
-                        <div class="curRate round-conner" :style="lexz"></div>
-                    </div>
-                </div>
-            </div>
+            <score ref="score" @changebtn="changebtn" @changescore="changescore"></score>
         </div>
         <foot></foot>
     </div>
@@ -61,26 +26,31 @@
 
 <script type="text/ecmascript-6">
     import foot from '../footer/footer'
+    import score from '../score/score'
 
     export default {
         data() {
             return {
-                xm: '',     //姓名
-                sfz: '',    //身份证
-                zkz: '',    //准考证
-                xx: ' ',    //考生学校
-                zf: ' ',   //总分
-                tl: ' ',   //听力35%
-                yd: ' ',   //阅读35%
-                xz: ' ',   //写作及翻译30%
+                name: '',     //姓名
+                ticket: '',    //准考证
                 submitBtn: '查询成绩',    //按钮
-                sScore: '',         //服务器返回值
-                turnScore: false,    //查询按钮
-                score: '',           //处理过的分数(听力、阅读、写作及翻译)
+                turnScore: true     //表单框控制是否隐藏
+            }
+        },
+        methods: {
+            submit() {
+                this.$refs.score.submit(this.name, this.ticket)
+            },
+            changebtn(txt) {
+                this.submitBtn = txt
+            },
+            changescore(txt) {
+                this.turnScore = txt
             }
         },
         components: {
-            foot
+            foot,
+            score
         }
     }
 </script>
@@ -109,7 +79,7 @@
                 text-align center
                 font-size 2.3rem
                 line-height 2.3rem
-            .getticket
+            .getscore
                 width 100%
                 .input-wrap
                     width 18rem
@@ -173,76 +143,4 @@
                     color #ffffff
                     border-radius 0.5rem
                     background-color #636b6f
-            .score-box
-                width 80%
-                position relative
-                top 4.5rem
-                margin 0 auto
-                border 0.2rem dashed #d9dde1
-                color #93999f
-                font-size 2rem
-                border-radius 0.5rem
-                &:before
-                    content attr(title)
-                    position absolute
-                    left 50%
-                    transform translateX(-50%)
-                    -webkit-transform translate(-50%, -50%)
-                    padding 0 1rem
-                    background-color #fff
-                .details
-                    font-size 1rem
-                    margin 2.5rem auto 0rem auto
-                    label
-                        width 90%
-                        display block
-                        color lightskyblue
-                        margin 0 auto 2rem auto
-                    span
-                        font-size 1.5rem
-                        font-weight bold
-                        color #93999f
-                        padding-left 1.5rem
-                    .icon
-                        position absolute
-                        top -0.2rem
-                        right -0.2rem
-                        width 4.8rem
-                        height 3.65rem
-                        background-size 4.8rem 3.65rem
-                        background-repeat no-repeat
-                        &.pass
-                            bg-image('pass')
-                        &.loser
-                            bg-image('loser')
-                .score
-                    width 100%
-                    height 3rem
-                    padding-bottom 1rem
-                    label
-                        width 85%
-                        font-size 1.5rem
-                        color black
-                        display block
-                        margin 0 auto
-                        font-weight bold
-                        padding-bottom 0.5rem
-                    span
-                        float right
-                        font-weight bold
-                        color lightskyblue
-                    .progress
-                        width 85%
-                        background #ddd
-                        margin 0 auto
-                        .curRate
-                            width 0
-                            background lightskyblue
-                        .round-conner
-                            height 1rem
-        .footer
-            width 100%
-            height 2rem
-            line-height 2rem
-            text-align center
 </style>
