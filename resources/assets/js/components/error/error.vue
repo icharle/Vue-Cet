@@ -1,6 +1,6 @@
 <template>
     <div class="error" v-show="errors">
-        <div class="icon-error"><i class="icon-cross"></i></div>
+        <div class="icon-error"><i :class="(this.type) ? 'icon-checkmark' : 'icon-cross'"></i></div>
         <div class="err-msg">{{msg1}}<br>{{msg2}}</div>
         <div class="err-btn" @click="show()">确定</div>
     </div>
@@ -10,13 +10,15 @@
     export default {
         data() {
             return {
+                type: false,       //类型
                 errors: false,    //错误提示
                 msg1: '',            //提示语
                 msg2: ''            //提示语
             }
         },
         methods: {
-            show(msg1,msg2) {
+            show(type, msg1, msg2) {
+                this.type = type
                 this.errors = !this.errors
                 this.msg1 = msg1
                 this.msg2 = msg2
