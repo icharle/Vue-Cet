@@ -2,7 +2,7 @@
     <div class="query">
         <div class="header"></div>
         <div class="content">
-            <span class="title">四六级成绩查询</span>
+            <navbar></navbar>
             <form class="getscore" v-show="turnScore">
                 <div class="input-wrap">
                     <span><i class="icon-user"></i></span>
@@ -25,6 +25,7 @@
 </template>
 
 <script type="text/ecmascript-6">
+    import navbar from '../navbar/navbar'
     import foot from '../footer/footer'
     import score from '../score/score'
 
@@ -49,6 +50,7 @@
             }
         },
         components: {
+            navbar,
             foot,
             score
         }

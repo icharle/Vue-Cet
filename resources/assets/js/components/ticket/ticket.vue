@@ -2,18 +2,7 @@
     <div class="ticket">
         <div class="header"></div>
         <div class="content">
-            <!--<span class="title">四六级准考证查询</span>-->
-            <div class="tab">
-                <div class="tab-item">
-                    <router-link to="/reserve"><i class="icon-circle-left"></i><p>预约查询</p></router-link>
-                </div>
-                <div class="tab-item active">
-                    准考证查询
-                </div>
-                <div class="tab-item">
-                    <router-link to="/query"><p>成绩查询</p><i class="icon-circle-right"></i></router-link>
-                </div>
-            </div>
+            <navbar></navbar>
             <form class="getticket">
                 <div class="input-wrap">
                     <span><i class="icon-user"></i></span>
@@ -41,6 +30,7 @@
 
 <script type="text/ecmascript-6">
     import store from '../common/store'
+    import navbar from '../navbar/navbar'
     import error from '../error/error'
     import foot from '../footer/footer'
 
@@ -80,6 +70,7 @@
             }
         },
         components: {
+            navbar,
             error,
             foot
         }
@@ -103,35 +94,13 @@
             flex 1
             -webkit-flex 1
             overflow auto
-            .title
-                display inherit
-                text-align center
-                font-size 2.3rem
-                line-height 2.3rem
-            .tab
-                display flex
-                width 100%
-                height 2.3rem
-                line-height 2.3rem
-                .tab-item
-                    flex 1
-                    text-align center
-                    &.active
-                        font-size 2rem
-                        color: #09f
-                    p
-                        display inline-block
-                        padding 0 0.3rem 0 0.3rem
-                    i
-                        display inline-block
-                        font-size 1.5rem
             .getticket
                 width 100%
                 .input-wrap
                     width 18rem
                     position relative
                     padding 0.5rem 0.6rem 0.5rem 3.4rem
-                    margin 2rem auto 0.5rem auto
+                    margin 1.5rem auto 0.5rem auto
                     border 0.08rem solid #ccc
                     border-radius 0.5rem
                     span

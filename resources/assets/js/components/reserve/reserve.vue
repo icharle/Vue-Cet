@@ -2,7 +2,7 @@
     <div class="reserve">
         <div class="header"></div>
         <div class="content">
-            <span class="title">四六级成绩预约查询</span>
+            <navbar></navbar>
             <form class="prescore">
                 <div class="input-wrap">
                     <span><i class="icon-user"></i></span>
@@ -35,6 +35,7 @@
 </template>
 
 <script type="text/ecmascript-6">
+    import navbar from '../navbar/navbar'
     import error from '../error/error'
     import foot from '../footer/footer'
     export default {
@@ -70,6 +71,7 @@
             }
         },
         components: {
+            navbar,
             foot,
             error
         }

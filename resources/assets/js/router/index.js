@@ -10,10 +10,11 @@ Vue.use(Router)
 
 export default new Router({
     mode: 'history',
+    linkActiveClass: 'active',
     routes: [
         {
             path: '/',
-            component: ticket
+            redirect: ticket
         },
         {
             path: '/ticket',
