@@ -196,17 +196,17 @@ class IndexController extends Controller
     public function PreSave()
     {
         $input = Input::all();
-        if (!isset($input['username']) || empty($input['username']) || !isset($input['idcard']) || empty($input['idcard']) || !isset($input['email']) || empty($input['email'])) {
+        if (!isset($input['xm']) || empty($input['xm']) || !isset($input['idcard']) || empty($input['idcard']) || !isset($input['email']) || empty($input['email'])) {
             return response()
                 ->json([
                     'status' => 403,
                     'msg' => '请输入URL链接！'
                 ]);
         } else {
-            $data['username'] = $input['username'];
+            $data['username'] = $input['xm'];
             $data['idcard'] = $input['idcard'];
             $data['email'] = $input['email'];
-            $data['level'] = $input['level'];
+            $data['level'] = $input['jb'];
             $result = Reserve::create($data);
             if ($result) {
                 return response()
