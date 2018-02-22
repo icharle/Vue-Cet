@@ -29,13 +29,12 @@
                 <div class="btn" @click="submit()">{{submitBtn}}</div>
             </form>
         </div>
-        <div class="footer">
-            <p>Copyright © 2018 <a href="https://icharle.com">Icharle</a>. All rights reserved.</p>
-        </div>
+        <foot></foot>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
+    import foot from '../footer/footer'
     export default {
         data() {
             return {
@@ -65,6 +64,9 @@
                     console.log(error)
                 });
             }
+        },
+        components: {
+            foot
         }
     }
 </script>

@@ -55,13 +55,13 @@
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <p>Copyright © 2018 <a href="https://icharle.com">Icharle</a>. All rights reserved.</p>
-        </div>
+        <foot></foot>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
+    import foot from '../footer/footer'
+
     export default {
         data() {
             return {
@@ -78,6 +78,9 @@
                 turnScore: false,    //查询按钮
                 score: '',           //处理过的分数(听力、阅读、写作及翻译)
             }
+        },
+        components: {
+            foot
         }
     }
 </script>

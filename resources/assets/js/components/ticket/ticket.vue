@@ -34,9 +34,7 @@
                 <div class="btn" @click="submit()">{{submitBtn}}</div>
             </form>
         </div>
-        <div class="footer">
-            <p>Copyright © 2018 <a href="https://icharle.com">Icharle</a>. All rights reserved.</p>
-        </div>
+        <foot></foot>
         <error ref="error"></error>
     </div>
 </template>
@@ -44,6 +42,7 @@
 <script type="text/ecmascript-6">
     import store from '../common/store'
     import error from '../error/error'
+    import foot from '../footer/footer'
 
     export default {
         data() {
@@ -81,7 +80,8 @@
             }
         },
         components: {
-            error
+            error,
+            foot
         }
     }
 </script>
@@ -189,9 +189,4 @@
                     color #ffffff
                     border-radius 0.5rem
                     background-color #636b6f
-        .footer
-            width 100%
-            height 2rem
-            line-height 2rem
-            text-align center
 </style>

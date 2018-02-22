@@ -46426,7 +46426,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.ticket {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  min-height: 100%;\n}\n.ticket .header {\n  width: 100%;\n  height: 25rem;\n  background-image: url(" + escape(__webpack_require__(55)) + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.ticket .content {\n  width: 100%;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-flex: 1;\n  overflow: auto;\n}\n.ticket .content .title {\n  display: inherit;\n  text-align: center;\n  font-size: 2.3rem;\n  line-height: 2.3rem;\n}\n.ticket .content .tab {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 100%;\n  height: 2.3rem;\n  line-height: 2.3rem;\n}\n.ticket .content .tab .tab-item {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  text-align: center;\n}\n.ticket .content .tab .tab-item.active {\n  font-size: 2rem;\n  color: #09f;\n}\n.ticket .content .tab .tab-item p {\n  display: inline-block;\n  padding: 0 0.3rem 0 0.3rem;\n}\n.ticket .content .tab .tab-item i {\n  display: inline-block;\n  font-size: 1.5rem;\n}\n.ticket .content .getticket {\n  width: 100%;\n}\n.ticket .content .getticket .input-wrap {\n  width: 18rem;\n  position: relative;\n  padding: 0.5rem 0.6rem 0.5rem 3.4rem;\n  margin: 2rem auto 0.5rem auto;\n  border: 0.08rem solid #ccc;\n  border-radius: 0.5rem;\n}\n.ticket .content .getticket .input-wrap span {\n  position: absolute;\n  top: 1.2rem;\n  left: 1rem;\n  font-size: 2.2rem;\n}\n.ticket .content .getticket .input-wrap input {\n  width: 100%;\n  line-height: 3.5rem;\n  font-size: 1.4rem;\n  border-width: 0;\n}\n.ticket .content .getticket .radio-wrap {\n  width: 20rem;\n  margin: 2rem auto 1rem auto;\n}\n.ticket .content .getticket .radio-wrap label input {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  border: 0;\n  outline: 0 !important;\n  vertical-align: middle;\n}\n.ticket .content .getticket .radio-wrap label span {\n  padding-left: 0.4rem;\n  font-size: 1.3rem;\n  vertical-align: middle;\n}\n.ticket .content .getticket .radio-wrap label .radio:after {\n  content: \"\";\n  display: block;\n  width: 1.8rem;\n  height: 1.8rem;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 1.8rem;\n  font-size: 1.3rem;\n  color: #09f;\n  border: 0.2rem solid #ddd;\n  background-color: #fff;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.ticket .content .getticket .radio-wrap label .radio:checked:after {\n  content: \"\\2713\";\n  border-color: #09f;\n  -webkit-transition: all 0.3s ease-in-out;\n  transition: all 0.3s ease-in-out;\n}\n.ticket .content .getticket .btn {\n  margin: 3rem auto 0rem auto;\n  width: 19rem;\n  height: 3rem;\n  line-height: 3rem;\n  text-align: center;\n  border: none;\n  font-size: 2rem;\n  color: #fff;\n  border-radius: 0.5rem;\n  background-color: #636b6f;\n}\n.ticket .footer {\n  width: 100%;\n  height: 2rem;\n  line-height: 2rem;\n  text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n.ticket {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  min-height: 100%;\n}\n.ticket .header {\n  width: 100%;\n  height: 25rem;\n  background-image: url(" + escape(__webpack_require__(55)) + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.ticket .content {\n  width: 100%;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-flex: 1;\n  overflow: auto;\n}\n.ticket .content .title {\n  display: inherit;\n  text-align: center;\n  font-size: 2.3rem;\n  line-height: 2.3rem;\n}\n.ticket .content .tab {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 100%;\n  height: 2.3rem;\n  line-height: 2.3rem;\n}\n.ticket .content .tab .tab-item {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  text-align: center;\n}\n.ticket .content .tab .tab-item.active {\n  font-size: 2rem;\n  color: #09f;\n}\n.ticket .content .tab .tab-item p {\n  display: inline-block;\n  padding: 0 0.3rem 0 0.3rem;\n}\n.ticket .content .tab .tab-item i {\n  display: inline-block;\n  font-size: 1.5rem;\n}\n.ticket .content .getticket {\n  width: 100%;\n}\n.ticket .content .getticket .input-wrap {\n  width: 18rem;\n  position: relative;\n  padding: 0.5rem 0.6rem 0.5rem 3.4rem;\n  margin: 2rem auto 0.5rem auto;\n  border: 0.08rem solid #ccc;\n  border-radius: 0.5rem;\n}\n.ticket .content .getticket .input-wrap span {\n  position: absolute;\n  top: 1.2rem;\n  left: 1rem;\n  font-size: 2.2rem;\n}\n.ticket .content .getticket .input-wrap input {\n  width: 100%;\n  line-height: 3.5rem;\n  font-size: 1.4rem;\n  border-width: 0;\n}\n.ticket .content .getticket .radio-wrap {\n  width: 20rem;\n  margin: 2rem auto 1rem auto;\n}\n.ticket .content .getticket .radio-wrap label input {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  border: 0;\n  outline: 0 !important;\n  vertical-align: middle;\n}\n.ticket .content .getticket .radio-wrap label span {\n  padding-left: 0.4rem;\n  font-size: 1.3rem;\n  vertical-align: middle;\n}\n.ticket .content .getticket .radio-wrap label .radio:after {\n  content: \"\";\n  display: block;\n  width: 1.8rem;\n  height: 1.8rem;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 1.8rem;\n  font-size: 1.3rem;\n  color: #09f;\n  border: 0.2rem solid #ddd;\n  background-color: #fff;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.ticket .content .getticket .radio-wrap label .radio:checked:after {\n  content: \"\\2713\";\n  border-color: #09f;\n  -webkit-transition: all 0.3s ease-in-out;\n  transition: all 0.3s ease-in-out;\n}\n.ticket .content .getticket .btn {\n  margin: 3rem auto 0rem auto;\n  width: 19rem;\n  height: 3rem;\n  line-height: 3rem;\n  text-align: center;\n  border: none;\n  font-size: 2rem;\n  color: #fff;\n  border-radius: 0.5rem;\n  background-color: #636b6f;\n}\n", ""]);
 
 // exports
 
@@ -46446,6 +46446,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_store__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__error_error__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__error_error___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__error_error__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__footer_footer__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__footer_footer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__footer_footer__);
 //
 //
 //
@@ -46487,8 +46489,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
+
 
 
 
@@ -46532,7 +46533,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         }
     },
     components: {
-        error: __WEBPACK_IMPORTED_MODULE_1__error_error___default.a
+        error: __WEBPACK_IMPORTED_MODULE_1__error_error___default.a,
+        foot: __WEBPACK_IMPORTED_MODULE_2__footer_footer___default.a
     }
 });
 
@@ -46835,7 +46837,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _vm._m(2),
+      _c("foot"),
       _vm._v(" "),
       _c("error", { ref: "error" })
     ],
@@ -46854,20 +46856,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", [_c("i", { staticClass: "icon-profile" })])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "footer" }, [
-      _c("p", [
-        _vm._v("Copyright © 2018 "),
-        _c("a", { attrs: { href: "https://icharle.com" } }, [
-          _vm._v("Icharle")
-        ]),
-        _vm._v(". All rights reserved.")
-      ])
-    ])
   }
 ]
 render._withStripped = true
@@ -47010,6 +46998,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_store__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__error_error__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__error_error___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__error_error__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__footer_footer__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__footer_footer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__footer_footer__);
 //
 //
 //
@@ -47062,8 +47052,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
+
 
 
 
@@ -47176,7 +47165,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         }
     },
     components: {
-        error: __WEBPACK_IMPORTED_MODULE_1__error_error___default.a
+        error: __WEBPACK_IMPORTED_MODULE_1__error_error___default.a,
+        foot: __WEBPACK_IMPORTED_MODULE_2__footer_footer___default.a
     }
 });
 
@@ -47336,29 +47326,14 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _vm._m(0),
+      _c("foot"),
       _vm._v(" "),
       _c("error", { ref: "error" })
     ],
     1
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "footer" }, [
-      _c("p", [
-        _vm._v("Copyright © 2018 "),
-        _c("a", { attrs: { href: "https://icharle.com" } }, [
-          _vm._v("Icharle")
-        ]),
-        _vm._v(". All rights reserved.")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -48157,6 +48132,8 @@ exports.push([module.i, "\n.query {\n  display: -webkit-box;\n  display: -ms-fle
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__footer_footer__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__footer_footer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__footer_footer__);
 //
 //
 //
@@ -48218,8 +48195,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
+
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -48237,6 +48214,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             turnScore: false, //查询按钮
             score: '' //处理过的分数(听力、阅读、写作及翻译)
         };
+    },
+
+    components: {
+        foot: __WEBPACK_IMPORTED_MODULE_0__footer_footer___default.a
     }
 });
 
@@ -48248,223 +48229,250 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "query" }, [
-    _c("div", { staticClass: "header" }),
-    _vm._v(" "),
-    _c("div", { staticClass: "content" }, [
-      _c("span", { staticClass: "title" }, [_vm._v("四六级成绩查询")]),
+  return _c(
+    "div",
+    { staticClass: "query" },
+    [
+      _c("div", { staticClass: "header" }),
       _vm._v(" "),
-      _c(
-        "form",
-        {
-          directives: [
-            { name: "show", rawName: "v-show", value: true, expression: "true" }
-          ],
-          staticClass: "getticket"
-        },
-        [
-          _c("div", { staticClass: "input-wrap" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("div", { staticClass: "input-inner" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.xm,
-                    expression: "xm"
-                  }
-                ],
-                attrs: { type: "text", placeholder: "姓名" },
-                domProps: { value: _vm.xm },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.xm = $event.target.value
-                  }
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "input-wrap" }, [
-            _vm._m(1),
-            _vm._v(" "),
-            _c("div", { staticClass: "input-inner" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.sfz,
-                    expression: "sfz"
-                  }
-                ],
-                attrs: { type: "text", placeholder: "身份证" },
-                domProps: { value: _vm.sfz },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.sfz = $event.target.value
-                  }
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "radio-wrap" }, [
-            _c("label", [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.jb,
-                    expression: "jb"
-                  }
-                ],
-                staticClass: "radio",
-                attrs: { type: "radio", name: "type", value: "1", checked: "" },
-                domProps: { checked: _vm._q(_vm.jb, "1") },
-                on: {
-                  change: function($event) {
-                    _vm.jb = "1"
-                  }
-                }
-              }),
-              _c("span", [_vm._v("四级")])
-            ]),
-            _vm._v(" "),
-            _c("label", [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.jb,
-                    expression: "jb"
-                  }
-                ],
-                staticClass: "radio",
-                attrs: { type: "radio", name: "type", value: "2" },
-                domProps: { checked: _vm._q(_vm.jb, "2") },
-                on: {
-                  change: function($event) {
-                    _vm.jb = "2"
-                  }
-                }
-              }),
-              _c("span", [_vm._v("六级")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "btn",
-              on: {
-                click: function($event) {
-                  _vm.submit()
-                }
+      _c("div", { staticClass: "content" }, [
+        _c("span", { staticClass: "title" }, [_vm._v("四六级成绩查询")]),
+        _vm._v(" "),
+        _c(
+          "form",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: true,
+                expression: "true"
               }
-            },
-            [_vm._v(_vm._s(_vm.submitBtn))]
-          )
-        ]
-      ),
+            ],
+            staticClass: "getticket"
+          },
+          [
+            _c("div", { staticClass: "input-wrap" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("div", { staticClass: "input-inner" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.xm,
+                      expression: "xm"
+                    }
+                  ],
+                  attrs: { type: "text", placeholder: "姓名" },
+                  domProps: { value: _vm.xm },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.xm = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-wrap" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: "input-inner" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.sfz,
+                      expression: "sfz"
+                    }
+                  ],
+                  attrs: { type: "text", placeholder: "身份证" },
+                  domProps: { value: _vm.sfz },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.sfz = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "radio-wrap" }, [
+              _c("label", [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.jb,
+                      expression: "jb"
+                    }
+                  ],
+                  staticClass: "radio",
+                  attrs: {
+                    type: "radio",
+                    name: "type",
+                    value: "1",
+                    checked: ""
+                  },
+                  domProps: { checked: _vm._q(_vm.jb, "1") },
+                  on: {
+                    change: function($event) {
+                      _vm.jb = "1"
+                    }
+                  }
+                }),
+                _c("span", [_vm._v("四级")])
+              ]),
+              _vm._v(" "),
+              _c("label", [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.jb,
+                      expression: "jb"
+                    }
+                  ],
+                  staticClass: "radio",
+                  attrs: { type: "radio", name: "type", value: "2" },
+                  domProps: { checked: _vm._q(_vm.jb, "2") },
+                  on: {
+                    change: function($event) {
+                      _vm.jb = "2"
+                    }
+                  }
+                }),
+                _c("span", [_vm._v("六级")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "btn",
+                on: {
+                  click: function($event) {
+                    _vm.submit()
+                  }
+                }
+              },
+              [_vm._v(_vm._s(_vm.submitBtn))]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: false,
+                expression: "false"
+              }
+            ],
+            staticClass: "score-box",
+            attrs: { title: "成绩情况" },
+            on: { click: _vm.showScore }
+          },
+          [
+            _c("div", { staticClass: "details" }, [
+              _c("label", [
+                _vm._v("考生姓名:"),
+                _c("span", [_vm._v(_vm._s(_vm.xm))])
+              ]),
+              _vm._v(" "),
+              _c("label", [
+                _vm._v("准考证号:"),
+                _c("span", [_vm._v(_vm._s(_vm.zkz))])
+              ]),
+              _vm._v(" "),
+              _c("label", [
+                _vm._v("考生学校:"),
+                _c("span", [_vm._v(_vm._s(_vm.xx))])
+              ]),
+              _vm._v(" "),
+              _c("div", {
+                staticClass: "icon",
+                class: this.zf >= 425 ? "pass" : "loser"
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "score" }, [
+              _c("label", [
+                _vm._v("总分"),
+                _c("span", [_vm._v(_vm._s(_vm.zf))])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "progress round-conner" }, [
+                _c("div", {
+                  staticClass: "curRate round-conner",
+                  style: _vm.lezf
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "score" }, [
+              _c("label", [
+                _vm._v("听力"),
+                _c("span", [_vm._v(_vm._s(_vm.tl))])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "progress round-conner" }, [
+                _c("div", {
+                  staticClass: "curRate round-conner",
+                  style: _vm.letl
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "score" }, [
+              _c("label", [
+                _vm._v("阅读"),
+                _c("span", [_vm._v(_vm._s(_vm.yd))])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "progress round-conner" }, [
+                _c("div", {
+                  staticClass: "curRate round-conner",
+                  style: _vm.leyd
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "score" }, [
+              _c("label", [
+                _vm._v("写作"),
+                _c("span", [_vm._v(_vm._s(_vm.xz))])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "progress round-conner" }, [
+                _c("div", {
+                  staticClass: "curRate round-conner",
+                  style: _vm.lexz
+                })
+              ])
+            ])
+          ]
+        )
+      ]),
       _vm._v(" "),
-      _c(
-        "div",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: false,
-              expression: "false"
-            }
-          ],
-          staticClass: "score-box",
-          attrs: { title: "成绩情况" },
-          on: { click: _vm.showScore }
-        },
-        [
-          _c("div", { staticClass: "details" }, [
-            _c("label", [
-              _vm._v("考生姓名:"),
-              _c("span", [_vm._v(_vm._s(_vm.xm))])
-            ]),
-            _vm._v(" "),
-            _c("label", [
-              _vm._v("准考证号:"),
-              _c("span", [_vm._v(_vm._s(_vm.zkz))])
-            ]),
-            _vm._v(" "),
-            _c("label", [
-              _vm._v("考生学校:"),
-              _c("span", [_vm._v(_vm._s(_vm.xx))])
-            ]),
-            _vm._v(" "),
-            _c("div", {
-              staticClass: "icon",
-              class: this.zf >= 425 ? "pass" : "loser"
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "score" }, [
-            _c("label", [_vm._v("总分"), _c("span", [_vm._v(_vm._s(_vm.zf))])]),
-            _vm._v(" "),
-            _c("div", { staticClass: "progress round-conner" }, [
-              _c("div", {
-                staticClass: "curRate round-conner",
-                style: _vm.lezf
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "score" }, [
-            _c("label", [_vm._v("听力"), _c("span", [_vm._v(_vm._s(_vm.tl))])]),
-            _vm._v(" "),
-            _c("div", { staticClass: "progress round-conner" }, [
-              _c("div", {
-                staticClass: "curRate round-conner",
-                style: _vm.letl
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "score" }, [
-            _c("label", [_vm._v("阅读"), _c("span", [_vm._v(_vm._s(_vm.yd))])]),
-            _vm._v(" "),
-            _c("div", { staticClass: "progress round-conner" }, [
-              _c("div", {
-                staticClass: "curRate round-conner",
-                style: _vm.leyd
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "score" }, [
-            _c("label", [_vm._v("写作"), _c("span", [_vm._v(_vm._s(_vm.xz))])]),
-            _vm._v(" "),
-            _c("div", { staticClass: "progress round-conner" }, [
-              _c("div", {
-                staticClass: "curRate round-conner",
-                style: _vm.lexz
-              })
-            ])
-          ])
-        ]
-      )
-    ]),
-    _vm._v(" "),
-    _vm._m(2)
-  ])
+      _c("foot")
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -48478,20 +48486,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", [_c("i", { staticClass: "icon-profile" })])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "footer" }, [
-      _c("p", [
-        _vm._v("Copyright © 2018 "),
-        _c("a", { attrs: { href: "https://icharle.com" } }, [
-          _vm._v("Icharle")
-        ]),
-        _vm._v(". All rights reserved.")
-      ])
-    ])
   }
 ]
 render._withStripped = true
@@ -48601,6 +48595,8 @@ exports.push([module.i, "\n.reserve {\n  display: -webkit-box;\n  display: -ms-f
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__footer_footer__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__footer_footer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__footer_footer__);
 //
 //
 //
@@ -48636,8 +48632,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -48665,6 +48660,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 console.log(error);
             });
         }
+    },
+    components: {
+        foot: __WEBPACK_IMPORTED_MODULE_0__footer_footer___default.a
     }
 });
 
@@ -48676,157 +48674,162 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "reserve" }, [
-    _c("div", { staticClass: "header" }),
-    _vm._v(" "),
-    _c("div", { staticClass: "content" }, [
-      _c("span", { staticClass: "title" }, [_vm._v("四六级成绩预约查询")]),
+  return _c(
+    "div",
+    { staticClass: "reserve" },
+    [
+      _c("div", { staticClass: "header" }),
       _vm._v(" "),
-      _c("form", { staticClass: "getticket" }, [
-        _c("div", { staticClass: "input-wrap" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "input-inner" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.xm,
-                  expression: "xm"
-                }
-              ],
-              attrs: { type: "text", placeholder: "姓名" },
-              domProps: { value: _vm.xm },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.xm = $event.target.value
-                }
-              }
-            })
-          ])
-        ]),
+      _c("div", { staticClass: "content" }, [
+        _c("span", { staticClass: "title" }, [_vm._v("四六级成绩预约查询")]),
         _vm._v(" "),
-        _c("div", { staticClass: "input-wrap" }, [
-          _vm._m(1),
-          _vm._v(" "),
-          _c("div", { staticClass: "input-inner" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.idcard,
-                  expression: "idcard"
-                }
-              ],
-              attrs: { type: "text", placeholder: "身份证or准考证" },
-              domProps: { value: _vm.idcard },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
+        _c("form", { staticClass: "getticket" }, [
+          _c("div", { staticClass: "input-wrap" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-inner" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.xm,
+                    expression: "xm"
                   }
-                  _vm.idcard = $event.target.value
-                }
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "input-wrap" }, [
-          _vm._m(2),
-          _vm._v(" "),
-          _c("div", { staticClass: "input-inner" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.email,
-                  expression: "email"
-                }
-              ],
-              attrs: { type: "text", placeholder: "接收邮箱" },
-              domProps: { value: _vm.email },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
+                ],
+                attrs: { type: "text", placeholder: "姓名" },
+                domProps: { value: _vm.xm },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.xm = $event.target.value
                   }
-                  _vm.email = $event.target.value
                 }
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "radio-wrap" }, [
-          _c("label", [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.jb,
-                  expression: "jb"
-                }
-              ],
-              staticClass: "radio",
-              attrs: { type: "radio", name: "type", value: "1", checked: "" },
-              domProps: { checked: _vm._q(_vm.jb, "1") },
-              on: {
-                change: function($event) {
-                  _vm.jb = "1"
-                }
-              }
-            }),
-            _c("span", [_vm._v("四级")])
+              })
+            ])
           ]),
           _vm._v(" "),
-          _c("label", [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.jb,
-                  expression: "jb"
+          _c("div", { staticClass: "input-wrap" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-inner" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.idcard,
+                    expression: "idcard"
+                  }
+                ],
+                attrs: { type: "text", placeholder: "身份证or准考证" },
+                domProps: { value: _vm.idcard },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.idcard = $event.target.value
+                  }
                 }
-              ],
-              staticClass: "radio",
-              attrs: { type: "radio", name: "type", value: "2" },
-              domProps: { checked: _vm._q(_vm.jb, "2") },
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "input-wrap" }, [
+            _vm._m(2),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-inner" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.email,
+                    expression: "email"
+                  }
+                ],
+                attrs: { type: "text", placeholder: "接收邮箱" },
+                domProps: { value: _vm.email },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.email = $event.target.value
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "radio-wrap" }, [
+            _c("label", [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.jb,
+                    expression: "jb"
+                  }
+                ],
+                staticClass: "radio",
+                attrs: { type: "radio", name: "type", value: "1", checked: "" },
+                domProps: { checked: _vm._q(_vm.jb, "1") },
+                on: {
+                  change: function($event) {
+                    _vm.jb = "1"
+                  }
+                }
+              }),
+              _c("span", [_vm._v("四级")])
+            ]),
+            _vm._v(" "),
+            _c("label", [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.jb,
+                    expression: "jb"
+                  }
+                ],
+                staticClass: "radio",
+                attrs: { type: "radio", name: "type", value: "2" },
+                domProps: { checked: _vm._q(_vm.jb, "2") },
+                on: {
+                  change: function($event) {
+                    _vm.jb = "2"
+                  }
+                }
+              }),
+              _c("span", [_vm._v("六级")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "btn",
               on: {
-                change: function($event) {
-                  _vm.jb = "2"
+                click: function($event) {
+                  _vm.submit()
                 }
               }
-            }),
-            _c("span", [_vm._v("六级")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "btn",
-            on: {
-              click: function($event) {
-                _vm.submit()
-              }
-            }
-          },
-          [_vm._v(_vm._s(_vm.submitBtn))]
-        )
-      ])
-    ]),
-    _vm._v(" "),
-    _vm._m(3)
-  ])
+            },
+            [_vm._v(_vm._s(_vm.submitBtn))]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("foot")
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -48846,7 +48849,140 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", [_c("i", { staticClass: "icon-mail" })])
-  },
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-1c1cc122", module.exports)
+  }
+}
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/reserve.jpg?5440261b7dc7f8f65c565cbef18908e3";
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(93)
+}
+var normalizeComponent = __webpack_require__(4)
+/* script */
+var __vue_script__ = __webpack_require__(95)
+/* template */
+var __vue_template__ = __webpack_require__(96)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/footer/footer.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-41998488", Component.options)
+  } else {
+    hotAPI.reload("data-v-41998488", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(94);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("24fcbbd8", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-41998488\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/stylus-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./footer.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-41998488\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/stylus-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./footer.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.footer {\n  width: 100%;\n  height: 2rem;\n  line-height: 2rem;\n  text-align: center;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 95 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 96 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -48867,15 +49003,9 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-1c1cc122", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-41998488", module.exports)
   }
 }
-
-/***/ }),
-/* 91 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/reserve.jpg?5440261b7dc7f8f65c565cbef18908e3";
 
 /***/ })
 /******/ ]);

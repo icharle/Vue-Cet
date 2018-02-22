@@ -1,7 +1,7 @@
 <template>
     <div class="detail">
         <div class="header"></div>
-            <div class="content">
+        <div class="content">
             <div class="ticket-box" title="准考证信息">
                 <div class="details">
                     <label>考生姓名:<span>{{xm}}</span></label>
@@ -45,9 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <p>Copyright © 2018 <a href="https://icharle.com">Icharle</a>. All rights reserved.</p>
-        </div>
+        <foot></foot>
         <error ref="error"></error>
     </div>
 </template>
@@ -55,6 +53,7 @@
 <script type="text/ecmascript-6">
     import store from '../common/store'
     import error from '../error/error'
+    import foot from '../footer/footer'
 
     export default {
         props: ['ticket'],
@@ -151,7 +150,8 @@
             }
         },
         components: {
-            error
+            error,
+            foot
         }
     }
 </script>
@@ -206,7 +206,6 @@
                         font-weight bold
                         color #93999f
                         padding-left 1.5rem
-
 
             .clickScore
                 width 80%
