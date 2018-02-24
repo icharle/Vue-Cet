@@ -13,7 +13,7 @@
                    style="border: 1px solid #cccccc; border-collapse: collapse;">
                 <tr>
                     <td align="center">
-                        <img src="{{ ('images/banner.jpg') }}" width="450" height="300"
+                        <img src="{{ $imgPath }}" width="450" height="300"
                              style="display: block;"/>
                     </td>
                 </tr>

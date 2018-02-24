@@ -51,7 +51,7 @@ class MailController extends Controller
 
     public function SendMail()
     {
-        Mail::to('1006188966@qq.com')->send(new SendScore());
+        Mail::to('1006188966@qq.com')->send(new \App\Mail\SendScore());
     }
 
     public function SendQueue()
