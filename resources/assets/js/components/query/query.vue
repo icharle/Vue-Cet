@@ -61,8 +61,8 @@
     .query
         display flex
         flex-direction column
-        /*height 100%*/
         min-height 100%
+        overflow auto
         .header
             width 100%
             height 12rem
