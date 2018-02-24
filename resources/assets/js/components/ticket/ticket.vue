@@ -81,7 +81,8 @@
     .ticket
         display flex
         flex-direction column
-        height 100%
+        /*height 100%*/
+        overflow auto
         min-height 100%
         .header
             width 100%
@@ -93,7 +94,6 @@
             width 100%
             flex 1
             -webkit-flex 1
-            overflow auto
             .getticket
                 width 100%
                 .input-wrap

@@ -82,7 +82,7 @@
     .reserve
         display flex
         flex-direction column
-        height 100%
+        /*height 100%*/
         min-height 100%
         .header
             width 100%
@@ -95,7 +95,6 @@
             width 100%
             flex 1
             -webkit-flex 1
-            overflow auto
             .title
                 display inherit
                 padding-top 2rem
