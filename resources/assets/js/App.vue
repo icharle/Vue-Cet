@@ -1,6 +1,6 @@
 <template>
-    <div style="height: 100%">
-        <transition :name="transitionName">
+    <div style="height: 100%; width: 100%">
+        <transition name="slide-fade">
             <keep-alive>
                 <router-view></router-view>
             </keep-alive>
@@ -10,11 +10,6 @@
 
 <script type="text/ecmascript-6">
     export default {
-        data(){
-            return {
-                transitionName:''
-            }
-        },
         mounted() {
             const script = document.createElement('script')
             script.src = 'https://s19.cnzz.com/z_stat.php?id=1267073773&web_id=1267073773'     //友盟链接
@@ -29,40 +24,26 @@
                     let refererUrl = '/'
                     window._czc.push(['_trackPageview', contentUrl, refererUrl])
                 }
-                if(to.meta.index > from.meta.index){
-                    //设置动画名称
-                    this.transitionName = 'slide-left';
-                }else{
-                    this.transitionName = 'slide-right';
-                }
             }
         }
     }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-    .slide-right-enter-active,
-    .slide-right-leave-active,
-    .slide-left-enter-active,
-    .slide-left-leave-active {
-        will-change: transform;
-        transition: all 200ms;
-        position: absolute;
+    .slide-fade{
+        position: absolute;left:0;right: 0;
     }
-    .slide-right-enter {
-        opacity: 0;
-        transform: translate3d(-100%, 0, 0);
+    .slide-fade-enter-active {
+        transition: all 1.5s ease;
     }
-    .slide-right-leave-active {
-        opacity: 0;
-        transform: translate3d(100%, 0, 0);
+    .slide-fade-leave-active {
+
+        transition: all .1s cubic-bezier(2.0, 0.5, 0.8, 1.0);
     }
-    .slide-left-enter {
+    .slide-fade-enter, .slide-fade-leave-to
+    {
+        left:0;right: 0;
+        transform: translateX(8rem);
         opacity: 0;
-        transform: translate3d(100%, 0, 0);
-    }
-    .slide-left-leave-active {
-        opacity: 0;
-        transform: translate3d(-100%, 0, 0);
     }
 </style>

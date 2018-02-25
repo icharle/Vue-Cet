@@ -18,7 +18,6 @@ export default new Router({
         },
         {
             path: '/ticket',
-            meta:{index:0},
             component: ticket
         },
         {
@@ -29,12 +28,10 @@ export default new Router({
         },
         {
             path: '/query',
-            meta:{index:1},
             component: query
         },
         {
             path: '/reserve',
-            meta:{index:-1},
             component: reserve
         }
     ]
