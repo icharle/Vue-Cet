@@ -19,8 +19,6 @@ Route::group(['middleware' => 'api'], function () {
     Route::post('presave', 'IndexController@PreSave');
     Route::post('RspSignature', 'IndexController@RspSignature');
 
-    Route::get('SendMail','MailController@SendMail');
-    Route::get('SendQueue','MailController@SendQueue');
-    Route::get('index','MailController@index');
+    Route::get('SendMail','MailController@index');
 
 });
