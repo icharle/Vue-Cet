@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Jobs\SendScore;
+use App\Jobs\ToTicket;
 use App\Reserve;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -209,9 +210,12 @@ class IndexController extends Controller
             $data['idcard'] = $input['idcard'];
             $data['email'] = $input['email'];
             $data['level'] = $input['jb'];
-            $result = Reserve::create($data);
-            if ($result) {
-                SendScore::dispatch()->delay(Carbon::now()->addMinutes(2));
+            $first = Reserve::firstOrCreate(['username' => $data['username']], ['idcard' => $data['idcard'], 'email' => $data['email'], 'level' => $data['level']]);
+            $update = Reserve::updateOrCreate(['username' => $data['username']], ['idcard' => $data['idcard'], 'email' => $data['email'], 'level' => $data['level']]);
+            if ($first || $update) {
+//                SendScore::dispatch()->delay(Carbon::now()->addMinutes(2));
+
+                ToTicket::dispatch($data['username'], $data['idcard'], $data['level'])->onQueue('Ticket')->delay(Carbon::now()->addMinutes(1));
                 return response()
                     ->json([
                         'status' => 200,
