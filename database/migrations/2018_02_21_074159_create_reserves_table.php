@@ -20,6 +20,7 @@ class CreateReservesTable extends Migration
             $table->string('email');
             $table->integer('level')->default(0);
             $table->string('ticket')->default(0);
+            $table->string('issend')->default(0);
             $table->timestamps();
         });
     }
