@@ -9,23 +9,17 @@ use Mail;
 
 class MailController extends Controller
 {
+    /**
+     *手动触发的方式发送邮件
+     */
     public function index()
     {
         $reserves = Reserve::all();
         foreach ($reserves as $reserve) {
-            if (strlen($reserve->idcard) == 18) {
-                $data['xm'] = $reserve->username;
-                $data['sfz'] = $reserve->idcard;
-                $data['jb'] = $reserve->level;
-                $res = $this->GetTickets($data);
-                // SendScore::dispatch($res['ks_bh']);
-//                $data['zkz'] = $res['ks_bh'];
-//                $res = $this->GetScore($data);
-//                SendScore::dispatch($res[16]);
-            } else {
+            if ($reserve->ticket != 'undefined'){
                 $data['xm'] = $reserve->username;
                 $email = $reserve->email;
-                $data['zkz'] = $reserve->idcard;
+                $data['zkz'] = $reserve->ticket;
                 $cetScores = $this->GetScore($data);
                 $res = array(
                     'name' => (string)$cetScores[3],      //姓名
@@ -42,22 +36,8 @@ class MailController extends Controller
                         'number' => (string)$cetScores[29],         //准考证号
                         'score' => (string)$cetScores[33]           //等 级
                     ]);
-                //dd($res);
-                SendScore::dispatch($res,$email);
+                SendScore::dispatch($email, $res)->onQueue('SendCode');
             }
-        }
-
-    }
-
-    public function SendMail()
-    {
-        Mail::to('1006188966@qq.com')->send(new \App\Mail\SendScore());
-    }
-
-    public function SendQueue()
-    {
-        for ($i = 0; $i <= 100; $i++) {
-            SendScore::dispatch($i);
         }
     }
 }

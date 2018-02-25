@@ -14,13 +14,17 @@ class SendScore implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    protected $email;
+    protected $data;
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($email,$res)
     {
+        $this->email = $email;
+        $this->data = $res;
     }
 
     /**
@@ -30,7 +34,6 @@ class SendScore implements ShouldQueue
      */
     public function handle()
     {
-        Log::info('Hello, Redis-Queue');
-//        Mail::to($this->email)->send(new \App\Mail\SendScore());
+        Mail::to($this->email)->send(new \App\Mail\SendScore($this->data));
     }
 }

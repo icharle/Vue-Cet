@@ -34,21 +34,21 @@
                                             <th style="color: #153643; font-family: Arial, sans-serif; font-size: 18px;"
                                                 width="44%">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：
                                             </th>
-                                            <td colspan="2">黄超
+                                            <td colspan="2">{{$data['name']}}
                                             </td>
                                         </tr>
                                         <tr>
                                             <th style="color: #153643; font-family: Arial, sans-serif; font-size: 18px;">
                                                 学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;校：
                                             </th>
-                                            <td colspan="2">华南理工大学广州学院
+                                            <td colspan="2">{{$data['school']}}
                                             </td>
                                         </tr>
                                         <tr>
                                             <th style="color: #153643; font-family: Arial, sans-serif; font-size: 18px;">
                                                 考试级别：
                                             </th>
-                                            <td colspan="2">英语四级
+                                            <td colspan="2">{{$data['type']}}
                                             </td>
                                         </tr>
 
@@ -62,14 +62,14 @@
                                             <th style="color: #153643; font-family: Arial, sans-serif; font-size: 18px;">
                                                 准考证号：
                                             </th>
-                                            <td colspan="2">445090171126123
+                                            <td colspan="2">{{$data['written']['number']}}
                                             </td>
                                         </tr>
                                         <tr>
                                             <th style="color: #153643; font-family: Arial, sans-serif; font-size: 18px;">
                                                 总&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分：
                                             </th>
-                                            <td colspan="2">520</td>
+                                            <td colspan="2">{{$data['written']['score']}}</td>
                                         </tr>
 
                                         <tr>
@@ -77,20 +77,20 @@
                                             <th width="22%" align="left" style="color: #999999">
                                                 听&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;力：
                                             </th>
-                                            <td>200</td>
+                                            <td>{{$data['written']['listening']}}</td>
                                         </tr>
                                         <tr>
                                             <td></td>
                                             <th width="22%" align="left" style="color: #999999">
                                                 阅&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;读：
                                             </th>
-                                            <td>160</td>
+                                            <td>{{$data['written']['reading']}}</td>
                                         </tr>
                                         <tr>
                                             <td></td>
                                             <th width="22%" align="left" style="color: #999999">写作和翻译：
                                             </th>
-                                            <td>160</td>
+                                            <td>{{$data['written']['translation']}}</td>
                                         </tr>
                                         <tr>
                                             <th colspan="3" bgcolor="#ee4c50" style="color: #ffffff">
@@ -101,7 +101,7 @@
                                             <th style="color: #153643; font-family: Arial, sans-serif; font-size: 18px;">
                                                 准考证号：
                                             </th>
-                                            <td colspan="2">--
+                                            <td colspan="2">{{$data['oral']['number']}}
                                             </td>
 
                                         </tr>
@@ -109,7 +109,7 @@
                                             <th style="color: #153643; font-family: Arial, sans-serif; font-size: 18px;">
                                                 等&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级：
                                             </th>
-                                            <td colspan="2">--
+                                            <td colspan="2">{{$data['oral']['score']}}
                                             </td>
                                         </tr>
 
