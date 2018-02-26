@@ -2,7 +2,7 @@
     <div class="ticket">
         <div class="header"></div>
         <div class="content">
-            <span class="title">四六级准考证查询</span>
+            <navbar></navbar>
             <form class="getticket">
                 <div class="input-wrap">
                     <span><i class="icon-user"></i></span>
@@ -23,17 +23,16 @@
                 <div class="btn" @click="submit()">{{submitBtn}}</div>
             </form>
         </div>
-        <div class="footer">
-            <p>Copyright © 2018 <a href="https://icharle.com">Icharle</a>. All rights reserved.</p>
-        </div>
+        <foot></foot>
         <error ref="error"></error>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
     import store from '../common/store'
+    import navbar from '../navbar/navbar'
     import error from '../error/error'
-
+    import foot from '../footer/footer'
     export default {
         data() {
             return {
@@ -55,7 +54,7 @@
                 }).then(response => {
                     let data = response.data
                     if (data.status === 403 || data.status === 404) {
-                        this.$refs.error.show("查询失败，未找到您的准考证！","请正确输入信息！")
+                        this.$refs.error.show(false,"查询失败，未找到您的准考证！","请正确输入信息！")
                         this.submitBtn = '查 询'
                     } else if (data.status === 200) {
                         this.ticket = data.msg
@@ -70,7 +69,9 @@
             }
         },
         components: {
-            error
+            navbar,
+            error,
+            foot
         }
     }
 </script>
@@ -79,8 +80,8 @@
     .ticket
         display flex
         flex-direction column
-        /*height 100%*/
         min-height 100%
+        overflow auto
         .header
             width 100%
             height 25rem
@@ -91,18 +92,13 @@
             width 100%
             flex 1
             -webkit-flex 1
-            .title
-                display inherit
-                text-align center
-                font-size 2.3rem
-                line-height 2.3rem
             .getticket
                 width 100%
                 .input-wrap
                     width 18rem
                     position relative
                     padding 0.5rem 0.6rem 0.5rem 3.4rem
-                    margin 2rem auto 0.5rem auto
+                    margin 1.5rem auto 0.5rem auto
                     border 0.08rem solid #ccc
                     border-radius 0.5rem
                     span
@@ -160,9 +156,4 @@
                     color #ffffff
                     border-radius 0.5rem
                     background-color #636b6f
-        .footer
-            width 100%
-            height 2rem
-            line-height 2rem
-            text-align center
 </style>
