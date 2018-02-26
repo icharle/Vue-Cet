@@ -135,11 +135,11 @@ body {
 
 @font-face {
   font-family: 'cet-icon';
-  src:  url('../fonts/cet-icon.eot?60tis6');
-  src:  url('../fonts/cet-icon.eot?60tis6#iefix') format('embedded-opentype'),
-  url('../fonts/cet-icon.ttf?60tis6') format('truetype'),
-  url('../fonts/cet-icon.woff?60tis6') format('woff'),
-  url('../fonts/cet-icon.svg?60tis6#cet-icon') format('svg');
+  src:  url('../fonts/cet-icon.eot?e73jz9');
+  src:  url('../fonts/cet-icon.eot?e73jz9#iefix') format('embedded-opentype'),
+  url('../fonts/cet-icon.ttf?e73jz9') format('truetype'),
+  url('../fonts/cet-icon.woff?e73jz9') format('woff'),
+  url('../fonts/cet-icon.svg?e73jz9#cet-icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -167,4 +167,16 @@ body {
 }
 .icon-cross:before {
   content: "\ea0f";
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-left:before {
+  content: "\ea44";
+}
+.icon-mail:before {
+  content: "\ea83";
 }
