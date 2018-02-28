@@ -50,6 +50,36 @@ class IndexController extends Controller
 
     }
 
+    public function TicketPlus()
+    {
+        $input = Input::only('xm', 'school', 'jb');
+        if (!isset($input['xm']) || empty($input['xm']) || !isset($input['school']) || empty($input['school']) || !isset($input['jb']) || empty($input['jb'])) {
+            return response()
+                ->json([
+                    'status' => 403,
+                    'msg' => '数据缺失,请完整输入个人信息！',
+                ]);
+        } else {
+            $res = $this->GetTicketPlus($input);
+            if ($res == 0) {
+                return response()
+                    ->json([
+                        'status' => 503,
+                        'msg' => '查询服务暂不可用！',
+                    ]);
+            } else {
+                return response()
+                    ->json([
+                        'status' => 200,
+                        'msg' => [
+                            'xm' => $input['xm'],
+                            'zkz' => $res
+                        ]
+                    ]);
+            }
+        }
+    }
+
     /**
      * @return \Illuminate\Http\JsonResponse
      * 分数查询

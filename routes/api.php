@@ -15,10 +15,11 @@ use Illuminate\Http\Request;
 Route::group(['middleware' => 'api'], function () {
 
     Route::post('tickets', 'IndexController@Tickets');
+    Route::post('ticketsplus', 'IndexController@TicketPlus');
     Route::post('score', 'IndexController@Score');
     Route::post('presave', 'IndexController@PreSave');
     Route::post('RspSignature', 'IndexController@RspSignature');
 
-    Route::get('SendMail','MailController@index');
+    Route::get('SendMail', 'MailController@index');
 
 });

@@ -95,4 +95,36 @@ class Controller extends BaseController
         }
         return $cetScores;
     }
+
+
+    /**
+     * @param $input
+     * @return mixed
+     * 添加暴力查准考证
+     */
+    public function GetTicketPlus($input)
+    {
+        $school = $input['school'];
+        $level = $input['jb'];
+        $zkz = ((($school * 1000 + 172) * 10 + $level) * 1000 + 1) * 100 + 1;
+        while (1) {
+            $url = 'http://www.chsi.com.cn/cet/query?zkzh=' . $zkz . '&xm=' . urlencode($input['xm']);
+            $referers = 'http://www.chsi.com.cn/cet/';
+            $result = $this->curl($url, 'get', '', $referers);
+            if (strpos($result, '笔试成绩')) {
+                return $zkz;
+                break;
+            } elseif (strpos($result, '请输入验证码')) {
+                $zkz = 0;
+                return $zkz;
+                break;
+            } else {
+                $zkz = $zkz + 1;
+                $temp = $zkz - 31;
+                if ($temp % 100 == 0) {
+                    $zkz = $zkz + 70;
+                }
+            }
+        }
+    }
 }
