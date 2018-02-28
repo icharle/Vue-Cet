@@ -53,13 +53,11 @@
             }
         },
         methods: {
-            submit() {
+            submit(username,zkzchuan) {
                 this.$emit('changebtn', '查 询 中...')
                 axios.post('api/score', {
-                    xm: this.xm,
-                    zkz: this.zkz
-//                    xm: '张嘉阳',
-//                    zkz: '320590171103912'
+                    xm: username,
+                    zkz: zkzchuan
                 }).then(response => {
                     let data = response.data
                     if (data.status === 403 || data.status === 404) {
