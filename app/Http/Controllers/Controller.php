@@ -104,9 +104,9 @@ class Controller extends BaseController
      */
     public function GetTicketPlus($input)
     {
-        $school = $input['school'];
-        $level = $input['jb'];
-        $zkz = ((($school * 1000 + 172) * 10 + $level) * 1000 + 1) * 100 + 1;
+        $school = $input['school'];         //学校代码
+        $level = $input['jb'];              //四级or六级
+        $zkz = ((($school * 1000 + 172) * 10 + $level) * 1000 + 1) * 100 + 1;       //准考证
         while (1) {
             $url = 'http://www.chsi.com.cn/cet/query?zkzh=' . $zkz . '&xm=' . urlencode($input['xm']);
             $referers = 'http://www.chsi.com.cn/cet/';

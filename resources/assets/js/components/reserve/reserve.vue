@@ -13,7 +13,7 @@
                 <div class="input-wrap">
                     <span><i class="icon-profile"></i></span>
                     <div class="input-inner">
-                        <input type="text" v-model="idcard" placeholder="身份证or准考证"/>
+                        <input type="text" v-model="idcard" placeholder="学校代码or准考证"/>
                     </div>
                 </div>
                 <div class="input-wrap">
@@ -38,11 +38,12 @@
     import navbar from '../navbar/navbar'
     import error from '../error/error'
     import foot from '../footer/footer'
+
     export default {
         data() {
             return {
                 xm: '',    //姓名
-                idcard: '',   //身份证or准考证
+                idcard: '',   //身份证or准考证  学校代码
                 email: '',    //邮箱
                 jb: 1,      //类型(四六级)
                 submitBtn: '预 约'
@@ -60,10 +61,10 @@
                     let data = response.data
                     if (data.status === 403 || data.status === 404) {
                         this.submitBtn = '预 约'
-                        this.$refs.error.show(false,"预约查询失败！","请正确输入信息！")
+                        this.$refs.error.show(false, "预约查询失败！", "请正确输入信息！")
                     } else if (data.status === 200) {
                         this.submitBtn = '预 约'
-                        this.$refs.error.show(true,"预约查询成功！","请留意邮件推送！")
+                        this.$refs.error.show(true, "预约查询成功！", "请留意邮件推送！")
                     }
                 }).catch(error => {
                     console.log(error)
