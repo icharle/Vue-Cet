@@ -33,6 +33,7 @@
     import navbar from '../navbar/navbar'
     import error from '../error/error'
     import foot from '../footer/footer'
+
     export default {
         data() {
             return {
@@ -54,7 +55,8 @@
                 }).then(response => {
                     let data = response.data
                     if (data.status === 403 || data.status === 404) {
-                        this.$refs.error.show(false,"查询失败，未找到您的准考证！","请正确输入信息！")
+//                        this.$refs.error.show(false,"查询失败，未找到您的准考证！","请正确输入信息！")
+                        this.$refs.error.show(false, "请前往预约查询！", "我们将以邮件通知您！")
                         this.submitBtn = '查 询'
                     } else if (data.status === 200) {
                         this.ticket = data.msg
